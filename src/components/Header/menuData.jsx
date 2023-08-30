@@ -1,98 +1,89 @@
-
-const menuData = [
+const menuItems = [
   {
-    id: 1,
     title: "About",
-    path: "/about",
-    newTab: false,
+    href: "/about"
   },
   {
-    id: 2,
-    title: "Events",
-    newTab: false,
-    submenu: [
-      {
-        id: 21,
-        title: "Recent Events",
-        path: "/events",
-        newTab: false,
-      },
-      {
-        id: 22,
-        title: "Upcoming Events",
-        path: "/events",
-        newTab: false,
-      },
-      
-    ],
+    title: "Upcoming Events",
+    href:"/upcomingevents"
   },
   {
-    id: 3,
-    title: "Incubation",
-    newTab: false,
-    submenu: [
-      {
-        id: 31,
-        title: "Technical Incubation",
-        path: "/incubation",
-        newTab: false,
-      },
-      {
-        id: 32,
-        title: "Bio Incubation",
-        path: "/incubation",
-        newTab: false,
-      },
-      {
-        id: 33,
-        title: "Bio Incubation",
-        path: "/incubation",
-        newTab: false,
-      },
-      
-    ],
+    title: "Recent Events",
+    href:"/recentevents"
   },
-  
   {
-    id: 4,
+    title: "Technical Incubation",
+    href:"/technicalincubation"
+  },
+  {
     title: "Mentors",
-    path: "/mentors",
-    newTab: false,
+    href:"/mentors"
   },
   {
-    id: 6,
-    title: "Facilities",
-    newTab: false,
-    submenu: [
-      {
-        id: 61,
-        title: "Technical Incubation",
-        path: "/incubation",
-        newTab: false,
-      },
-      {
-        id: 62,
-        title: "Bio Incubation",
-        path: "/incubation",
-        newTab: false,
-      },
-      {
-        id: 63,
-        title: "Bio Incubation",
-        path: "/incubation",
-        newTab: false,
-      },
-      
-    ],
-  },
-  {
-    id: 7,
     title: "Contact",
-    path: "/contact",
-    newTab: false,
+    href:"/contact"
   },
+  {
+    title: "Activites",
+    href:"/activities"
+  },
+  
 
-  
-  
+
 ];
-export default menuData;
+const dropDownItems=[{
+  id:1,
+  title:"Events",
+  items: [
+    {
+    id:11,
+    title:"Upcoming Events",
+    path:"/upcomingevents",
+  },
+  {
+    id:22,
+    title:"Recent Events",
+    path:"/recentevents",
+  }
+] 
+},
+{
+  id:2,
+  title:"Incubation",
+  items: [
+    {
+    id:21,
+    title:"Technical Incubation",
+    path:"/technicalincubation",
+  },
+  {
+    id:22,
+    title:"Bio Incubation",
+    path:"/bioincubation",
+  },
+  {
+    id:23,
+    title:"Bio Incubation",
+    path:"/bioincubation",
+  }
+]
+},
+{
+  id:2,
+  title:"Activities",
+  items: [
+    {
+    id:21,
+    title:"Technical Incubation",
+    path:"/technicalincubation",
+  },
+  {
+    id:22,
+    title:"Bio Incubation",
+    path:"/bioincubation",
+  }
+] 
+}
+]
+
+export {dropDownItems,menuItems};
