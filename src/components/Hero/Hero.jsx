@@ -5,8 +5,8 @@ import Button from '../Button/Button'
 import { Player } from '@lottiefiles/react-lottie-player';
 function Hero() {
     return (
-        <section className="pt-5 w-full overflow-x-hidden mb-1 pb-0">
-            <div className="grid max-w-screen-xl px-4 py-6 mx-auto lg:gap-8 xl:gap-0 lg:py-13 lg:grid-cols-12">
+        <section className="px-3 py-14 w-full overflow-x-hidden mb-1 ">
+            <div className="grid max-w-screen-2xl px-4 py-6 mx-auto lg:gap-8 xl:gap-0 lg:py-13 lg:grid-cols-12">
                 <div className="mr-auto place-self-center lg:col-span-7 ">
                     <h1 className="max-w-2xl font-poppins font-semibold sm:text-[72px] text-[52px] text-headingColor sm:leading-[100px] leading-[75px]">Technology Business Incubator <span className='text-secondary'>KIET</span></h1>
 

@@ -5,11 +5,11 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-  
-    <main className="overflow-hidden font-poppins ">
-      <Hero/>
-      <h1 className="max-w-2xl  mb-5 mx-[20rem]  text-center self-center font-poppins font-semibold sm:text-[52px] text-[52px] text-secondary sm:leading-[100px] leading-[75px] ">Our Sponsors</h1>
-      <MyCarousel/>
+
+    <main className="overflow-hidden font-poppins max-w-screen-2xl mx-auto ">
+      <Hero />
+      <h3 className="text-2xl font-semibold text-gray-800 md:text-2xl lg:text-5xl px-3 ">Our <span className='text-secondary'>Sponsors</span></h3>
+      <MyCarousel />
     </main>
   )
 }
