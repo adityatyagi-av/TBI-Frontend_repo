@@ -4,7 +4,6 @@ import {Navbar, NavbarBrand,NavbarMenu,NavbarMenuToggle,NavbarMenuItem, NavbarCo
 import {Logo} from "./Logo.jsx";
 import DropdownButton from "./DropdownButton.jsx";
 import {dropDowmItems,dropDownItems,menuItems} from './menuData.jsx'
-import './navbar.css'
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   // const dropDowmItems=dropDownItems;
