@@ -1,10 +1,116 @@
 import Image from 'next/image'
 import React from 'react'
+import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue} from "@nextui-org/react";
+const rows = [
+    {
+      key: "1",
+      name: "Saurav Kumar",
+      designation: "Head (HI), KIET Group of Institutions",
+      role: "Chairman",
+     
+    },
+    {
+      key: "2",
+      name: "Saurav Kumar",
+      designation: "Advisor, KIET Group of Institutions",
+      role: "Member",
+      
+    },
+    {
+        key: "3",
+        name: "Saurav Kumar",
+        designation: " Representative of NSTEDB, DST, Govt. of India, New Delhi",
+        role: "Member",
+        
+      },
+    {
+      key: "4",
+      name: "Saurav Kumar",
+      designation: " Additional Advisor, Micro Small & Medium Enterprises, Govt. of India, New Delhi",
+      role: "Member",
+      
+    },
+    {
+      key: "5",
+      name: "Saurav Kumar",
+      designation: "Lead Bank Manager, Syndicate Bank, Ghaziabad",
+      role: "Member",
+      
+    },
+    {
+        key: "6",
+        name: "Saurav Kumar",
+        designation: "Representative of SIDBI, New Delhi",
+        role: "Member",
+        
+      },
+      {
+        key: "7",
+        name: "Saurav Kumar",
+        designation: "Representative of Industries Department, U.P.",
+        role: "Member",
+        
+      },
+      {
+        key: "8",
+        name: "Saurav Kumar",
+        designation: "Representative of National Research Development Corp., New Delhi",
+        role: "Member",
+        
+      },
+      {
+        key: "9",
+        name: "Saurav Kumar",
+        designation: "Leading Entrepreneur",
+        role: "Member",
+        
+      },
+      {
+        key: "10",
+        name: "Saurav Kumar",
+        designation: "R&D Expert, KIET, Ghaziabad",
+        role: "Member",
+        
+      },
+      {
+        key: "11",
+        name: "Saurav Kumar",
+        designation: "Dean (Academic), KIET, Ghaziabad",
+        role: "Member",
+        
+      },
+      {
+        key: "12",
+        name: "Saurav Kumar",
+        designation: "General Manager, TBI-KIET, Ghaziabad",
+        role: "Ex-Officio Member Secretary",
+        
+      },
+
+  ];
+  
+  const columns = [
+    {
+      key: "name",
+      label: "NAME",
+    },
+    {
+        key: "designation",
+        label: "Designation",
+      },
+
+    {
+      key: "role",
+      label: "ROLE",
+    },
+    
+  ];
+
 
 const AboutTbi = () => {
   return (
     <>
-    <section className="bg-white">
+    <section className="bg-white mt-6">
     <div className="relative flex">
         <div className="min-h-screen lg:w-1/3"></div>
         <div className="hidden w-3/4 min-h-[90vh] mt-0 bg-blue-900 dark:bg-gray-800 lg:block"></div>
@@ -102,6 +208,24 @@ const AboutTbi = () => {
         </main>
     </div>
 </section>
+<h1 className="mt-12 mb-5 self-center text-center font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
+Board of Governers
+        </h1>
+<Table aria-label="Board of Members" fullWidth={false} isStriped={true}>
+      <TableHeader>
+        {columns.map((column) =>
+          <TableColumn key={column.key}>{column.label}</TableColumn>
+        )}
+      </TableHeader>
+      <TableBody>
+        {rows.map((row) =>
+          <TableRow key={row.key}>
+            {(columnKey) => <TableCell>{getKeyValue(row, columnKey)}</TableCell>}
+          </TableRow>
+        )}
+      </TableBody>
+    </Table>
+
 </>
   )
 }
