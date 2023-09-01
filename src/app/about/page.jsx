@@ -2,11 +2,12 @@
 import React from "react";
 import {Tabs, Tab, Card, CardBody} from "@nextui-org/react";
 import AboutTbi from "./abouttbi";
+import Teams from "./teams";
 
 export default function About() {
   return (
-    <div className="flex  flex-col mx-10 mt-10">
-      <Tabs aria-label="Options">
+    <div className="flex  flex-col mx-auto mt-10">
+      <Tabs aria-label="Options" fullWidth={false} size="lg" color="secondary" className="px-10 mx-auto mb-4 py-2">
         <Tab key="abouttbi" title="About TBI">
             <AboutTbi/>
         </Tab>
@@ -14,15 +15,11 @@ export default function About() {
           
         </Tab>
         
-        <Tab key="recognition" title="Recognition">
+        <Tab key="milestones" title="Milestones">
            
         </Tab>
         <Tab key="Team" title="Team">
-          <Card>
-            <CardBody>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            </CardBody>
-          </Card>  
+          <Teams/>
         </Tab>
         
       </Tabs>

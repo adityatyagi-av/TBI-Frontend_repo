@@ -1,9 +1,10 @@
 'use client'
 import React from "react";
-import {Navbar, NavbarBrand,NavbarMenu,NavbarMenuToggle,NavbarMenuItem, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
+import {Navbar, NavbarBrand,NavbarMenu,NavbarMenuToggle,NavbarMenuItem, NavbarContent, NavbarItem, Button} from "@nextui-org/react";
 import {Logo} from "./Logo.jsx";
 import DropdownButton from "./DropdownButton.jsx";
 import {dropDowmItems,dropDownItems,menuItems} from './menuData.jsx'
+import Link from "next/link.js";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   // const dropDowmItems=dropDownItems;
@@ -18,7 +19,8 @@ export default function Header() {
           justify="start"
         />
         <NavbarBrand justify="start">
-        <Link href="/" className="gap-2">
+          
+        <Link href="/" className="gap-2 flex">
           <Logo />
           
         </Link>
