@@ -25,7 +25,7 @@ function page() {
                     <path d="M1440 0H0V57C720 0 1440 57 1440 57V0Z" />
                 </svg>
             </section>
-            <section id='gallery' className="container px-6 py-8 mx-auto lg:py-16">
+            <section id='gallery' className="container px-6 py-8 mx-auto lg:py-16 max-w-screen-xl">
                 <h3 className="text-xl font-medium text-gray-800 md:text-2xl lg:text-3xl ">Browse Our Projects</h3>
 
                 <div className="grid grid-cols-1 gap-10 mt-10 md:grid-cols-2 lg:grid-cols-3 ">

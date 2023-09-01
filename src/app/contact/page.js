@@ -5,7 +5,7 @@ import { FaYoutube } from "react-icons/fa6";
 function page() {
     return (
         <>
-            <div className="flex justify-center items-center bg-white mt-0 py-14">
+            <div className="flex justify-center items-center bg-white mt-0 py-14 max-w-screen-xl mx-auto px-3">
                 <div className="container mx-auto my-4 px-4 lg:px-20">
 
                     <div className="w-full p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
