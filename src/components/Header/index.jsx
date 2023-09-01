@@ -3,7 +3,7 @@ import React from "react";
 import {Navbar, NavbarBrand,NavbarMenu,NavbarMenuToggle,NavbarMenuItem, NavbarContent, NavbarItem, Button} from "@nextui-org/react";
 import {Logo} from "./Logo.jsx";
 import DropdownButton from "./DropdownButton.jsx";
-import {dropDowmItems,dropDownItems,menuItems} from './menuData.jsx'
+import {dropDownItems,menuItems} from './menuData.jsx'
 import Link from "next/link.js";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);

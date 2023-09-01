@@ -1,29 +1,30 @@
 import Image from 'next/image'
 import React from 'react'
 
-const MainTeam = () => {
+const TeamCard = ({team}) => {
+    
   return (
     <section className="bg-white dark:bg-gray-900">
     <div className="container px-6 py-10 mx-auto">
-        <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">team.name</h1>
+        <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">{team.name}</h1>
 
         <p className="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">
             {team.desc}
         </p>
-
+        <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-4">
         {
-            team.map((team)=>{
-             
-                <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-4">
+            team.members.map((member)=>(
+                
+            <div key={member.id}>
             <div className="flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
-                <Image className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"  width={32} height={32} src="/chairman.jpg" alt=""/>
+                <Image className="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"  width={32} height={32} src={`${member.imagesrc}`} alt=""/>
 
-                <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">arthur melo</h1>
+                <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">{member.name}</h1>
 
-                <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">design director</p>
+                <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">{member.role}</p>
 
                 <div className="flex mt-3 -mx-2">
-                    <a href="#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">
+                    <a href={`${member.linkedin}`} className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">
                         <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -32,7 +33,7 @@ const MainTeam = () => {
                         </svg>
                     </a>
 
-                    <a href="#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Facebook">
+                    <a href={`${member.twitter}`} className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Facebook">
                         <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -41,7 +42,7 @@ const MainTeam = () => {
                         </svg>
                     </a>
 
-                    <a href="#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Github">
+                    <a href={`${member.github}`} className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Github">
                         <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -52,13 +53,13 @@ const MainTeam = () => {
                 </div>
                 </div>
                 </div>
-            })
+            ))
         }
-            
+     </div>   
             
     </div>
 </section>
   )
 }
 
-export default MainTeam
+export default TeamCard
