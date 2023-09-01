@@ -1,7 +1,7 @@
 'use client'
 import React from "react";
 import {Tabs, Tab, Card, CardBody} from "@nextui-org/react";
-import MainTeam from "./mainteam";
+
 
 
 const Teams = () => {
@@ -12,7 +12,7 @@ const Teams = () => {
             
         </Tab>
         <Tab key="development" title="Development">
-          <MainTeam/>
+          
         </Tab>
         
         <Tab key="design" title="Design">
