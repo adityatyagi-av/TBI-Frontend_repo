@@ -10,17 +10,17 @@ export default function Header() {
   
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}>
-      <NavbarContent className="flex flex-row-reverse">
+    <Navbar onMenuOpenChange={setIsMenuOpen} maxWidth="xl" height="5rem" justify="start">
+      <NavbarContent className="flex flex-row-reverse justify-between items-center">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden "
-          justify="end"
+          justify="start"
         />
-        <NavbarBrand >
+        <NavbarBrand justify="start">
         <Link href="/" className="gap-2">
           <Logo />
-          <p className="font-bold  text-2xl">TBI KIET</p>
+          
         </Link>
         </NavbarBrand>
       </NavbarContent>
