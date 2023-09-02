@@ -21,7 +21,6 @@ function Hero() {
                         loop
                         mode="normal"
                         src="https://lottie.host/6b09f1bb-dff5-4bf4-a213-d72b4b7362af/hRlvLIcKYn.json"
-                        style="width: 320px"
                     ></Player>
                 </div>
             </div>

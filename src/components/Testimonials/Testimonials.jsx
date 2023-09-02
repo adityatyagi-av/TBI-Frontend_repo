@@ -48,14 +48,14 @@ const Testimonials = () => {
     return (
         <div className="parent">
             <div className="py-9">
-                <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
+                <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
                     What our clients are saying
                 </h1>
 
-                <div class="flex mx-auto mt-6">
-                    <span class="inline-block w-40 h-1 bg-blue-900 rounded-full"></span>
-                    <span class="inline-block w-3 h-1 mx-1 bg-blue-900 rounded-full"></span>
-                    <span class="inline-block w-1 h-1 bg-blue-900 rounded-full"></span>
+                <div className="flex mx-auto mt-6">
+                    <span className="inline-block w-40 h-1 bg-blue-900 rounded-full"></span>
+                    <span className="inline-block w-3 h-1 mx-1 bg-blue-900 rounded-full"></span>
+                    <span className="inline-block w-1 h-1 bg-blue-900 rounded-full"></span>
                 </div>
             </div>
             <Carousel
@@ -68,22 +68,22 @@ const Testimonials = () => {
                 showDots={true}
                 infinite={true}
                 partialVisible={false}
-                dotListClass="custom-dot-list-style"
+                dotListclassName="custom-dot-list-style"
             >
                 {testimonialsData.map((testimonial, index) => {
                     return (
                         <div className="p-3" key={index}>
-                            <div class="p-8 border rounded-lg text-gray-500 hover:bg-blue-900 hover:text-gray-50 shadow-md ">
-                                <p class="leading-loose  ">
+                            <div className="p-8 border rounded-lg text-gray-500 hover:bg-blue-900 hover:text-gray-50 shadow-md ">
+                                <p className="leading-loose  ">
                                     {testimonial.text}
                                 </p>
 
-                                <div class="flex items-center mt-8 -mx-2">
-                                    <img class="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-gray-100" src={testimonial.imageSrc} alt="" />
+                                <div className="flex items-center mt-8 -mx-2">
+                                    <img className="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-gray-100" src={testimonial.imageSrc} alt="" />
 
-                                    <div class="mx-2">
-                                        <h1 class="font-semibold">{testimonial.name}</h1>
-                                        <span class="text-sm">{testimonial.company}</span>
+                                    <div className="mx-2">
+                                        <h1 className="font-semibold">{testimonial.name}</h1>
+                                        <span className="text-sm">{testimonial.company}</span>
                                     </div>
                                 </div>
                             </div>
