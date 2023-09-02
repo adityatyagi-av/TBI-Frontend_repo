@@ -8,7 +8,7 @@ import TeamCard from "./teamcards";
 const Teams = () => {
   return (
     <div className="flex  flex-col mx-10 ">
-      <Tabs aria-label="Options" fullWidth={true} size="lg"  className=" mx-auto mb-5 py-3">
+      <Tabs aria-label="Options" fullWidth={true} size="lg" radius=""  className=" mx-auto mb-5 py-3">
         <Tab key="mainteam" title="Main Team">
            <TeamCard team={mainteam[0]}/>
         </Tab>
