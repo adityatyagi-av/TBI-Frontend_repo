@@ -34,9 +34,11 @@ export default function Header() {
             About
           </Link>
         </NavbarItem>
-        <NavbarItem  >
-          <DropdownButton  lists={dropDownItems[0]} />
-        </NavbarItem>
+        <NavbarItem className="pl-1 pr-2">
+          <Link color="foreground" href="/events">
+            Events
+          </Link>
+          </NavbarItem>
         <NavbarItem className="pl-1 pr-2">
           <Link color="foreground" href="/mentors">
             Mentors
