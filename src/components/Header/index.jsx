@@ -1,14 +1,12 @@
 'use client'
 import React from "react";
-import {Navbar, NavbarBrand,NavbarMenu,NavbarMenuToggle,NavbarMenuItem, NavbarContent, NavbarItem, Button} from "@nextui-org/react";
-import {Logo} from "./Logo.jsx";
-import DropdownButton from "./DropdownButton.jsx";
-import {dropDownItems,menuItems} from './menuData.jsx'
+import { Navbar, NavbarBrand, NavbarMenu, NavbarMenuToggle, NavbarMenuItem, NavbarContent, NavbarItem, Button } from "@nextui-org/react";
+import { Logo } from "./Logo.jsx";
+import { menuItems } from './menuData.jsx'
 import Link from "next/link.js";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  // const dropDowmItems=dropDownItems;
-  
+
 
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen} maxWidth="xl" height="5rem" justify="start">
@@ -19,11 +17,11 @@ export default function Header() {
           justify="start"
         />
         <NavbarBrand justify="start">
-          
-        <Link href="/" className="gap-2 flex">
-          <Logo />
-          
-        </Link>
+
+          <Link href="/" className="gap-2 flex">
+            <Logo />
+
+          </Link>
         </NavbarBrand>
       </NavbarContent>
 
@@ -38,33 +36,31 @@ export default function Header() {
           <Link color="foreground" href="/events">
             Events
           </Link>
-          </NavbarItem>
+        </NavbarItem>
         <NavbarItem className="pl-1 pr-2">
           <Link color="foreground" href="/mentors">
             Mentors
           </Link>
         </NavbarItem>
-        <NavbarItem > 
-          <DropdownButton lists={dropDownItems[1]} />
+        <NavbarItem >
+          <Link color="foreground" href="/incubation">
+            Incubation
+          </Link>
         </NavbarItem>
         <NavbarItem className="item pl-2 pr-2">
-          <Link color="foreground"  href="/gallery">
-           Gallery
+          <Link color="foreground" href="/gallery">
+            Gallery
           </Link>
-        </NavbarItem>
-        
-        <NavbarItem >
-          <DropdownButton lists={dropDownItems[2]} />
         </NavbarItem>
         <NavbarItem className="item pl-1 pr-2">
-          <Link color="foreground"  href="/contact">
-           Contact
+          <Link color="foreground" href="/contact">
+            Contact
           </Link>
         </NavbarItem>
-        
+
       </NavbarContent>
-      
-     
+
+
       <NavbarMenu justify="end">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>

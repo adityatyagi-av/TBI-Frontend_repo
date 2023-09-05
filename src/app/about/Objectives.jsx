@@ -4,7 +4,7 @@ import { Player } from '@lottiefiles/react-lottie-player';
 
 function Objectives() {
     return (
-        <div className='max-w-screen-2xl mx-auto'>
+        <div className='max-w-screen-xl mx-auto'>
             <section className="px-3 w-full overflow-x-hidden mb-1 ">
                 <div className="grid  px-4 py-6 mx-auto lg:gap-8 xl:gap-0 lg:py-13 lg:grid-cols-10">
 
@@ -86,7 +86,7 @@ function Objectives() {
                             controls
                             loop
                             mode="normal"
-                            src="https://lottie.host/e2517798-9076-485e-a103-b40ee35f7c08/bA1wHXyfT7.json"
+                            src="https://lottie.host/525ef19e-9b6e-44db-83b0-c7787383f02b/0qB3Uq5iGy.json"
                         ></Player>
                     </div>
                 </div>
