@@ -4,6 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.maximum{
+.maximum {
     max-width: 1536px !important;
 }

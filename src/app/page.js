@@ -14,7 +14,7 @@ export default function Home() {
       <MyCarousel />
       <Stats />
       <Testimonials />
-      <Newsletter/>
+      <Newsletter />
     </main>
   )
 }

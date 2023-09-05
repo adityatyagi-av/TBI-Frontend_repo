@@ -5,85 +5,31 @@ const menuItems = [
   },
   {
     title: "Upcoming Events",
-    href:"/upcomingevents"
+    href: "/upcomingevents"
   },
   {
     title: "Recent Events",
-    href:"/recentevents"
+    href: "/recentevents"
   },
   {
-    title: "Technical Incubation",
-    href:"/technicalincubation"
+    title: "Incubation",
+    href: "/incubation"
   },
   {
     title: "Mentors",
-    href:"/mentors"
+    href: "/mentors"
   },
   {
     title: "Contact",
-    href:"/contact"
+    href: "/contact"
   },
   {
     title: "Activites",
-    href:"/activities"
+    href: "/activities"
   },
-  
+
 
 
 ];
-const dropDownItems=[{
-  id:1,
-  title:"Events",
-  items: [
-    {
-    id:11,
-    title:"Upcoming Events",
-    path:"/upcomingevents",
-  },
-  {
-    id:22,
-    title:"Recent Events",
-    path:"/recentevents",
-  }
-] 
-},
-{
-  id:2,
-  title:"Incubation",
-  items: [
-    {
-    id:21,
-    title:"Technical Incubation",
-    path:"/technicalincubation",
-  },
-  {
-    id:22,
-    title:"Bio Incubation",
-    path:"/bioincubation",
-  },
-  {
-    id:23,
-    title:"Bio Incubation",
-    path:"/bioincubation",
-  }
-]
-},
-{
-  id:2,
-  title:"Activities",
-  items: [
-    {
-    id:21,
-    title:"Technical Incubation",
-    path:"/technicalincubation",
-  },
-  {
-    id:22,
-    title:"Bio Incubation",
-    path:"/bioincubation",
-  }
-] 
-}
-]
 
-export {dropDownItems,menuItems};
+export { menuItems };
