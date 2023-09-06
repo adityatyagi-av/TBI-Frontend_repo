@@ -3,6 +3,7 @@
 import React from 'react'
 import Button from '../Button/Button'
 import { Player } from '@lottiefiles/react-lottie-player';
+import Link from 'next/link';
 function Hero() {
     return (
         <section className="px-3 py-14 w-full overflow-x-hidden mb-1 ">
@@ -11,7 +12,9 @@ function Hero() {
                     <h1 className="max-w-2xl font-poppins font-semibold sm:text-[72px] text-[52px] text-headingColor sm:leading-[100px] leading-[75px]">Technology Business Incubator <span className='text-secondary'>KIET</span></h1>
 
                     <p className="max-w-xl mt-11 mb-6 text-center sm:text-left font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl">TBI-KIET is a registered body under Society Registration Act 1860 as Krishna Path Incubation Society-TBI in 2007. TBI-KIET was jointly promoted by NSTEDB, Department of Science & Technology, Govt. of India and KIET Group of Institutions, Ghaziabad. </p>
-                    <Button content={'Incubate With Us'} />
+                    <Link href='/incubation/social-incubation'>
+                        <Button content={'Incubate With Us'} />
+                    </Link>
                 </div>
 
                 <div className="lg:mt-0 lg:col-span-5 lg:flex ">

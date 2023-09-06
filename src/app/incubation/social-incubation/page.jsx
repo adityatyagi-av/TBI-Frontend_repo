@@ -1,11 +1,11 @@
 import React from 'react'
 
-function FormNidhiEIR() {
+function page() {
     return (
         <div>
-
+            Social Incubation
         </div>
     )
 }
 
-export default FormNidhiEIR
+export default page
