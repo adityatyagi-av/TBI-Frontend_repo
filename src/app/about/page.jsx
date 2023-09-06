@@ -14,7 +14,7 @@ export default function About() {
            <AboutTbi/>
         </Tab>
         <Tab key="objectives" title="Objectives">
-        {/* <Objectives/> */}
+        <Objectives/>
         </Tab>
         <Tab key="milestones" title="Milestones">
         <Teams/>
