@@ -27,17 +27,17 @@ export default function Header() {
 
       <NavbarContent className="hidden sm:flex gap-4 " justify="center">
 
-        <NavbarItem className="pr-2">
+        <NavbarItem>
           <Link color="foreground" href="/about">
             About
           </Link>
         </NavbarItem>
-        <NavbarItem className="pl-1 pr-2">
+        <NavbarItem >
           <Link color="foreground" href="/events">
             Events
           </Link>
         </NavbarItem>
-        <NavbarItem className="pl-1 pr-2">
+        <NavbarItem >
           <Link color="foreground" href="/mentors">
             Mentors
           </Link>
@@ -47,12 +47,18 @@ export default function Header() {
             Incubation
           </Link>
         </NavbarItem>
-        <NavbarItem className="item pl-2 pr-2">
+        <NavbarItem className="pr-2">
+          <Link color="foreground" href="/facilities">
+            Facilities
+          </Link>
+        </NavbarItem>
+        <NavbarItem >
           <Link color="foreground" href="/gallery">
             Gallery
           </Link>
+          
         </NavbarItem>
-        <NavbarItem className="item pl-1 pr-2">
+        <NavbarItem >
           <Link color="foreground" href="/contact">
             Contact
           </Link>

@@ -4,28 +4,28 @@ const menuItems = [
     href: "/about"
   },
   {
-    title: "Upcoming Events",
-    href: "/upcomingevents"
-  },
-  {
-    title: "Recent Events",
-    href: "/recentevents"
-  },
-  {
-    title: "Incubation",
-    href: "/incubation"
+    title: "Events",
+    href: "/events"
   },
   {
     title: "Mentors",
     href: "/mentors"
   },
   {
-    title: "Contact",
-    href: "/contact"
+    title: "Incubation",
+    href: "/incubation"
   },
   {
-    title: "Activites",
-    href: "/activities"
+    title: "Facilities",
+    href: "/facilities"
+  },
+  {
+    title: "Gallery",
+    href: "/gallery"
+  },
+  {
+    title: "Contact",
+    href: "/contact"
   },
 
 
