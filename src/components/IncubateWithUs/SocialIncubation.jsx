@@ -1,8 +1,8 @@
 "use client"
-
 import React from 'react'
 import Button from '../Button/Button'
 import { Player } from '@lottiefiles/react-lottie-player';
+import Link from 'next/link';
 function SocialIncubation() {
     return (
         <section className="px-3 py-14 w-full overflow-x-hidden mb-1 ">
@@ -12,8 +12,9 @@ function SocialIncubation() {
 
                     <p className="max-w-xl mt-11 mb-6 text-center sm:text-left font-light text-gray-500 lg:mb-4 md:text-lg lg:text-xl">TBI-KIET is a registered body under Society Registration Act 1860 as Krishna Path Incubation Society-TBI in 2007. TBI-KIET was jointly promoted by NSTEDB, Department of Science & Technology, Govt. of India and KIET Group of Institutions, Ghaziabad. </p>
                     <p className="max-w-xl  mb-6 text-center sm:text-left font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl">TBI-KIET is a registered body under Society Registration Act 1860 as Krishna Path Incubation Society-TBI in 2007. TBI-KIET was jointly promoted by NSTEDB, Department of Science & Technology, Govt. of India and KIET Group of Institutions, Ghaziabad. </p>
-
-                    <Button content={'View Details'} />
+                    <Link href='/incubation/social-incubation'>
+                        <Button content={'View Details'} />
+                    </Link>
                 </div>
 
                 <div className="lg:mt-0 lg:col-span-5 lg:flex ">
