@@ -12,7 +12,7 @@ function SocialIncubation() {
 
                     <p className="max-w-xl mt-11 mb-6 text-center sm:text-left font-light text-gray-500 lg:mb-4 md:text-lg lg:text-xl">TBI-KIET is a registered body under Society Registration Act 1860 as Krishna Path Incubation Society-TBI in 2007. TBI-KIET was jointly promoted by NSTEDB, Department of Science & Technology, Govt. of India and KIET Group of Institutions, Ghaziabad. </p>
                     <p className="max-w-xl  mb-6 text-center sm:text-left font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl">TBI-KIET is a registered body under Society Registration Act 1860 as Krishna Path Incubation Society-TBI in 2007. TBI-KIET was jointly promoted by NSTEDB, Department of Science & Technology, Govt. of India and KIET Group of Institutions, Ghaziabad. </p>
-                    <Link href='/incubation/social-incubation'>
+                    <Link href='/incubation/social'>
                         <Button content={'View Details'} />
                     </Link>
                 </div>
