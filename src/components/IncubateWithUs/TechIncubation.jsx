@@ -1,4 +1,5 @@
 import React from 'react'
+import SchemeCarousel from './Carousel'
 function TechIncubation() {
     return (   
         <>
@@ -43,7 +44,7 @@ function TechIncubation() {
                         </div>
                     </div>
                 </div>
-                
+            <SchemeCarousel/>    
         </>  
     )
 }
