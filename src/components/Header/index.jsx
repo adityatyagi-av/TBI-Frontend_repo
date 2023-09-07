@@ -9,7 +9,7 @@ export default function Header() {
 
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} maxWidth="xl" height="5rem" justify="start">
+    <Navbar onMenuOpenChange={setIsMenuOpen} maxWidth="xl" height="5rem" justify="start" >
       <NavbarContent className="flex flex-row-reverse justify-between items-center">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
