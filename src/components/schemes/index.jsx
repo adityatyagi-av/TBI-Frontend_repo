@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Scheme = ({direction}) => {
+const Scheme = ({direction,pageLink}) => {
   return (
     <>
     <h1 className="text-2xl font-semibold text-center mt-12 text-gray-800 capitalize lg:text-4xl dark:text-white">NIDHI EIR <span className="text-blue-900">1.0</span></h1>
@@ -15,7 +15,7 @@ const Scheme = ({direction}) => {
 
                 <div class="flex flex-col mt-6 space-y-3 lg:space-y-0 lg:flex-row">
                     <a href="#" class="block px-5 py-2 text-sm font-medium tracking-wider text-center text-white transition-colors duration-300 transform bg-blue-950 rounded-md hover:bg-blue-800">Register Here</a>
-                    <a href="#" class="block px-5 py-2 text-sm font-medium tracking-wider text-center text-gray-700 transition-colors duration-300 transform bg-gray-200 rounded-md lg:mx-4 hover:bg-gray-300">Learn More</a>
+                    <a href={`${pageLink}`} class="block px-5 py-2 text-sm font-medium tracking-wider text-center text-gray-700 transition-colors duration-300 transform bg-gray-200 rounded-md lg:mx-4 hover:bg-gray-300">Learn More</a>
                 </div>
             </div>
         </div>
