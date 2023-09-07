@@ -7,16 +7,9 @@ function page() {
     return (
        <>
        
-  
-
-       <Scheme pageLink="technical/nidhieir"/>
-     <Scheme direction="lg:flex-row-reverse" pageLink="technical/nidhieir"/>
-     <Scheme pageLink="technical/nidhieir"/>
-
-
-     <div className="dark:bg-gray-900">
+    <div className="dark:bg-gray-900">
       <div className="pb-20">
-        <div className="mx-auto bg-gradient-to-l from-indigo-900 to-indigo-700 h-96">
+        <div className="mx-auto bg-gradient-to-l from-blue-900 to-blue-700 h-96">
           <div className="mx-auto container w-full flex flex-col justify-center items-center">
             <div className="flex justify-center items-center flex-col">
               <div className="mt-20">
@@ -51,6 +44,10 @@ function page() {
       </div>
     </div>
  
+
+       <Scheme pageLink="technical/nidhieir"/>
+     <Scheme direction="lg:flex-row-reverse" pageLink="technical/nidhieir"/>
+     <Scheme pageLink="technical/nidhieir"/>
        </>
     )
 }
