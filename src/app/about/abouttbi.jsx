@@ -123,7 +123,7 @@ const AboutTbi = () => {
 
             <div className="lg:mt-14 sm:mt-10 mt-12">
               
-                <Image className="lg:block hidden w-full" src="https://i.ibb.co/GvwJnvn/Group-736.png" alt="Group of people Chilling" width={100} height={100} quality={100} / >
+                <Image className="lg:block hidden w-full" src="https://i.ibb.co/GvwJnvn/Group-736.png" alt="Group of people Chilling" width={100} height={100} quality={100} />
                 <Image className="lg:hidden sm:block hidden w-full" src="https://i.ibb.co/5sZTmHq/Rectangle-116.png" alt="Group of people Chilling" width={100} height={100}/>
                 <Image className="sm:hidden block w-full" src="https://i.ibb.co/zSxXJGQ/Rectangle-122.png" alt="Group of people Chilling" width={100} height={100} />
             </div>

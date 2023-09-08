@@ -12,7 +12,7 @@ function BioIncubation() {
         <div className="flex flex-col lg:flex-row justify-center items-center space-y-6 lg:space-y-0">
             <div className="w-80 sm:w-auto flex flex-col justify-start items-start">
                 <div>
-                    <p className="text-3xl xl:text-4xl font-semibold leading-9 text-blue-900">Incubate in HealthCare Schemes</p>
+                    <p className="text-3xl xl:text-4xl font-semibold leading-9 ">Incubate in <span className='text-blue-900'>HealthCare</span> Schemes</p>
                 </div>
                 <div className="mt-4 lg:w-4/5 xl:w-3/5">
                     <p className="text-base leading-6 text-gray-600">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
