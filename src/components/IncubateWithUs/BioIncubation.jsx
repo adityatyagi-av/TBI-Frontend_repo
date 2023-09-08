@@ -1,10 +1,12 @@
 
 import React from 'react'
+import SchemeCarousel from './Carousel'
 
 function BioIncubation() {
     return (
         <>
-        <h1 className="max-w-2xl self-center mx-auto font-poppins font-semibold sm:text-[52px] text-[32px] text-headingColor ">HealthCare <span className='text-secondary'>Incubation</span></h1>
+    
+        <h1 className="max-w-2xl mt-20  pt-10 self-center mx-auto font-poppins font-semibold sm:text-[52px] text-[32px] text-headingColor ">HealthCare <span className='text-secondary'>Incubation</span></h1>
 
 <div className="mx-auto container flex justify-center items-center py-12 px-4 sm:px-6 2xl:px-0">
         <div className="flex flex-col lg:flex-row justify-center items-center space-y-6 lg:space-y-0">
@@ -45,7 +47,7 @@ function BioIncubation() {
             </div>
         </div>
     </div>
-    
+    <SchemeCarousel/>
         </>
     )
 }
