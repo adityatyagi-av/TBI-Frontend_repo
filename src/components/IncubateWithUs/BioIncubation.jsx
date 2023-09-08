@@ -1,16 +1,18 @@
 
 import React from 'react'
+import SchemeCarousel from './Carousel'
 
 function BioIncubation() {
     return (
         <>
-        <h1 className="max-w-2xl self-center mx-auto font-poppins font-semibold sm:text-[52px] text-[32px] text-headingColor ">HealthCare <span className='text-secondary'>Incubation</span></h1>
+    
+        <h1 className="max-w-2xl mt-20  pt-10 self-center mx-auto font-poppins font-semibold sm:text-[52px] text-[32px] text-headingColor ">HealthCare <span className='text-secondary'>Incubation</span></h1>
 
 <div className="mx-auto container flex justify-center items-center py-12 px-4 sm:px-6 2xl:px-0">
         <div className="flex flex-col lg:flex-row justify-center items-center space-y-6 lg:space-y-0">
             <div className="w-80 sm:w-auto flex flex-col justify-start items-start">
                 <div>
-                    <p className="text-3xl xl:text-4xl font-semibold leading-9 text-blue-900">Incubate in HealthCare Schemes</p>
+                    <p className="text-3xl xl:text-4xl font-semibold leading-9 ">Incubate in <span className='text-blue-900'>HealthCare</span> Schemes</p>
                 </div>
                 <div className="mt-4 lg:w-4/5 xl:w-3/5">
                     <p className="text-base leading-6 text-gray-600">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
@@ -45,7 +47,7 @@ function BioIncubation() {
             </div>
         </div>
     </div>
-    
+    <SchemeCarousel/>
         </>
     )
 }
