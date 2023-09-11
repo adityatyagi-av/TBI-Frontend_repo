@@ -11,19 +11,19 @@ export default function About() {
     <div className="flex  flex-col mx-auto ">
       <Tabs aria-label="Options" fullWidth={false} size="lg" color="secondary" className=" md:mx-auto mb-4 py-2">
         <Tab key="abouttbi" title="About TBI">
-           <AboutTbi/>
+          <AboutTbi />
         </Tab>
         <Tab key="objectives" title="Objectives">
-        <Objectives/>
+          <Objectives />
         </Tab>
         <Tab key="milestones" title="Milestones">
-        <Teams/>
+          <Teams />
         </Tab>
         <Tab key="teams" title="Teams">
-        <Teams/>
+          <Teams />
         </Tab>
-        
+
       </Tabs>
-    </div> 
+    </div>
   );
 }

@@ -110,47 +110,47 @@ const columns = [
 const AboutTbi = () => {
   return (
     <>
-     <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
-            <div className="lg:w-10/12 w-full">
-            <h1 className="text-2xl font-semibold capitalize lg:text-5xl lg:ml-4 ">
-              <span className="text-blue-900">About TBI</span> <br />
-            </h1>
-              
-                {/* <h2 className="xl:w-8/12 lg:w-10/12 w-full font-bold text-gray-800 lg:text-4xl text-3xl lg:leading-10 leading-9 mt-2">We are here to make great decision delightfull for everyone</h2> */}
-                <p className="font-normal text-base leading-6 text-gray-600 mt-6"> During last 11 years our remarkable growth has been endorsed by NSTEDB, DST, GoI by approving flagship programme of Ministry i.e. Nationa Initiative for Developing and Harnessing Innovations-Entrepreneur in Residence (NIDHI-EIR) under this scheme we are giving fellowship of RS. 20000 to 30000 per month for next one year to 12 aspirants. <br /> (Details Link:
-                  <a href="http://www.nidhi-eir.in/pdfs/NIDHI-EIR_guideline.pdf" className='text-gray-400'> http://www.nidhi-eir.in/pdfs/NIDHI-EIR_guideline.pdf</a> )</p>
-            </div>
+      <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
+        <div className="lg:w-10/12 w-full">
+          <h1 className="text-2xl font-semibold capitalize lg:text-5xl lg:ml-4 ">
+            <span className="text-blue-900">About TBI</span> <br />
+          </h1>
 
-            <div className="lg:mt-14 sm:mt-10 mt-12">
-              
-                <Image className="lg:block hidden w-full" src="https://i.ibb.co/GvwJnvn/Group-736.png" alt="Group of people Chilling" width={100} height={100} quality={100} />
-                <Image className="lg:hidden sm:block hidden w-full" src="https://i.ibb.co/5sZTmHq/Rectangle-116.png" alt="Group of people Chilling" width={100} height={100}/>
-                <Image className="sm:hidden block w-full" src="https://i.ibb.co/zSxXJGQ/Rectangle-122.png" alt="Group of people Chilling" width={100} height={100} />
-            </div>
-
-            <div className="lg:mt-16 sm:mt-12 mt-16 flex lg:flex-row justify-between flex-col lg:gap-8 gap-12">
-                <div className="w-full xl:w-5/12 lg:w-6/12">
-                    <h2 className="font-bold lg:text-4xl text-3xl lg:leading-9 leading-7 text-gray-800">Our Story</h2>
-                    <p className="font-normal text-base leading-6 text-gray-600 mt-4">“ TBI-KIET is a registered body under Society Registration Act 1860 as Krishna Path Incubation Society-TBI in 2007. TBI-KIET was jointly promoted by NSTEDB, Department of Science & Technology, Govt. of India and KIET Group of Institutions, Ghaziabad. The DST, Govt. of India supported initially for 5 years and further it was expected that TBI-KIET should be self supportive. Since 2012 TBI-KIET is self supportive and showing satisfactory growth in terms of no. of startup incubated, mentored and graduated. This is the only incubator across country which promote only first generation entrepreneurs. TBI-KIET has been ranked 8th among all best TBI/STEP by Economic Times on 11/02/2011. Till date 85 incubatees have been promoted and 50 graduated from TBI-KIET. The core strength and thrust area of the TBI-KIET is ICT, Robotics Automation, Solar Energy, Automobile, E-mobility . TBI-KIET has dedicated state of the art, 05 Storyedfurnished building having furnished cubicles alongwith internet and 24×7 power supply. Apart from this we have specialized lab facilities viz. IoT, Fab Lab, D-Link, IoS Apple, Block Chain, NI-LabView Lab and dedicated Innovation lab with robotics facilities. TBI-KIET has strong Governing Body comprises of Representatives from Government, Industry, Bank, R&D Institutions and Academia.”</p>
-                    <p className="font-normal text-base leading-6 text-gray-600 mt-6"></p>
-                </div>
-                <div className="lg:flex items-center w-full lg:w-1/2 ">
-                    {/* <img className="lg:block hidden w-full" src="https://i.ibb.co/2kxWpNm/Group-740.png" alt="people discussing on board" />
-                    <img className="lg:hidden sm:block hidden w-full h-3/4" src="https://i.ibb.co/ZLgK3NQ/Group-788.png" alt="people discussing on board" /> */}
-                    {/* <img className="sm:hidden block w-full" src="https://i.ibb.co/9g2R7Xr/Group-803.png" alt="people discussing on board" /> */}
-                    <iframe className='lg:block hidden w-full' width="560" height="290" src="https://www.youtube.com/embed/1jFPnqSC0-U?si=s31SoNhsHzwZO8HH" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-                    <iframe className='lg:hidden sm:block hidden w-full h-3/4' width="560" height="290" src="https://www.youtube.com/embed/1jFPnqSC0-U?si=s31SoNhsHzwZO8HH" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-                    <iframe className='sm:hidden block w-full' width="560" height="290" src="https://www.youtube.com/embed/1jFPnqSC0-U?si=s31SoNhsHzwZO8HH" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-                </div>
-            </div>
+          {/* <h2 className="xl:w-8/12 lg:w-10/12 w-full font-bold text-gray-800 lg:text-4xl text-3xl lg:leading-10 leading-9 mt-2">We are here to make great decision delightfull for everyone</h2> */}
+          <p className="font-normal text-base leading-6 text-gray-600 mt-6"> During last 11 years our remarkable growth has been endorsed by NSTEDB, DST, GoI by approving flagship programme of Ministry i.e. Nationa Initiative for Developing and Harnessing Innovations-Entrepreneur in Residence (NIDHI-EIR) under this scheme we are giving fellowship of RS. 20000 to 30000 per month for next one year to 12 aspirants. <br /> (Details Link:
+            <a href="http://www.nidhi-eir.in/pdfs/NIDHI-EIR_guideline.pdf" className='text-gray-400'> http://www.nidhi-eir.in/pdfs/NIDHI-EIR_guideline.pdf</a> )</p>
         </div>
-      
-      <section className="bg-white dark:bg-gray-900 mt-20">
+
+        <div className="lg:mt-14 sm:mt-10 mt-12">
+
+          <Image className="lg:block hidden w-full" src="https://i.ibb.co/GvwJnvn/Group-736.png" alt="Group of people Chilling" width={100} height={100} quality={100} />
+          <Image className="lg:hidden sm:block hidden w-full" src="https://i.ibb.co/5sZTmHq/Rectangle-116.png" alt="Group of people Chilling" width={100} height={100} />
+          <Image className="sm:hidden block w-full" src="https://i.ibb.co/zSxXJGQ/Rectangle-122.png" alt="Group of people Chilling" width={100} height={100} />
+        </div>
+
+        <div className="lg:mt-16 sm:mt-12 mt-16 flex lg:flex-row justify-between flex-col lg:gap-8 gap-12">
+          <div className="w-full xl:w-5/12 lg:w-6/12">
+            <h2 className="font-bold lg:text-4xl text-3xl lg:leading-9 leading-7 text-gray-800">Our Story</h2>
+            <p className="font-normal text-base leading-6 text-gray-600 mt-4">“ TBI-KIET is a registered body under Society Registration Act 1860 as Krishna Path Incubation Society-TBI in 2007. TBI-KIET was jointly promoted by NSTEDB, Department of Science & Technology, Govt. of India and KIET Group of Institutions, Ghaziabad. The DST, Govt. of India supported initially for 5 years and further it was expected that TBI-KIET should be self supportive. Since 2012 TBI-KIET is self supportive and showing satisfactory growth in terms of no. of startup incubated, mentored and graduated. This is the only incubator across country which promote only first generation entrepreneurs. TBI-KIET has been ranked 8th among all best TBI/STEP by Economic Times on 11/02/2011. Till date 85 incubatees have been promoted and 50 graduated from TBI-KIET. The core strength and thrust area of the TBI-KIET is ICT, Robotics Automation, Solar Energy, Automobile, E-mobility . TBI-KIET has dedicated state of the art, 05 Storyedfurnished building having furnished cubicles alongwith internet and 24×7 power supply. Apart from this we have specialized lab facilities viz. IoT, Fab Lab, D-Link, IoS Apple, Block Chain, NI-LabView Lab and dedicated Innovation lab with robotics facilities. TBI-KIET has strong Governing Body comprises of Representatives from Government, Industry, Bank, R&D Institutions and Academia.”</p>
+            <p className="font-normal text-base leading-6 text-gray-600 mt-6"></p>
+          </div>
+          <div className="lg:flex items-center w-full lg:w-1/2 ">
+            {/* <img className="lg:block hidden w-full" src="https://i.ibb.co/2kxWpNm/Group-740.png" alt="people discussing on board" />
+                    <img className="lg:hidden sm:block hidden w-full h-3/4" src="https://i.ibb.co/ZLgK3NQ/Group-788.png" alt="people discussing on board" /> */}
+            {/* <img className="sm:hidden block w-full" src="https://i.ibb.co/9g2R7Xr/Group-803.png" alt="people discussing on board" /> */}
+            <iframe className='lg:block hidden w-full' width="560" height="290" src="https://www.youtube.com/embed/1jFPnqSC0-U?si=s31SoNhsHzwZO8HH" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+            <iframe className='lg:hidden sm:block hidden w-full h-3/4' width="560" height="290" src="https://www.youtube.com/embed/1jFPnqSC0-U?si=s31SoNhsHzwZO8HH" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+            <iframe className='sm:hidden block w-full' width="560" height="290" src="https://www.youtube.com/embed/1jFPnqSC0-U?si=s31SoNhsHzwZO8HH" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <section className="bg-white  mt-20">
         <div className="max-w-6xl px-6 py-10 mx-auto">
-          <h1 className="mt-2 text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
+          <h1 className="mt-2 text-2xl font-semibold text-gray-800 capitalize lg:text-3xl ">
             SHRI ATUL GARG
           </h1>
-          <p className="text-xl font-medium text-blue-500 ">Hon’ble Minister of State of Medical and Health, Family Welfare, Mother and Child Welfare, Govt. of U.P.</p>
+          <p className="text-xl font-medium text-blue-500 ">Honourable Minister of State of Medical and Health, Family Welfare, Mother and Child Welfare, Govt. of U.P.</p>
 
 
 
@@ -176,9 +176,9 @@ const AboutTbi = () => {
           </main>
         </div>
       </section>
-      <section className="bg-white dark:bg-gray-900 mt-10">
+      <section className="bg-white  mt-10">
         <div className="max-w-6xl px-6 py-10 mx-auto">
-          <h1 className="mt-2 text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
+          <h1 className="mt-2 text-2xl font-semibold text-gray-800 capitalize lg:text-3xl">
             LATE SHRI SATENDRA KUMAR
           </h1>
           <p className="text-xl font-medium text-blue-500 ">(Founder General Manager)</p>
@@ -208,7 +208,7 @@ const AboutTbi = () => {
           </main>
         </div>
       </section>
-      <h1 className="mt-12 mb-5 self-center text-center font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
+      <h1 className="mt-12 mb-5 self-center text-center font-semibold text-gray-800 capitalize lg:text-3xl ">
         Board of Governers
       </h1>
       <Table aria-label="Board of Members" fullWidth={false} isStriped={true}>

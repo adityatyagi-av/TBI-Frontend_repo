@@ -3,31 +3,31 @@ import React from 'react'
 
 const MentorPage = () => {
     return (
-        <section className="bg-white dark:bg-gray-900">
+        <section className="bg-white ">
             <div className="container px-6 py-10 mx-auto">
-                <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">Our <span className="text-blue-500">Mentors</span></h1>
+                <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl ">Our <span className="text-blue-500">Mentors</span></h1>
 
-                <p className="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">
+                <p className="max-w-2xl mx-auto my-6 text-center text-gray-500">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo incidunt ex placeat modi magni quia error alias, adipisci rem similique, at omnis eligendi optio eos harum.
                 </p>
 
                 <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-2">
-                    <div className="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-900 dark:border-gray-700 dark:hover:border-transparent">
+                    <div className="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-900">
                         <div className="flex flex-col sm:-mx-4 sm:flex-row">
 
                             <Image className="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="/aditya.png" alt="" width={96} height={96} />
 
                             <div className="mt-4 sm:mx-4 sm:mt-0">
-                                <h1 className="text-xl font-semibold text-gray-700 capitalize md:text-2xl dark:text-white group-hover:text-white">arthur melo</h1>
+                                <h1 className="text-xl font-semibold text-gray-700 capitalize md:text-2xl  group-hover:text-white">arthur melo</h1>
 
-                                <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">design director</p>
+                                <p className="mt-2 text-gray-500 capitalize group-hover:text-gray-300">design director</p>
                             </div>
                         </div>
 
-                        <p className="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nesciunt officia aliquam neque optio? Cumque facere numquam est.</p>
+                        <p className="mt-4 text-gray-500 capitalize group-hover:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nesciunt officia aliquam neque optio? Cumque facere numquam est.</p>
 
                         <div className="flex mt-4 -mx-2">
-                            <a href="#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">
+                            <a href="#" className="mx-2 text-gray-600 hover:text-gray-500  group-hover:text-white" aria-label="Reddit">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -36,7 +36,7 @@ const MentorPage = () => {
                                 </svg>
                             </a>
 
-                            <a href="#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Facebook">
+                            <a href="#" className="mx-2 text-gray-600 hover:text-gray-500  group-hover:text-white" aria-label="Facebook">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -45,7 +45,7 @@ const MentorPage = () => {
                                 </svg>
                             </a>
 
-                            <a href="#" className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Github">
+                            <a href="#" className="mx-2 text-gray-600 hover:text-gray-500  group-hover:text-white" aria-label="Github">
                                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -55,8 +55,8 @@ const MentorPage = () => {
                             </a>
                         </div>
                     </div>
-                    
-                    
+
+
 
                 </div>
             </div>

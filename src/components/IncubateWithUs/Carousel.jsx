@@ -19,10 +19,10 @@ const responsive = {
         items: 1,
     }
 };
-const schemes=[
-    {id:1},
-    {id:2},
-    {id:3}
+const schemes = [
+    { id: 1 },
+    { id: 2 },
+    { id: 3 }
 ]
 
 
@@ -30,7 +30,7 @@ const SchemeCarousel = () => {
     return (
         <div className="parent">
             <div className="py-5">
-                <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
+                <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl ">
                     Here our Schemes
                 </h1>
 
@@ -52,9 +52,9 @@ const SchemeCarousel = () => {
                 partialVisible={false}
                 dotListclassName="custom-dot-list-style"
             >
-                {schemes.map((scheme,index) => {
+                {schemes.map((scheme, index) => {
                     return (
-                        <SchemeCard key="index"/>
+                        <SchemeCard key="index" />
 
                     );
                 })}
