@@ -4,9 +4,9 @@ import { Player } from '@lottiefiles/react-lottie-player';
 
 function Objectives() {
     return (
-        <div className='max-w-screen-xl mx-auto'>
+        <div className='max-w-screen-xl mx-auto text-gray-700'>
             <section className="px-3 w-full overflow-x-hidden mb-1 ">
-                <div className="grid  px-4 py-6 mx-auto lg:gap-8 xl:gap-0 lg:py-13 lg:grid-cols-10">
+                <div className="grid  px-4 py-6 mx-auto lg:gap-8 xl:gap-0 lg:py-13 lg:grid-cols-10 ">
 
                     <div className="mr-auto place-self-center lg:col-span-5 ">
                         <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl ">

@@ -67,11 +67,11 @@ const UpcomingEvents = () => {
               <h6 className="mb-2 font-semibold leading-5">
                 Iterative approaches to corporate strategy
               </h6>
-              <p className="text-sm text-gray-900">
+              <p className="text-sm text-gray-900 mb-2">
                 A slice of heaven. O for awesome, this chocka full cuzzie is as
                 rip-off as a cracker.
               </p>
-              <Button content={"RSPV NOW"} className="w-7 mx-[20rem] shadow-xl " />
+              <Button content={"RSVP NOW"} />
             </div>
 
           </div>

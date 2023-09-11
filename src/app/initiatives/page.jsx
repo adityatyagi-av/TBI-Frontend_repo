@@ -6,7 +6,7 @@ function page() {
         <section className="text-gray-600 body-font max-w-screen-xl mx-auto">
             <div className="container px-5 py-24">
                 <div className="py-9">
-                    <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
+                    <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl ">
                         Initiatives taken by TBI KIET
                     </h1>
 

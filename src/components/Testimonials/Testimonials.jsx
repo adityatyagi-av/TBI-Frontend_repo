@@ -48,7 +48,7 @@ const Testimonials = () => {
     return (
         <div className="parent">
             <div className="py-9">
-                <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
+                <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl ">
                     What our clients are saying
                 </h1>
 

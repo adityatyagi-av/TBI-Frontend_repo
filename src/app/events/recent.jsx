@@ -4,15 +4,15 @@ import React from 'react'
 const RecentEvents = () => {
     return (
 
-        <section className="bg-white dark:bg-gray-900">
+        <section className="bg-white ">
             <div className="container px-6 py-4 mx-auto">
                 <div className="flex items-center justify-between">
-                    <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white mx-auto">Recent Events </h1>
+                    <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl mx-auto">Recent Events </h1>
 
 
                 </div>
 
-                <hr className="my-8 border-gray-200 dark:border-gray-700" />
+                <hr className="my-8 border-gray-200 " />
 
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
                     <div className='shadow-xl rounded-md '>
@@ -22,22 +22,22 @@ const RecentEvents = () => {
                         <div className="mt-8 p-4">
                             <span className="text-blue-500 uppercase">IN-PERSON</span>
 
-                            <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
+                            <h1 className="mt-4 text-xl font-semibold text-gray-800">
                                 What do you want to know about UI
                             </h1>
 
-                            <p className="mt-2 text-gray-500 dark:text-gray-400">
+                            <p className="mt-2 text-gray-500">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam est asperiores vel, ab animi
                                 recusandae nulla veritatis id tempore sapiente
                             </p>
 
                             <div className="flex items-center justify-between mt-4">
                                 <div>
-                                    <a href="#" className="text-lg font-medium text-gray-700 dark:text-gray-300 hover:underline hover:text-gray-500">
+                                    <a href="#" className="text-lg font-medium text-gray-700 hover:underline hover:text-gray-500">
                                         John snow
                                     </a>
 
-                                    <p className="text-sm text-gray-500 dark:text-gray-400">February 1, 2022</p>
+                                    <p className="text-sm text-gray-500">February 1, 2022</p>
                                 </div>
 
                                 <a href="#" className="inline-block text-blue-500 underline hover:text-blue-400">Read more</a>
@@ -52,22 +52,22 @@ const RecentEvents = () => {
                         <div className="mt-8 p-4">
                             <span className="text-blue-500 uppercase">IN-PERSON</span>
 
-                            <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
+                            <h1 className="mt-4 text-xl font-semibold text-gray-800">
                                 What do you want to know about UI
                             </h1>
 
-                            <p className="mt-2 text-gray-500 dark:text-gray-400">
+                            <p className="mt-2 text-gray-500">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam est asperiores vel, ab animi
                                 recusandae nulla veritatis id tempore sapiente
                             </p>
 
                             <div className="flex items-center justify-between mt-4">
                                 <div>
-                                    <a href="#" className="text-lg font-medium text-gray-700 dark:text-gray-300 hover:underline hover:text-gray-500">
+                                    <a href="#" className="text-lg font-medium text-gray-700  hover:underline hover:text-gray-500">
                                         John snow
                                     </a>
 
-                                    <p className="text-sm text-gray-500 dark:text-gray-400">February 1, 2022</p>
+                                    <p className="text-sm text-gray-500">February 1, 2022</p>
                                 </div>
 
                                 <a href="#" className="inline-block text-blue-500 underline hover:text-blue-400">Read more</a>
@@ -82,22 +82,22 @@ const RecentEvents = () => {
                         <div className="mt-8 p-4">
                             <span className="text-blue-500 uppercase">IN-PERSON</span>
 
-                            <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
+                            <h1 className="mt-4 text-xl font-semibold text-gray-800">
                                 What do you want to know about UI
                             </h1>
 
-                            <p className="mt-2 text-gray-500 dark:text-gray-400">
+                            <p className="mt-2 text-gray-500">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam est asperiores vel, ab animi
                                 recusandae nulla veritatis id tempore sapiente
                             </p>
 
                             <div className="flex items-center justify-between mt-4">
                                 <div>
-                                    <a href="#" className="text-lg font-medium text-gray-700 dark:text-gray-300 hover:underline hover:text-gray-500">
+                                    <a href="#" className="text-lg font-medium text-gray-700  hover:underline hover:text-gray-500">
                                         John snow
                                     </a>
 
-                                    <p className="text-sm text-gray-500 dark:text-gray-400">February 1, 2022</p>
+                                    <p className="text-sm text-gray-500">February 1, 2022</p>
                                 </div>
 
                                 <a href="#" className="inline-block text-blue-500 underline hover:text-blue-400">Read more</a>
@@ -112,22 +112,22 @@ const RecentEvents = () => {
                         <div className="mt-8 p-4">
                             <span className="text-blue-500 uppercase">IN-PERSON</span>
 
-                            <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
+                            <h1 className="mt-4 text-xl font-semibold text-gray-800">
                                 What do you want to know about UI
                             </h1>
 
-                            <p className="mt-2 text-gray-500 dark:text-gray-400">
+                            <p className="mt-2 text-gray-500">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam est asperiores vel, ab animi
                                 recusandae nulla veritatis id tempore sapiente
                             </p>
 
                             <div className="flex items-center justify-between mt-4">
                                 <div>
-                                    <a href="#" className="text-lg font-medium text-gray-700 dark:text-gray-300 hover:underline hover:text-gray-500">
+                                    <a href="#" className="text-lg font-medium text-gray-700  hover:underline hover:text-gray-500">
                                         John snow
                                     </a>
 
-                                    <p className="text-sm text-gray-500 dark:text-gray-400">February 1, 2022</p>
+                                    <p className="text-sm text-gray-500">February 1, 2022</p>
                                 </div>
 
                                 <a href="#" className="inline-block text-blue-500 underline hover:text-blue-400">Read more</a>
@@ -142,22 +142,22 @@ const RecentEvents = () => {
                         <div className="mt-8 p-4">
                             <span className="text-blue-500 uppercase">IN-PERSON</span>
 
-                            <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
+                            <h1 className="mt-4 text-xl font-semibold text-gray-800">
                                 What do you want to know about UI
                             </h1>
 
-                            <p className="mt-2 text-gray-500 dark:text-gray-400">
+                            <p className="mt-2 text-gray-500">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam est asperiores vel, ab animi
                                 recusandae nulla veritatis id tempore sapiente
                             </p>
 
                             <div className="flex items-center justify-between mt-4">
                                 <div>
-                                    <a href="#" className="text-lg font-medium text-gray-700 dark:text-gray-300 hover:underline hover:text-gray-500">
+                                    <a href="#" className="text-lg font-medium text-gray-700  hover:underline hover:text-gray-500">
                                         John snow
                                     </a>
 
-                                    <p className="text-sm text-gray-500 dark:text-gray-400">February 1, 2022</p>
+                                    <p className="text-sm text-gray-500">February 1, 2022</p>
                                 </div>
 
                                 <a href="#" className="inline-block text-blue-500 underline hover:text-blue-400">Read more</a>
@@ -172,22 +172,22 @@ const RecentEvents = () => {
                         <div className="mt-8 p-4">
                             <span className="text-blue-500 uppercase">IN-PERSON</span>
 
-                            <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
+                            <h1 className="mt-4 text-xl font-semibold text-gray-800">
                                 What do you want to know about UI
                             </h1>
 
-                            <p className="mt-2 text-gray-500 dark:text-gray-400">
+                            <p className="mt-2 text-gray-500">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam est asperiores vel, ab animi
                                 recusandae nulla veritatis id tempore sapiente
                             </p>
 
                             <div className="flex items-center justify-between mt-4">
                                 <div>
-                                    <a href="#" className="text-lg font-medium text-gray-700 dark:text-gray-300 hover:underline hover:text-gray-500">
+                                    <a href="#" className="text-lg font-medium text-gray-700  hover:underline hover:text-gray-500">
                                         John snow
                                     </a>
 
-                                    <p className="text-sm text-gray-500 dark:text-gray-400">February 1, 2022</p>
+                                    <p className="text-sm text-gray-500">February 1, 2022</p>
                                 </div>
 
                                 <a href="#" className="inline-block text-blue-500 underline hover:text-blue-400">Read more</a>
@@ -202,22 +202,22 @@ const RecentEvents = () => {
                         <div className="mt-8 p-4">
                             <span className="text-blue-500 uppercase">IN-PERSON</span>
 
-                            <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
+                            <h1 className="mt-4 text-xl font-semibold text-gray-800">
                                 What do you want to know about UI
                             </h1>
 
-                            <p className="mt-2 text-gray-500 dark:text-gray-400">
+                            <p className="mt-2 text-gray-500">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam est asperiores vel, ab animi
                                 recusandae nulla veritatis id tempore sapiente
                             </p>
 
                             <div className="flex items-center justify-between mt-4">
                                 <div>
-                                    <a href="#" className="text-lg font-medium text-gray-700 dark:text-gray-300 hover:underline hover:text-gray-500">
+                                    <a href="#" className="text-lg font-medium text-gray-700  hover:underline hover:text-gray-500">
                                         John snow
                                     </a>
 
-                                    <p className="text-sm text-gray-500 dark:text-gray-400">February 1, 2022</p>
+                                    <p className="text-sm text-gray-500">February 1, 2022</p>
                                 </div>
 
                                 <a href="#" className="inline-block text-blue-500 underline hover:text-blue-400">Read more</a>
@@ -232,22 +232,22 @@ const RecentEvents = () => {
                         <div className="mt-8 p-4">
                             <span className="text-blue-500 uppercase">IN-PERSON</span>
 
-                            <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
+                            <h1 className="mt-4 text-xl font-semibold text-gray-800">
                                 What do you want to know about UI
                             </h1>
 
-                            <p className="mt-2 text-gray-500 dark:text-gray-400">
+                            <p className="mt-2 text-gray-500">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam est asperiores vel, ab animi
                                 recusandae nulla veritatis id tempore sapiente
                             </p>
 
                             <div className="flex items-center justify-between mt-4">
                                 <div>
-                                    <a href="#" className="text-lg font-medium text-gray-700 dark:text-gray-300 hover:underline hover:text-gray-500">
+                                    <a href="#" className="text-lg font-medium text-gray-700  hover:underline hover:text-gray-500">
                                         John snow
                                     </a>
 
-                                    <p className="text-sm text-gray-500 dark:text-gray-400">February 1, 2022</p>
+                                    <p className="text-sm text-gray-500">February 1, 2022</p>
                                 </div>
 
                                 <a href="#" className="inline-block text-blue-500 underline hover:text-blue-400">Read more</a>
