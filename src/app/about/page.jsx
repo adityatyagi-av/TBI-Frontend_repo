@@ -4,6 +4,7 @@ import { Tabs, Tab, Card, CardBody } from "@nextui-org/react";
 import AboutTbi from "./abouttbi";
 import Teams from "./teams";
 import Objectives from "./Objectives";
+import Milestones from "./Milestones";
 
 
 export default function About() {
@@ -17,7 +18,7 @@ export default function About() {
           <Objectives />
         </Tab>
         <Tab key="milestones" title="Milestones">
-          <Teams />
+          <Milestones />
         </Tab>
         <Tab key="teams" title="Teams">
           <Teams />
