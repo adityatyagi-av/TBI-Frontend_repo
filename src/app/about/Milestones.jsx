@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
+import Button from '@/components/Button/Button'
 import React from 'react'
 
 function Milestones() {
@@ -14,17 +15,14 @@ function Milestones() {
                             Here is your guide to the tech fest 2021 process. Go through all the steps to know the exact process of the
                             fest.
                         </p>
-                        <a href="#"
-                            className="bg-transparent mr-auto hover:bg-blue-800 text-blue-900 rounded shadow hover:shadow-lg py-2 px-4 border border-blue-900 hover:border-transparent">
-                            Explore Now</a>
+                        <div className='w-1/2'>
+
+                            <Button content={'Explore'} />
+                        </div>
                     </div>
                     <div className="ml-0 md:ml-12 lg:w-2/3 sticky">
                         <div className="container mx-auto w-full h-full">
                             <div className="relative wrap overflow-hidden p-10 h-full">
-                                {/* <div className="border-2-2 border-yellow-555 absolute h-full border right-1/2 "
-                                    style="right: 50%; border: 2px solid #FFC100; border-radius: 1%;"></div>
-                                <div className="border-2-2 border-yellow-555 absolute h-full border"
-                                    style="left: 50%; border: 2px solid #FFC100; border-radius: 1%;"></div> */}
                                 <div className="border-2 border-blue-900 absolute h-full right-1/2 transform translate-x-1/2"></div>
                                 <div className="border-2 border-blue-900 absolute h-full left-1/2 transform -translate-x-1/2"></div>
 
