@@ -1,6 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link'
 import React from 'react'
-import Image from 'next/image'
 
 const Support = () => {
   return (
@@ -15,7 +15,9 @@ const Support = () => {
           >
             <path d="M50 0H100L50 100H0L50 0Z" />
           </svg>
-          <Image
+          <img
+            width={100}
+            height={100}
             className="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
             src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
             alt=""
@@ -181,21 +183,21 @@ const Support = () => {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-5">
-            <Image
+            <img
               width={100}
               height={100}
               className="object-cover w-full h-56 col-span-2 rounded shadow-lg"
               src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
               alt=""
             />
-            <Image
+            <img
               width={100}
               height={100}
               className="object-cover w-full h-48 rounded shadow-lg"
               src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
               alt=""
             />
-            <Image
+            <img
               width={100}
               height={100}
               className="object-cover w-full h-48 rounded shadow-lg"
@@ -337,7 +339,7 @@ const Support = () => {
               </div>
             </div>
             <div>
-              <Image
+              <img
                 width={100}
                 height={100}
                 className="object-cover w-full h-56 rounded shadow-lg sm:h-96"
