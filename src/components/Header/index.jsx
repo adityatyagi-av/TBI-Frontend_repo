@@ -27,38 +27,38 @@ export default function Header() {
       <NavbarContent className="hidden sm:flex gap-6 focus:underline" justify="center" >
 
         <NavbarItem>
-          <Link href="/about" className=" text-gray-700 hover:text-blue-900 text-md font-normal active:text-blue-900 focus:text-xl focus:text-blue-900">
+          <Link href="/about" className=" text-gray-700 hover:text-blue-900 text-md font-normal active:text-blue-900 focus:text-blue-900">
             About
           </Link>
         </NavbarItem>
         <NavbarItem >
-          <Link href="/events" className=" text-gray-700 hover:text-blue-900 text-md font-normal active:text-blue-900 focus:text-xl focus:text-blue-900">
+          <Link href="/events" className=" text-gray-700 hover:text-blue-900 text-md font-normal active:text-blue-900 focus:text-blue-900">
             Events
           </Link>
         </NavbarItem>
         <NavbarItem >
-          <Link href="/mentors" className=" text-gray-700 hover:text-blue-900 text-md font-normal active:text-blue-900 focus:text-xl focus:text-blue-900">
+          <Link href="/mentors" className=" text-gray-700 hover:text-blue-900 text-md font-normal active:text-blue-900 focus:text-blue-900">
             Mentors
           </Link>
         </NavbarItem>
         <NavbarItem >
-          <Link href="/incubation" className=" text-gray-700 hover:text-blue-900 text-md font-normal active:text-blue-900 focus:text-xl focus:text-blue-900">
+          <Link href="/incubation" className=" text-gray-700 hover:text-blue-900 text-md font-normal active:text-blue-900 focus:text-blue-900">
             Incubation
           </Link>
         </NavbarItem>
         <NavbarItem >
-          <Link href="/facilities" className=" text-gray-700 hover:text-blue-900 text-md font-normal active:text-blue-900 focus:text-xl focus:text-blue-900">
+          <Link href="/facilities" className=" text-gray-700 hover:text-blue-900 text-md font-normal active:text-blue-900 focus:text-blue-900">
             Facilities
           </Link>
         </NavbarItem>
         <NavbarItem >
-          <Link href="/gallery" className=" text-gray-700 hover:text-blue-900 text-md font-normal active:text-blue-900 focus:text-xl focus:text-blue-900">
+          <Link href="/gallery" className=" text-gray-700 hover:text-blue-900 text-md font-normal active:text-blue-900 focus:text-blue-900">
             Gallery
           </Link>
 
         </NavbarItem>
         <NavbarItem >
-          <Link href="/contact" className=" text-gray-700 hover:text-blue-900 text-md font-normal active:text-blue-900 focus:text-xl focus:text-blue-900">
+          <Link href="/contact" className=" text-gray-700 hover:text-blue-900 text-md font-normal active:text-blue-900 focus:text-blue-900">
             Contact
           </Link>
         </NavbarItem>
@@ -68,7 +68,7 @@ export default function Header() {
 
       <NavbarMenu justify="end">
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`} className=" text-gray-700 hover:text-blue-900 text-md font-normal active:text-blue-900 focus:text-xl focus:text-blue-900" >
+          <NavbarMenuItem key={`${item}-${index}`} className=" text-gray-700 hover:text-blue-900 text-md font-normal active:text-blue-900 focus:text-blue-900" >
             <Link
               color={
                 index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"

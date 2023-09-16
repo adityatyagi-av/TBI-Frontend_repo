@@ -16,11 +16,11 @@ const MyCarousel = () => {
 
         containerclassName="container-with-dots"
         customTransition="all 1s linear"
-        dotListclassName=""
+        dotList
         draggable
         focusOnSelect={true}
         infinite
-        itemclassName=""
+        item
         keyBoardControl
         minimumTouchDrag={80}
         pauseOnHover
@@ -58,7 +58,7 @@ const MyCarousel = () => {
         rtl={false}
         shouldResetAutoplay
         showDots={false}
-        sliderclassName=""
+        slider
         slidesToSlide={2}
         swipeable
         transitionDuration={1000}

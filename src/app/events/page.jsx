@@ -1,7 +1,7 @@
 'use client'
 import React from "react";
 import { Tabs, Tab } from "@nextui-org/react";
-import UpcomingEvents from "./upcoming";
+import UpcomingEvents from "./UpcomingEvents";
 import RecentEvents from "./PastEvents";
 
 

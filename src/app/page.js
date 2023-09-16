@@ -8,13 +8,15 @@ import Testimonials from '@/components/Testimonials/Testimonials'
 
 export default function Home() {
   return (
-
-    <main className="overflow-hidden font-poppins max-w-screen-xl mx-auto ">
-      <Hero />
-      <MyCarousel />
-      <Stats />
-      <Testimonials />
-      <Newsletter />
-    </main>
+    <>
+      <title>TBI-KIET</title>
+      <main className="overflow-hidden font-poppins max-w-screen-xl mx-auto ">
+        <Hero />
+        <MyCarousel />
+        <Stats />
+        <Testimonials />
+        <Newsletter />
+      </main>
+    </>
   )
 }
