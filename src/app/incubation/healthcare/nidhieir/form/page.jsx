@@ -12,9 +12,11 @@ const SignupForm = () => {
   const formik = useFormik({
     initialValues: {
       name: '',
-      phone:'',
+      phoneNumber:'',
       email: '',
       dateOfBirth:'',
+      gender:'',
+      category:'',
     },
     validationSchema: Yup.object({
       name: Yup.string()
@@ -27,10 +29,11 @@ const SignupForm = () => {
         dateOfBirth: Yup.date()
           .max(today, 'Date of birth cannot be in the future')
           .required('Required')
-          .test('is-old-enough', 'Must be at least 12 years old', function (value) {
+          .test('is-old-enough', 'Must be at least 15 years old', function (value) {
             return Yup.date().max(minDate).isValidSync(value);
           }),
-
+          gender: Yup.string().required('Required'),
+          category: Yup.string().required('Required'),
     }),
     onSubmit: values => {
       alert(JSON.stringify(values, null, 2));
@@ -118,6 +121,118 @@ const SignupForm = () => {
                             <div className="ml-7 text-xs text-red-300">{formik.errors.dateOfBirth}</div>
                           ) : null}
                         </div>
+                       
+                        <div className="relative pb-2 ml-2">
+                          <label className="block text-gray-600 text-sm font-bold mb-2">Gender</label>
+                          <div className="flex">
+                            <label className="inline-flex items-center mr-4">
+                              <input
+                                type="radio"
+                                id="gender-male"
+                                name="gender"
+                                value="male"
+                                checked={formik.values.gender === 'male'}
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                className="form-radio text-blue-500 h-4 w-4"
+                              />
+                              <span className="ml-2">Male</span>
+                            </label>
+                            <label className="inline-flex items-center mr-4">
+                              <input
+                                type="radio"
+                                id="gender-female"
+                                name="gender"
+                                value="female"
+                                checked={formik.values.gender === 'female'}
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                className="form-radio text-pink-500 h-4 w-4"
+                              />
+                              <span className="ml-2">Female</span>
+                            </label>
+                            <label className="inline-flex items-center">
+                              <input
+                                type="radio"
+                                id="gender-other"
+                                name="gender"
+                                value="other"
+                                checked={formik.values.gender === 'other'}
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                className="form-radio text-green-500 h-4 w-4"
+                              />
+                              <span className="ml-2">Other</span>
+                            </label>
+                          </div>
+                          {formik.touched.gender && formik.errors.gender ? (
+                            <div className="ml-7 text-xs text-red-300">{formik.errors.gender}</div>
+                          ) : null}
+                        </div>
+                        <div className="relative pb-2 ml-2">
+                          <label className="block text-gray-600 text-sm font-bold mb-2">Category</label>
+                          <div className="flex flex-row">
+                            <label className="inline-flex items-center mr-4">
+                              <input
+                                type="radio"
+                                id="category-general"
+                                name="category"
+                                value="general"
+                                checked={formik.values.category === 'general'}
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                className="form-radio text-blue-500 h-4 w-4"
+                              />
+                              <span className="ml-2">General</span>
+                            </label>
+                            <label className="inline-flex items-center mr-4">
+                              <input
+                                type="radio"
+                                id="category-obc"
+                                name="category"
+                                value="obc"
+                                checked={formik.values.category === 'obc'}
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                className="form-radio text-blue-500 h-4 w-4"
+                              />
+                              <span className="ml-2">OBC</span>
+                            </label>
+                            <label className="inline-flex items-center mr-4">
+                              <input
+                                type="radio"
+                                id="category-sc"
+                                name="category"
+                                value="sc"
+                                checked={formik.values.category === 'sc'}
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                className="form-radio text-blue-500 h-4 w-4"
+                              />
+                              <span className="ml-2">SC</span>
+                            </label>
+                            <label className="inline-flex items-center mr-4">
+                              <input
+                                type="radio"
+                                id="category-st"
+                                name="category"
+                                value="st"
+                                checked={formik.values.category === 'st'}
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                className="form-radio text-blue-500 h-4 w-4"
+                              />
+                              <span className="ml-2">ST</span>
+                            </label>
+                           
+                           
+                          </div>
+                          {formik.touched.gender && formik.errors.gender ? (
+                            <div className="ml-7 text-xs text-red-300">{formik.errors.gender}</div>
+                          ) : null}
+                        </div>
+                        
+
 
 
                         
