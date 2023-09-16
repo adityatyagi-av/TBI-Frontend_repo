@@ -1,8 +1,8 @@
 'use client'
 import React from "react";
-import { Tabs, Tab} from "@nextui-org/react";
-import UpcomingEvents from "./upcoming";
-import RecentEvents from "./recent";
+import { Tabs, Tab } from "@nextui-org/react";
+import UpcomingEvents from "./UpcomingEvents";
+import RecentEvents from "./PastEvents";
 
 
 
@@ -14,12 +14,9 @@ const Events = () => {
         <Tab key="upcomingevents" title="Upcoming Events">
           <UpcomingEvents />
         </Tab>
-        <Tab key="recentevents" title="Recent Events">
+        <Tab key="pastevents" title="Past Events">
           <RecentEvents />
         </Tab>
-
-
-
       </Tabs>
     </div>
   )

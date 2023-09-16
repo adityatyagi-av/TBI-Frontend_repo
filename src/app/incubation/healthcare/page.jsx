@@ -6,7 +6,7 @@ import Image from 'next/image'
 function page() {
     return (
         <>
-            <div className="">
+            <div >
                 <div className="pb-20">
                     <div className="mx-auto bg-gradient-to-l from-blue-900 to-blue-700 h-96">
                         <div className="mx-auto container w-full flex flex-col justify-center items-center">
