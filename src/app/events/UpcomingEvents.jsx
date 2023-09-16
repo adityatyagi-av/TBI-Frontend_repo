@@ -1,6 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
+import Button from '@/components/Button/Button';
 import React from 'react'
+import { Chip } from "@nextui-org/react";
+import JoinUs from './JoinUs';
 
 const UpcomingEvents = () => {
   return (
@@ -33,7 +36,7 @@ const UpcomingEvents = () => {
             </div>
           </div>
 
-          <div className=" lg:w-1/3 lg:mx-auto lg:-mt-9 mt-4 ">
+          <div className=" lg:w-1/3 lg:mx-auto lg:-mt-12 mt-4 ">
             <div className=" overflow-hidden bg-white ">
               <div className='pb-3'>
                 <iframe title='google' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3497.8737422744807!2d77.49449147624586!3d28.753186378590044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf574d18f2b6f%3A0x4a65c0bc0122eb2f!2sKIET%20Group%20of%20Institutions!5e0!3m2!1sen!2sin!4v1689486947062!5m2!1sen!2sin" className='border-0 w-full h-full rounded-md shadow-sm' allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
@@ -61,55 +64,59 @@ const UpcomingEvents = () => {
 
 
         </div>
-        <div class="p-8 mt-8 space-y-8 bg-gray-100 dark:bg-gray-800 rounded-xl">
-          <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-            <p class="textlg sm:text-xl">Unlimited Links</p>
+        <div className='mt-7 lg:-mx-6 lg:flex lg:items-center'>
+          <div className='w-full lg:w-[48%] '>
+            <div class="p-8 mt-8 space-y-8 rounded-lg">
+              <h2 className="text-2xl font-semibold font-poppins capitalize lg:text-3xl ">
+                Details of Events
+              </h2>
+              <div class="flex items-center justify-between">
+                <p class="font-poppins text-lg sm:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+              </div>
 
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
+              <div class="flex items-center justify-between">
+                <p class="font-poppins text-lg sm:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+              </div>
+
+              <div class="flex items-center justify-between">
+                <p class="font-poppins text-lg sm:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+              </div>
+
+              <div class="flex items-center justify-between">
+                <p class="font-poppins text-lg sm:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+              </div>
+              <div class="flex items-center justify-between">
+                <p class="font-poppins text-lg sm:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+              </div>
+            </div>
           </div>
 
-          <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-            <p class="textlg sm:text-xl">Own analytics platfrom</p>
 
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-          </div>
-
-          <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-            <p class="textlg sm:text-xl">Full Support with discussion</p>
-
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-          </div>
-
-          <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-            <p class="textlg sm:text-xl">Optimize hashtags</p>
-
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-400 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd" />
-            </svg>
-          </div>
-
-          <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-            <p class="textlg sm:text-xl">Mobile app</p>
-
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-          </div>
-
-          <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-            <p class="textlg sm:text-xl">Unlimited users</p>
-
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-400 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd" />
-            </svg>
+          <div className='w-full lg:w-1/3 mx-auto'>
+            <div class="p-8 mt-8 space-y-8">
+              <h2 className="text-2xl font-semibold font-poppins capitalize lg:text-3xl ">
+                Register Now
+              </h2>
+              <div class="flex items-center justify-between">
+                <p class="font-poppins text-md sm:text-lg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad repellat dolorum quae, ex harum adipisci?</p>
+              </div>
+              <Button content={'RSVP NOW'} />
+              <br />
+              <div >
+                <Chip className='mx-2 my-2' size="md">Large</Chip>
+                <Chip className='mx-2 my-2' size="md">Large</Chip>
+                <Chip className='mx-2 my-2' size="md">Large</Chip>
+                <Chip className='mx-2 my-2' size="md">Large</Chip>
+                <Chip className='mx-2 my-2' size="md">Large</Chip>
+                <Chip className='mx-2 my-2' size="md">Large</Chip>
+                <Chip className='mx-2 my-2' size="md">Large</Chip>
+                <Chip className='mx-2 my-2' size="md">Large</Chip>
+                <Chip className='mx-2 my-2' size="md">Large</Chip>
+              </div>
+            </div>
           </div>
         </div>
+        <JoinUs />
       </div >
     </section >
   );
