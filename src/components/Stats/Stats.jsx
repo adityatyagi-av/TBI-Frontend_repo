@@ -5,11 +5,19 @@ import EachStatsCard from './EachStatsCard'
 function Stats() {
     return (
         <section className="text-gray-600 body-font max-w-screen-xl mx-auto">
-            <div className="container px-5 py-24 mx-auto">
-                <div className="flex flex-col w-full mb-20">
-                    <h3 className="text-2xl font-semibold text-gray-800 lg:text-4xl px-3">Some <span className='text-secondary'>Statistics</span></h3>
+            <div className="container py-7 mx-auto">
+                <div className="py-9">
+                    <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl ">
+                        Some Statistics
+                    </h1>
+
+                    <div className="flex mx-auto mt-6">
+                        <span className="inline-block w-40 h-1 bg-blue-900 rounded-full"></span>
+                        <span className="inline-block w-3 h-1 mx-1 bg-blue-900 rounded-full"></span>
+                        <span className="inline-block w-1 h-1 bg-blue-900 rounded-full"></span>
+                    </div>
                 </div>
-                <div className="flex flex-wrap -m-4 text-center">
+                <div className="flex flex-wrap text-center">
                     <EachStatsCard end={987}
                         content={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, officiis.'}
                         bg={'bg-secondary'}
