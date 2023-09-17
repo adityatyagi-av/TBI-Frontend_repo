@@ -17,6 +17,9 @@ const SignupForm = () => {
       dateOfBirth:'',
       gender:'',
       category:'',
+      address:'',
+      education:'',
+      experience:'',
     },
     validationSchema: Yup.object({
       name: Yup.string()
@@ -34,6 +37,9 @@ const SignupForm = () => {
           }),
           gender: Yup.string().required('Required'),
           category: Yup.string().required('Required'),
+          address: Yup.string().required('Required'),
+          education: Yup.string().required('Required'),
+          experience: Yup.string().required('Required'),
     }),
     onSubmit: values => {
       alert(JSON.stringify(values, null, 2));
@@ -62,7 +68,11 @@ const SignupForm = () => {
                     Personal Information
                 </h2>
                 <div className="max-w-sm mx-auto md:w-2/3">
-                    <div className=" relative mb-2">
+                  {/* NAME SECTION */}
+                    <div className=" relative mb-3">
+                    <label className="block text-gray-600 text-sm font-bold ml-1.5 mb-.5">Name {formik.touched.name && formik.errors.name ? (
+                              <span className=' text-xs text-red-500 mb-.5'>{`(${formik.errors.name}*)`}</span>
+                            ) : null}</label>
                         <input  id="name"
                           name="name"
                           type="text"
@@ -71,12 +81,13 @@ const SignupForm = () => {
                           value={formik.values.name} 
                           className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent" 
                           placeholder="Name of the Applicant"/>
-                          {formik.touched.name && formik.errors.name ? (
-                              <div className='ml-7 text-xs text-red-300'>{formik.errors.name}</div>
-                            ) : null}
+                          
                         </div>
-                        {/* code for email */}
-                        <div className=" relative mb-2 ">
+                        {/* EMAIL SECTION */}
+                        <div className=" relative mb-3 ">
+                        <label className="block text-gray-600 text-sm font-bold ml-1.5 mb-.5">Email {formik.touched.email && formik.errors.email ? (
+                              <span className=' text-xs text-red-500 mb-.5'>{`(${formik.errors.email}*)`}</span>
+                            ) : null}</label>
                         <input  id="email"
                           name="email"
                           type="text"
@@ -85,12 +96,14 @@ const SignupForm = () => {
                           value={formik.values.email} 
                           className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent" 
                           placeholder="E-mail"/>
-                          {formik.touched.email && formik.errors.email ? (
-                              <div className='ml-7 text-xs text-red-300'>{formik.errors.email}</div>
-                            ) : null}
                         </div>
-                        {/* code for phone number */}
-                        <div className="relative mb-2">
+
+
+                        {/*PHONE NUMBER SECTION */}
+                        <div className="relative mb-3">
+                        <label className="block text-gray-600 text-sm font-bold ml-1.5 mb-.5">Phone Number {formik.touched.phoneNumber && formik.errors.phoneNumber ? (
+                              <span className=' text-xs text-red-500 mb-.5'>{`(${formik.errors.phoneNumber}*)`}</span>
+                            ) : null}</label>
                           <input
                             id="phoneNumber"
                             name="phoneNumber" 
@@ -101,12 +114,13 @@ const SignupForm = () => {
                             className="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
                             placeholder="Phone Number"
                           />
-                          {formik.touched.phoneNumber && formik.errors.phoneNumber ? (
-                            <div className="ml-7 text-xs text-red-300">{formik.errors.phoneNumber}</div>
-                          ) : null}
+                          
                         </div>
 
-                        <div className="relative pb-2">
+                        <div className="relative mb-3">
+                        <label className="block text-gray-600 text-sm font-bold ml-1.5 mb-.5">Enter D.O.B {formik.touched.dateOfBirth && formik.errors.dateOfBirth ? (
+                              <span className=' text-xs text-red-500 mb-.5'>{`(${formik.errors.dateOfBirth}*)`}</span>
+                            ) : null}</label>
                           <input
                             id="dateOfBirth"
                             name="dateOfBirth"
@@ -117,14 +131,15 @@ const SignupForm = () => {
                             className="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
                             placeholder="Date of Birth"
                           />
-                          {formik.touched.dateOfBirth && formik.errors.dateOfBirth ? (
-                            <div className="ml-7 text-xs text-red-300">{formik.errors.dateOfBirth}</div>
-                          ) : null}
+                          
                         </div>
-                       
-                        <div className="relative pb-2 ml-2">
-                          <label className="block text-gray-600 text-sm font-bold mb-2">Gender</label>
-                          <div className="flex">
+
+                       {/* GENDER SECTION */}
+                        <div className="relative mb-3 ">
+                        <label className="block text-gray-600 text-sm font-bold ml-1.5 mb-.5">Gender {formik.touched.gender && formik.errors.gender ? (
+                              <span className=' text-xs text-red-500 mb-.5'>{`(${formik.errors.gender}*)`}</span>
+                            ) : null}</label>
+                          <div className="flex ml-1.5">
                             <label className="inline-flex items-center mr-4">
                               <input
                                 type="radio"
@@ -165,13 +180,14 @@ const SignupForm = () => {
                               <span className="ml-2">Other</span>
                             </label>
                           </div>
-                          {formik.touched.gender && formik.errors.gender ? (
-                            <div className="ml-7 text-xs text-red-300">{formik.errors.gender}</div>
-                          ) : null}
                         </div>
-                        <div className="relative pb-2 ml-2">
-                          <label className="block text-gray-600 text-sm font-bold mb-2">Category</label>
-                          <div className="flex flex-row">
+
+                        {/* CATEGORY SECTION */}
+                        <div className="relative mb-3">
+                        <label className="block text-gray-600 text-sm font-bold ml-1.5 mb-.5">Category {formik.touched.category && formik.errors.category ? (
+                              <span className=' text-xs text-red-500 mb-.5'>{`(${formik.errors.category}*)`}</span>
+                            ) : null}</label>
+                          <div className="flex flex-row ml-1.5">
                             <label className="inline-flex items-center mr-4">
                               <input
                                 type="radio"
@@ -227,51 +243,76 @@ const SignupForm = () => {
                            
                            
                           </div>
-                          {formik.touched.gender && formik.errors.gender ? (
-                            <div className="ml-7 text-xs text-red-300">{formik.errors.gender}</div>
-                          ) : null}
+                          
                         </div>
-                        
 
-
-
-                        
+                        {/* ADDRESS DIV */}
+                        <div className=" relative mb-3">
+                        <label className="block text-gray-600 text-sm font-bold ml-1.5 mb-.5">Postal Address {formik.touched.address && formik.errors.address ? (
+                              <span className=' text-xs text-red-500 mb-.5'>{`(${formik.errors.address}*)`}</span>
+                            ) : null}</label>
+                        <textarea  id="address"
+                          name="address"
+                          type="textarea"
+                          onChange={formik.handleChange}
+                          onBlur={formik.handleBlur}
+                          value={formik.values.address} 
+                          className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent" 
+                          placeholder="Full Postal Address"/>
+                          
+                        </div> 
                     </div>
                 </div>
+
                 <hr/>
+                
+                {/*  */}
+                {/*  QUALIFICATIONS */}
+                {/*  */}
+
                 <div className="items-center w-full p-4 space-y-4 text-gray-500 md:inline-flex md:space-y-0">
                     <h2 className="max-w-sm mx-auto md:w-1/3">
-                        Personal info
+                        Qualifications
                     </h2>
                     <div className="max-w-sm mx-auto space-y-5 md:w-2/3">
                         <div>
-                            <div className=" relative ">
-                                <input type="text" id="user-info-name" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Name of Applicant"/>
-                                </div>
-                            </div>
-                            <div>
-                            <div className=" relative ">
-                                <input type="text" id="use" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Name"/>
-                                </div>
-                            </div>
-                            <div>
-                            <div className=" relative ">
-                                <input type="text" id="use" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Name"/>
-                                </div>
-                            </div>
-                            <div>
-                            <div className=" relative ">
-                                <input type="text" id="use" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Name"/>
-                                </div>
-                            </div>
+                           {/* Education DIV*/}
+                        <div className=" relative mb-3">
+                        <label className="block text-gray-600 text-sm font-bold ml-1.5 mb-.5">Basic undergraduate training/education {formik.touched.education && formik.errors.education ? (
+                              <span className=' text-xs text-red-500 mb-.5'>{`(${formik.errors.education}*)`}</span>
+                            ) : null}</label>
+                        <textarea  id="education"
+                          name="education"
+                          type="textarea"
+                          onChange={formik.handleChange}
+                          onBlur={formik.handleBlur}
+                          value={formik.values.education} 
+                          className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent" 
+                          placeholder="Enter your educational Qualifications"/>
+                          
+                        </div> 
+                          {/* Experience DIV*/}
+                          <div className=" relative mb-3">
+                        <label className="block text-gray-600 text-sm font-bold ml-1.5 mb-.5">Any experiences relating to entrepreneurship, leadership, fund raising, organizing activities/ events etc. {formik.touched.experience && formik.errors.experience ? (
+                              <span className=' text-xs text-red-500 mb-.5'>{`(${formik.errors.experience}*)`}</span>
+                            ) : null}</label>
+                        <textarea  id="experience"
+                          name="experience"
+                          type="textarea"
+                          onChange={formik.handleChange}
+                          onBlur={formik.handleBlur}
+                          value={formik.values.experience} 
+                          className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent" 
+                          placeholder="Enter your Experience"/>
+                          
+                        </div> 
 
-                            
-                            <div>
-                                <div className=" relative ">
-                                    <input type="text" id="user-info-phone" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Phone number"/>
-                                    </div>
-                                </div>
-                            </div>
+
+
+
+
+                        </div>
+                        </div>
                         </div>
                         <hr/>
                        
