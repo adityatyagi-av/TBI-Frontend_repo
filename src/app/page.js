@@ -1,10 +1,10 @@
 import MyCarousel from '@/components/Carousel/Carousel'
+import FAQ from '@/components/FAQ/FAQ'
 import Hero from '@/components/Hero/Hero'
 import KeyPoints from '@/components/KeyPoints/Facilities'
 import Stats from '@/components/Stats/Stats'
 import Testimonials from '@/components/Testimonials/Testimonials'
 import TopMentors from '@/components/TopMentors/TopMentors'
-
 
 
 export default function Home() {
@@ -18,6 +18,7 @@ export default function Home() {
         <TopMentors />
         <KeyPoints />
         <Testimonials />
+        <FAQ />
       </main>
     </>
   )
