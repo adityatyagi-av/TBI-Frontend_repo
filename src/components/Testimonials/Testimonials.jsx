@@ -46,7 +46,7 @@ const testimonialsData = [
 ];
 const Testimonials = () => {
     return (
-        <div className="parent">
+        <div className="parent sm:py-16 py-6">
             <div className="py-9">
                 <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl ">
                     What our clients are saying

@@ -1,9 +1,10 @@
 import MyCarousel from '@/components/Carousel/Carousel'
+import FAQ from '@/components/FAQ/FAQ'
 import Hero from '@/components/Hero/Hero'
-import Newsletter from '@/components/Newsletter/Newsletter'
+import KeyPoints from '@/components/KeyPoints/Facilities'
 import Stats from '@/components/Stats/Stats'
 import Testimonials from '@/components/Testimonials/Testimonials'
-// import Image from 'next/image'
+import TopMentors from '@/components/TopMentors/TopMentors'
 
 
 export default function Home() {
@@ -14,8 +15,10 @@ export default function Home() {
         <Hero />
         <MyCarousel />
         <Stats />
+        <TopMentors />
+        <KeyPoints />
         <Testimonials />
-        <Newsletter />
+        <FAQ />
       </main>
     </>
   )
