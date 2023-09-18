@@ -6,7 +6,6 @@ import Image from 'next/image';
 const MyCarousel = () => {
   return (
     <div>
-      <h3 className="text-lg font-semibold text-gray-800 md:text-xl lg:text-2xl px-3 text-center">Our <span className='text-secondary'>Sponsors</span></h3>
       <Carousel className="mx-auto py-14"
         additionalTransfrom={0}
         arrows={false}
@@ -63,14 +62,14 @@ const MyCarousel = () => {
         swipeable
         transitionDuration={1000}
       >
-        <Image src="/tbilogo.svg" width={50} height={50} alt="image" />
-        <Image src="/tbilogo.svg" width={50} height={50} alt="image" />
-        <Image src="/tbilogo.svg" width={50} height={50} alt="image" />
-        <Image src="/tbilogo.svg" width={50} height={50} alt="image" />
-        <Image src="/tbilogo.svg" width={50} height={50} alt="image" />
-        <Image src="/tbilogo.svg" width={50} height={50} alt="image" />
-        <Image src="/tbilogo.svg" width={50} height={50} alt="image" />
-        <Image src="/tbilogo.svg" width={50} height={50} alt="image" />
+        <Image src="/tesla.svg" width={150} height={150} alt="image" />
+        <Image src="/tesla.svg" width={150} height={150} alt="image" />
+        <Image src="/tesla.svg" width={150} height={150} alt="image" />
+        <Image src="/tesla.svg" width={150} height={150} alt="image" />
+        <Image src="/tesla.svg" width={150} height={150} alt="image" />
+        <Image src="/tesla.svg" width={150} height={150} alt="image" />
+        <Image src="/tesla.svg" width={150} height={150} alt="image" />
+        <Image src="/tesla.svg" width={150} height={150} alt="image" />
       </Carousel>
     </div>
   )
