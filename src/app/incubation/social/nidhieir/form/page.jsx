@@ -1,323 +1,213 @@
 "use client"
-import React, { useState } from 'react';
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Stepper from '@mui/material/Stepper';
+import Step from '@mui/material/Step';
+import StepLabel from '@mui/material/StepLabel';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 import { useFormik } from 'formik';
-import * as Yup from 'yup';
-import { ProgressBar, Step } from 'react-step-progress-bar';
-import 'react-step-progress-bar/styles.css';
+import * as yup from 'yup';
 
-const SignupForm = () => {
-  const [currentStep, setCurrentStep] = useState(0);
 
-  const steps = [
-    { label: 'Qualifications', validator: validateStep1 },
-    // { label: 'Qualifications', validator: validateStep2 },
-    { label: 'Additional Information', validator: validateStep2 },
-  ];
+const steps = ['Personal Info', 'Qualifications', 'Experience'];
+
+export default function HorizontalLinearStepper() {
+  const [activeStep, setActiveStep] = React.useState(0);
+  const [skipped, setSkipped] = React.useState(new Set());
+
+  const isStepOptional = (step) => {
+    return step === 1;
+  };
+
+  const isStepSkipped = (step) => {
+    return skipped.has(step);
+  };
+
+  const handleNext = () => {
+    let newSkipped = skipped;
+    if (isStepSkipped(activeStep)) {
+      newSkipped = new Set(newSkipped.values());
+      newSkipped.delete(activeStep);
+    }
+
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    setSkipped(newSkipped);
+  };
+
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  };
+
+  const handleSkip = () => {
+    if (!isStepOptional(activeStep)) {
+      // You probably want to guard against something like this,
+      // it should never occur unless someone's actively trying to break something.
+      throw new Error("You can't skip a step that isn't optional.");
+    }
+
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    setSkipped((prevSkipped) => {
+      const newSkipped = new Set(prevSkipped.values());
+      newSkipped.add(activeStep);
+      return newSkipped;
+    });
+  };
+
+  const validationSchema = yup.object({
+    email: yup
+      .string('Enter your email')
+      .email('Enter a valid email')
+      .required('Email is required'),
+    password: yup
+      .string('Enter your password')
+      .min(8, 'Password should be of minimum 8 characters length')
+      .required('Password is required'),
+  });
+
 
   const formik = useFormik({
     initialValues: {
-      name: '',
-      email: '',
-      dateOfBirth: '',
-      gender: '',
-      category: '',
-      address: '',
-      education: '',
-      experience: '',
+      email: 'foobar@example.com',
+      password: 'foobar',
     },
-    validationSchema: Yup.object({
-      name: Yup.string()
-        .max(15, 'Must be 15 characters or less')
-        .required('Required'),
-      email: Yup.string().email('Invalid email address').required('Required'),
-      dateOfBirth: Yup.date()
-        .max(new Date(), 'Date of birth cannot be in the future')
-        .required('Required')
-        .test('is-old-enough', 'Must be at least 15 years old', function (value) {
-          const minDate = new Date();
-          minDate.setFullYear(minDate.getFullYear() - 15);
-          return Yup.date().max(minDate).isValidSync(value);
-        }),
-      gender: Yup.string().required('Required'),
-      category: Yup.string().required('Required'),
-      address: Yup.string().required('Required'),
-      education: Yup.string().required('Required'),
-      experience: Yup.string().required('Required'),
-    }),
-    onSubmit: values => {
+    validationSchema: validationSchema,
+    onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
     },
   });
-
   
 
-  function validateStep1() {
-    return (
-      formik.validateField('name') && 
-      formik.validateField('email')&&
-      formik.validateField('dateOfBirth') &&
-      formik.validateField('gender') &&
-      formik.validateField('category') &&
-      formik.validateField('address')
-    );
-  }
-
-  function validateStep2() {
-    return formik.validateField('education') 
-    && formik.validateField('experience');
-  }
-
-  const handleStepChange = () => {
-    const currentStepIsValid = steps[currentStep].validator();
-
-    if (currentStepIsValid) {
-      setCurrentStep(currentStep + 1);
-    }
-  };
-
-  const handleStepBack = () => {
-    if (currentStep > 0) {
-      setCurrentStep(currentStep - 1);
-    }
-  };
-
   return (
-    <div>
-      <ProgressBar
-        percent={(currentStep / (steps.length - 1)) * 100}
-        filledBackground="linear-gradient(to right, blue, dark-blue)"
-        height={15}
-      />
-      <div>
-        <h2>{steps[currentStep].label}</h2>
-        <form onSubmit={formik.handleSubmit}>
+    <Box sx={{ width: '81%' }} className="mx-auto">
+      <form onSubmit={formik.handleSubmit}>
+      <Stepper activeStep={activeStep}>
+        {steps.map((label, index) => {
+          const stepProps = {};
+          const labelProps = {};
           
-          {currentStep === 1 && (
-            <>
-            <div>
-            <label htmlFor="name">Name</label>
-            <input
-              id="name"
-              name="name"
-              type="text"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.name}
-            />
-            {formik.touched.name && formik.errors.name ? (
-              <div>{formik.errors.name}</div>
-            ) : null}
-          </div>
-          <div>
-            <label htmlFor="email">Email</label>
-            <input
-              id="email"
-              name="email"
-              type="text"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.email}
-            />
-            {formik.touched.email && formik.errors.email ? (
-              <div>{formik.errors.email}</div>
-            ) : null}
+          if (isStepSkipped(index)) {
+            stepProps.completed = false;
+          }
+          return (
+            <Step key={label} {...stepProps}>
+              <StepLabel {...labelProps}>{label}</StepLabel>
+            </Step>
+          );
+        })}
+      </Stepper>
+
+      {activeStep === steps.length &&
+        <>
+          <Typography sx={{ mt: 2, mb: 1 }}>
+            All steps completed - you&apos;re finished
+          </Typography>
+          <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
+            <Box sx={{ flex: '1 1 auto' }} />
+            <Button type='submit'>Finish</Button>
+          </Box>
+        </>
+}
+      {  activeStep === 0 && 
           
-                <label htmlFor="dateOfBirth">Date of Birth</label>
-                <input
-                  id="dateOfBirth"
-                  name="dateOfBirth"
-                  type="date"
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.dateOfBirth}
-                />
-                {formik.touched.dateOfBirth && formik.errors.dateOfBirth ? (
-                  <div>{formik.errors.dateOfBirth}</div>
-                ) : null}
-              </div>
-              <div>
-                <label htmlFor="gender">Gender</label>
-                <div>
-                  <label>
-                    <input
-                      type="radio"
-                      id="gender-male"
-                      name="gender"
-                      value="male"
-                      checked={formik.values.gender === 'male'}
-                      onChange={formik.handleChange}
-                    />
-                    Male
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      id="gender-female"
-                      name="gender"
-                      value="female"
-                      checked={formik.values.gender === 'female'}
-                      onChange={formik.handleChange}
-                    />
-                    Female
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      id="gender-other"
-                      name="gender"
-                      value="other"
-                      checked={formik.values.gender === 'other'}
-                      onChange={formik.handleChange}
-                    />
-                    Other
-                  </label>
-                </div>
-                {formik.touched.gender && formik.errors.gender ? (
-                  <div>{formik.errors.gender}</div>
-                ) : null}
-              </div>
-              <div>
-                <label htmlFor="category">Category</label>
-                <div>
-                  <label>
-                    <input
-                      type="radio"
-                      id="category-general"
-                      name="category"
-                      value="general"
-                      checked={formik.values.category === 'general'}
-                      onChange={formik.handleChange}
-                    />
-                    General
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      id="category-obc"
-                      name="category"
-                      value="obc"
-                      checked={formik.values.category === 'obc'}
-                      onChange={formik.handleChange}
-                    />
-                    OBC
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      id="category-sc"
-                      name="category"
-                      value="sc"
-                      checked={formik.values.category === 'sc'}
-                      onChange={formik.handleChange}
-                    />
-                    SC
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      id="category-st"
-                      name="category"
-                      value="st"
-                      checked={formik.values.category === 'st'}
-                      onChange={formik.handleChange}
-                    />
-                    ST
-                  </label>
-                </div>
-                {formik.touched.category && formik.errors.category ? (
-                  <div>{formik.errors.category}</div>
-                ) : null}
-              </div>
-              <div>
-                <label htmlFor="address">Postal Address</label>
-                <textarea
-                  id="address"
-                  name="address"
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.address}
-                />
-                {formik.touched.address && formik.errors.address ? (
-                  <div>{formik.errors.address}</div>
-                ) : null}
-                </div>                
-            </>
-          )}
-
-          {currentStep === 2 && (
             <>
-              <div>
-                <label htmlFor="education">Educational Qualifications</label>
-                <textarea
-                  id="education"
-                  name="education"
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.education}
-                />
-                {formik.touched.education && formik.errors.education ? (
-                  <div>{formik.errors.education}</div>
-                ) : null}
-              </div>
-              <div>
-                <label htmlFor="experience">
-                  Experiences (Entrepreneurship, Leadership, etc.)
-                </label>
-                <textarea
-                  id="experience"
-                  name="experience"
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.experience}
-                />
-                {formik.touched.experience && formik.errors.experience ? (
-                  <div>{formik.errors.experience}</div>
-                ) : null}
-              </div>
-              <div>
-                <label htmlFor="resume">
-                  Resume (PDF or DOCX, max 10MB)
-                </label>
-                <input
-                  type="file"
-                  id="resume"
-                  name="resume"
-                  accept=".pdf,.docx"
-                  onChange={(event) => {
-                    formik.setFieldValue('resume', event.currentTarget.files[0]);
-                  }}
-                  onBlur={formik.handleBlur}
-                />
-                {formik.touched.resume && formik.errors.resume ? (
-                  <div>{formik.errors.resume}</div>
-                ) : null}
-              </div>
-            </>
-          )}
-
-          <div>
-            <button
-              type="button"
-              onClick={handleStepBack}
-              disabled={currentStep === 0}
+          <Typography sx={{ mt: 2, mb: 1 }}>Step 1</Typography>
+          <input
+          fullWidth
+          id="email"
+          name="email"
+          label="Email"
+          value={formik.values.email}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          error={formik.touched.email && Boolean(formik.errors.email)}
+          helperText={formik.touched.email && formik.errors.email}
+        />
+        <input
+          fullWidth
+          id="password"
+          name="password"
+          label="Password"
+          type="password"
+          value={formik.values.password}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          error={formik.touched.password && Boolean(formik.errors.password)}
+          helperText={formik.touched.password && formik.errors.password}
+        />
+        
+          <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
+            <Button
+              color="inherit"
+              disabled={activeStep === 0}
+              onClick={handleBack}
+              sx={{ mr: 1 }}
             >
               Back
-            </button>
-            <button
-              type="button"
-              onClick={handleStepChange}
-             
-            >
-              Next
-            </button>
-            {currentStep === steps.length - 1 && (
-              <button type="submit">Submit</button>
-            )}
-          </div>
-        </form>
-      </div>
-    </div>
-  );
-};
+            </Button>
+            <Box sx={{ flex: '1 1 auto' }} />
+           
 
-export default SignupForm;
+            <Button
+            onClick={handleNext}>
+
+              { 'Next'}
+            </Button>
+          </Box>
+        </>
+         }
+        
+        {activeStep === 1 && 
+        
+            <>
+          <Typography sx={{ mt: 2, mb: 1 }}>Step 2</Typography>
+          <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
+            <Button
+              color="inherit"
+              disabled={activeStep === 0}
+              onClick={handleBack}
+              sx={{ mr: 1 }}
+            >
+              Back
+            </Button>
+            <Box sx={{ flex: '1 1 auto' }} />
+           
+
+            <Button
+            onClick={handleNext}>
+
+              { 'Next'}
+            </Button>
+          </Box>
+        </>
+         }
+        {activeStep === 2 &&
+            <>
+          <Typography sx={{ mt: 2, mb: 1 }}>Step 3</Typography>
+          <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
+            <Button
+              color="inherit"
+              disabled={activeStep === 0}
+              onClick={handleBack}
+              sx={{ mr: 1 }}
+            >
+              Back
+            </Button>
+            <Box sx={{ flex: '1 1 auto' }} />
+           
+
+            <Button
+            onClick={handleNext}>
+
+              { 'Next'}
+            </Button>
+          </Box>
+        </>
+        
+        }
+        
+      
+    </form>
+    </Box>
+  );
+}
