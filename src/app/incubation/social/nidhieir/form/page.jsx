@@ -10,9 +10,11 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import Input from '@/components/input';
 import InputRadio from '@/components/inputRadio';
+import InputTextArea from '@/components/inputTextArea';
+import InputFile from '@/components/inputFile';
 
 
-const steps = ['Personal Info', 'Qualifications', 'Experience'];
+const steps = ['Personal Info', 'Qualifications', 'Idea Description'];
 
 export default function HorizontalLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -80,6 +82,18 @@ export default function HorizontalLinearStepper() {
       address: Yup.string().required('Required'),
       education: Yup.string().required('Required'),
       experience: Yup.string().required('Required'),
+      resume: Yup.mixed()
+      .test('fileFormat', 'Invalid file format. Only PDF or DOCX are allowed.', (value) => {
+        if (!value) return true;
+        const allowedFormats = ['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+        return value && allowedFormats.includes(value.type);
+      })
+      .test('fileSize', 'File size must be less than 10MB', (value) => {
+        if (!value) return true;
+        return value && value.size <= 10 * 1024 * 1024;
+      })
+      .required('Resume is required'),
+
   });
 
 
@@ -94,6 +108,7 @@ export default function HorizontalLinearStepper() {
       address:'',
       education:'',
       experience:'',
+      resume: null,
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
@@ -135,15 +150,21 @@ export default function HorizontalLinearStepper() {
       {  activeStep === 0 && 
           
             <>
-            <Input value="name" label="Name Of the Applicant" placeHolder="Aditya Tyagi" formikTouched={formik.touched.name} formikError={formik.errors.name} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.name} type="text" />
+            <Input className="mt-4" value="name" label="Name Of the Applicant" placeHolder="Aditya Tyagi" formikTouched={formik.touched.name} formikError={formik.errors.name} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.name} type="text" />
 
             <Input value="email" label="Your Email" placeHolder="adityatyagi@gmail.com" formikTouched={formik.touched.email} formikError={formik.errors.email} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.email} type="email"/>
 
             <Input value="phoneNumber" label="Phone/Mobile Number" placeHolder="8088088088" formikTouched={formik.touched.phoneNumber} formikError={formik.errors.phoneNumber} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.phoneNumber} type="tel"/>
 
+            <InputTextArea value="address" label="Full Postal Address" placeHolder="5A, street-12,Thane Mumbai " formikTouched={formik.touched.address} formikError={formik.errors.address} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.address} />
+
             <Input value="dateOfBirth" label="Date Of Birth" placeHolder="02-06-2003" formikTouched={formik.touched.dateOfBirth} formikError={formik.errors.dateOfBirth} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.dateOfBirth} type="date"/>
 
-            <InputRadio/>
+            <InputRadio value="gender" label="Gender" options={['Male','Female']} formikTouched={formik.touched.gender} formikError={formik.errors.gender} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+
+            <InputRadio value="category" label="Category" options={['General','SC','ST','OBC']} formikTouched={formik.touched.gender} formikError={formik.errors.gender} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+
+            
         
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
             <Button
@@ -169,8 +190,15 @@ export default function HorizontalLinearStepper() {
         {activeStep === 1 && 
         
             <>
-          <Typography sx={{ mt: 2, mb: 1 }}>Step 2</Typography>
+          
+          <InputTextArea value="education" label="Basic undergraduate training/education" placeHolder="Enter your educational Details " formikTouched={formik.touched.education} formikError={formik.errors.education} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.education} />
+
+          <InputTextArea value="experience" label="Any experiences relating to entrepreneurship, leadership, fund raising, organizing activities/ events etc." placeHolder="Your Experience " formikTouched={formik.touched.experience} formikError={formik.errors.experience} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.experience} />
+
+          <InputFile value="resume" label="Attach CV or Resume with details of education and work experience" formik={formik} formikTouched={formik.touched.resume} formikError={formik.errors.resume} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.resume}/>
+
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
+
             <Button
               color="inherit"
               disabled={activeStep === 0}
