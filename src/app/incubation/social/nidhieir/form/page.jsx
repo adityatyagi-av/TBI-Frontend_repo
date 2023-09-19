@@ -7,7 +7,9 @@ import StepLabel from '@mui/material/StepLabel';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useFormik } from 'formik';
-import * as yup from 'yup';
+import * as Yup from 'yup';
+import Input from '@/components/input';
+import InputRadio from '@/components/inputRadio';
 
 
 const steps = ['Personal Info', 'Qualifications', 'Experience'];
@@ -53,23 +55,45 @@ export default function HorizontalLinearStepper() {
       return newSkipped;
     });
   };
+  //conditions for dob
+  const today = new Date();
+  const minDate = new Date(today);
+  minDate.setFullYear(today.getFullYear() - 15); 
 
-  const validationSchema = yup.object({
-    email: yup
-      .string('Enter your email')
-      .email('Enter a valid email')
-      .required('Email is required'),
-    password: yup
-      .string('Enter your password')
-      .min(8, 'Password should be of minimum 8 characters length')
-      .required('Password is required'),
+  //validation Schema
+  const validationSchema = Yup.object({
+    name: Yup.string()
+    .max(15, 'Must be 15 characters or less')
+    .required('Required'),
+  email: Yup.string().email('Invalid email address').required('Required'),
+  phoneNumber: Yup.string()
+    .matches(/^[0-9]{10}$/, '10 digit mobile number should be entered')
+    .required('Required'),
+    dateOfBirth: Yup.date()
+      .max(today, 'Date of birth cannot be in the future')
+      .required('Required')
+      .test('is-old-enough', 'Must be at least 15 years old', function (value) {
+        return Yup.date().max(minDate).isValidSync(value);
+      }),
+      gender: Yup.string().required('Required'),
+      category: Yup.string().required('Required'),
+      address: Yup.string().required('Required'),
+      education: Yup.string().required('Required'),
+      experience: Yup.string().required('Required'),
   });
 
 
   const formik = useFormik({
     initialValues: {
-      email: 'foobar@example.com',
-      password: 'foobar',
+      name: '',
+      phoneNumber:'',
+      email: '',
+      dateOfBirth:'',
+      gender:'',
+      category:'',
+      address:'',
+      education:'',
+      experience:'',
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
@@ -111,30 +135,15 @@ export default function HorizontalLinearStepper() {
       {  activeStep === 0 && 
           
             <>
-          <Typography sx={{ mt: 2, mb: 1 }}>Step 1</Typography>
-          <input
-          fullWidth
-          id="email"
-          name="email"
-          label="Email"
-          value={formik.values.email}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          error={formik.touched.email && Boolean(formik.errors.email)}
-          helperText={formik.touched.email && formik.errors.email}
-        />
-        <input
-          fullWidth
-          id="password"
-          name="password"
-          label="Password"
-          type="password"
-          value={formik.values.password}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          error={formik.touched.password && Boolean(formik.errors.password)}
-          helperText={formik.touched.password && formik.errors.password}
-        />
+            <Input value="name" label="Name Of the Applicant" placeHolder="Aditya Tyagi" formikTouched={formik.touched.name} formikError={formik.errors.name} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.name} type="text" />
+
+            <Input value="email" label="Your Email" placeHolder="adityatyagi@gmail.com" formikTouched={formik.touched.email} formikError={formik.errors.email} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.email} type="email"/>
+
+            <Input value="phoneNumber" label="Phone/Mobile Number" placeHolder="8088088088" formikTouched={formik.touched.phoneNumber} formikError={formik.errors.phoneNumber} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.phoneNumber} type="tel"/>
+
+            <Input value="dateOfBirth" label="Date Of Birth" placeHolder="02-06-2003" formikTouched={formik.touched.dateOfBirth} formikError={formik.errors.dateOfBirth} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.dateOfBirth} type="date"/>
+
+            <InputRadio/>
         
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
             <Button
