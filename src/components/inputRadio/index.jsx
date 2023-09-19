@@ -3,7 +3,7 @@ import React from 'react'
 const InputRadio = ({value,label,options,formikTouched,formikError,formikChange,formikBlur}) => {
   
   return (
-    <div className="mb-6">
+    <div className="my-2">
 
           <label for={value} className="block mb-2 text-sm font-medium text-gray-900 ">{label} {formikTouched && formikError ? (
           <span className=' text-xs text-red-500 mb-.5'>{`(${formikError}*)`}</span>
@@ -18,7 +18,7 @@ const InputRadio = ({value,label,options,formikTouched,formikError,formikChange,
         value={option}
        onChange={formikChange}
        onBlur={formikBlur}/>
-        <label for="default-radio-1" className="ml-2 text-sm font-medium text-gray-900 ">{option}</label>
+        <label for={value} className="ml-2 text-sm font-medium text-gray-900 ">{option}</label>
         </div>
         
         )

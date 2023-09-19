@@ -14,7 +14,7 @@ import InputTextArea from '@/components/inputTextArea';
 import InputFile from '@/components/inputFile';
 
 
-const steps = ['Personal Info', 'Qualifications', 'Idea Description'];
+const steps = ['Applicant Details', 'Idea Description','Checklist'];
 
 export default function HorizontalLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -93,6 +93,15 @@ export default function HorizontalLinearStepper() {
         return value && value.size <= 10 * 1024 * 1024;
       })
       .required('Resume is required'),
+      ideaDescription: Yup.string().required('Required'),
+      conceptNote: Yup.mixed().required('Attach the concept note'),
+      aspectNote: Yup.mixed().required('Attach the note describing the knowledge or technology intensity aspects of the idea.'),
+      previousReciepent: Yup.string().required('Required'),
+      fullCommitment:Yup.string().required('Required'),
+      noOtherFellowShip:Yup.string().required('Required'),
+      businessCommitment:Yup.string().required('Required'),
+      notBeneficiary:Yup.string().required('Required'),
+      registerPEP:Yup.string().required('Required'),
 
   });
 
@@ -109,6 +118,15 @@ export default function HorizontalLinearStepper() {
       education:'',
       experience:'',
       resume: null,
+      ideaDescription:'',
+      conceptNote:null,
+      aspectNote:null,
+      previousReciepent:'',
+      fullCommitment:'',
+      noOtherFellowShip:'',
+      businessCommitment:'',
+      notBeneficiary:'',
+      registerPEP:'',
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
@@ -147,6 +165,9 @@ export default function HorizontalLinearStepper() {
           </Box>
         </>
 }
+
+
+
       {  activeStep === 0 && 
           
             <>
@@ -162,8 +183,13 @@ export default function HorizontalLinearStepper() {
 
             <InputRadio value="gender" label="Gender" options={['Male','Female']} formikTouched={formik.touched.gender} formikError={formik.errors.gender} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
-            <InputRadio value="category" label="Category" options={['General','SC','ST','OBC']} formikTouched={formik.touched.gender} formikError={formik.errors.gender} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+            <InputRadio value="category" label="Category" options={['General','SC','ST','OBC']} formikTouched={formik.touched.category} formikError={formik.errors.category} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
+            <InputTextArea value="education" label="Basic undergraduate training/education" placeHolder="Enter your educational Details " formikTouched={formik.touched.education} formikError={formik.errors.education} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.education} />
+
+            <InputTextArea value="experience" label="Any experiences relating to entrepreneurship, leadership, fund raising, organizing activities/ events etc." placeHolder="Your Experience " formikTouched={formik.touched.experience} formikError={formik.errors.experience} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.experience} />
+
+            <InputFile value="resume" label="Attach CV or Resume with details of education and work experience" formik={formik} formikTouched={formik.touched.resume} formikError={formik.errors.resume} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.resume}/>
             
         
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
@@ -187,17 +213,21 @@ export default function HorizontalLinearStepper() {
         </>
          }
         
+
+
+
         {activeStep === 1 && 
         
             <>
-          
-          <InputTextArea value="education" label="Basic undergraduate training/education" placeHolder="Enter your educational Details " formikTouched={formik.touched.education} formikError={formik.errors.education} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.education} />
+          <InputTextArea value="ideaDescription" label="Please describe the technology for which you are seeking market opportunities or market for which you are seeking technology opportunities." placeHolder="Your Experience " formikTouched={formik.touched.ideaDescription} formikError={formik.errors.ideaDescription} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.ideaDescription} />
 
-          <InputTextArea value="experience" label="Any experiences relating to entrepreneurship, leadership, fund raising, organizing activities/ events etc." placeHolder="Your Experience " formikTouched={formik.touched.experience} formikError={formik.errors.experience} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.experience} />
+          <InputFile value="conceptNote" label="Please attach a concept note of the technology/business idea you propose to pursue." formik={formik} formikTouched={formik.touched.conceptNote} formikError={formik.errors.conceptNote} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.conceptNote}/>
 
-          <InputFile value="resume" label="Attach CV or Resume with details of education and work experience" formik={formik} formikTouched={formik.touched.resume} formikError={formik.errors.resume} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.resume}/>
+          <InputFile value="aspectNote" label="Please attach a note describing the knowledge or technology intensity aspects of the idea. Describe the innovative elements of the idea along with comparisons with previous reports or products available." formik={formik} formikTouched={formik.touched.aspectNote} formikError={formik.errors.aspectNote} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.aspectNote}/>
+         
 
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
+
 
             <Button
               color="inherit"
@@ -220,7 +250,24 @@ export default function HorizontalLinearStepper() {
          }
         {activeStep === 2 &&
             <>
-          <Typography sx={{ mt: 2, mb: 1 }}>Step 3</Typography>
+            <InputRadio value="previousReciepent" label="Applicant confirms that he/she has not been a recipient of the NIDHI-EIR previously. NIDHI-EIR can be used only once." options={['Yes','No']} formikTouched={formik.touched.previousReciepent} formikError={formik.errors.previousReciepent} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+
+
+            <InputRadio value="fullCommitment" label="Applicant is planning to pursue NIDHI-EIR full-time with no other concurrent commitments." options={['Yes','No']} formikTouched={formik.touched.fullCommitment} formikError={formik.errors.fullCommitment} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+
+
+            <InputRadio value="noOtherFellowShip" label="Applicant confirms that he/she will not be in receipt of any other remuneration or fellowship during the duration of the NIDHI-EIR." options={['Yes','No']} formikTouched={formik.touched.noOtherFellowShip} formikError={formik.errors.noOtherFellowShip} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+
+            <InputRadio value="businessCommitment" label="Applicant confirms that he/she is fully committed to exploring a business idea. NIDHI-EIR support recipient should not treat this support as a stop gap arrangement to support them in their academic pursuits or transition between jobs." options={['Yes','No']} formikTouched={formik.touched.businessCommitment} formikError={formik.errors.businessCommitment} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+
+            <InputRadio value="notBeneficiary" label="Applicant confirms that he/she is not the promoter or significant (>10%) share holder / beneficiary of another company at the time of applying for and receiving the NIDHI-EIR support." options={['Yes','No']} formikTouched={formik.touched.notBeneficiary} formikError={formik.errors.notBeneficiary} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+            
+            <InputRadio value="registerPEP" label="The NIDHI-EIR has or is planning to register for the pre-incubation or incubation program at the PEP for the entire duration of NIDHI-EIR support.  " options={['Yes','No']} formikTouched={formik.touched.registerPEP} formikError={formik.errors.registerPEP} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+
+
+            
+            
+
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
             <Button
               color="inherit"
