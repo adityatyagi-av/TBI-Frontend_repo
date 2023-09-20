@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { Tabs, Tab, Card, CardBody } from "@nextui-org/react";
+import { Tabs, Tab } from "@nextui-org/react";
 import AboutTbi from "./abouttbi";
 import Teams from "./teams";
 import Objectives from "./Objectives";
@@ -9,7 +9,7 @@ import Milestones from "./Milestones";
 
 export default function About() {
   return (
-    <div className="flex  flex-col mx-auto ">
+    <div className="flex flex-col mx-auto ">
       <Tabs aria-label="Options" fullWidth={false} size="lg" color="secondary" className=" md:mx-auto mb-4 py-2">
         <Tab key="abouttbi" title="About TBI">
           <AboutTbi />
@@ -23,7 +23,6 @@ export default function About() {
         <Tab key="teams" title="Teams">
           <Teams />
         </Tab>
-
       </Tabs>
     </div>
   );

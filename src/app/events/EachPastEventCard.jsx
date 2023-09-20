@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 function EachPastEventCard() {
     return (
         <div className='py-4'>
@@ -15,7 +16,7 @@ function EachPastEventCard() {
                     laudantium quia tempore delect
                 </p>
 
-                <p className="mt-3 text-base font-medium text-blue-800 group-hover:text-green-400 cursor-pointer">Check It Out</p>
+                <Link href={'/events/:eventid'} className="mt-3 text-base font-medium text-blue-800 group-hover:text-green-400 cursor-pointer">Check It Out</Link>
             </div>
         </div>
     )
