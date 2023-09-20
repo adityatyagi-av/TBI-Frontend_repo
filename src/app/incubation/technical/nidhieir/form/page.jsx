@@ -144,7 +144,24 @@ export default function HorizontalLinearStepper() {
 
     },
   });
-  
+  const genderOptions = [
+    { label: 'Male', value: 'male' },
+    { label: 'Female', value: 'female' },
+    { label: 'Prefer Not to Say', value: 'prefernottosay' },
+  ];
+  const categoryOptions=[
+    
+      { label: 'General', value: 'general' },
+      { label: 'OBC', value: 'obc' },
+      { label: 'SC', value: 'sc' },
+      { label: 'ST', value: 'st' },
+      
+  ]
+
+  const generalOptions=[
+    { label: 'Yes', value: 'yes' },
+    { label: 'No', value: 'no' },
+  ]
 
   return (
     <Box sx={{ width: '81%' }} className="mx-auto">
@@ -192,9 +209,9 @@ export default function HorizontalLinearStepper() {
 
             <Input value="dateOfBirth" label="Date Of Birth" placeHolder="02-06-2003" formikTouched={formik.touched.dateOfBirth} formikError={formik.errors.dateOfBirth} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.dateOfBirth} type="date"/>
 
-            <InputRadio value="gender" label="Gender" options={['Male','Female']} formikTouched={formik.touched.gender} formikError={formik.errors.gender} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+            <InputRadio value="gender" label="Gender" options={genderOptions} formikTouched={formik.touched.gender} formikError={formik.errors.gender} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
-            <InputRadio value="category" label="Category" options={['General','SC','ST','OBC']} formikTouched={formik.touched.category} formikError={formik.errors.category} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+            <InputRadio value="category" label="Category" options={categoryOptions} formikTouched={formik.touched.category} formikError={formik.errors.category} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
             <InputTextArea value="education" label="Basic undergraduate training/education" placeHolder="Enter your educational Details " formikTouched={formik.touched.education} formikError={formik.errors.education} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.education} />
 
@@ -262,19 +279,19 @@ export default function HorizontalLinearStepper() {
          }
         {activeStep === 2 &&
             <>
-            <InputRadio value="previousReciepent" label="Applicant confirms that he/she has not been a recipient of the NIDHI-EIR previously. NIDHI-EIR can be used only once." options={['Yes','No']} formikTouched={formik.touched.previousReciepent} formikError={formik.errors.previousReciepent} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+            <InputRadio value="previousReciepent" label="Applicant confirms that he/she has not been a recipient of the NIDHI-EIR previously. NIDHI-EIR can be used only once." options={generalOptions} formikTouched={formik.touched.previousReciepent} formikError={formik.errors.previousReciepent} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
 
-            <InputRadio value="fullCommitment" label="Applicant is planning to pursue NIDHI-EIR full-time with no other concurrent commitments." options={['Yes','No']} formikTouched={formik.touched.fullCommitment} formikError={formik.errors.fullCommitment} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+            <InputRadio value="fullCommitment" label="Applicant is planning to pursue NIDHI-EIR full-time with no other concurrent commitments." options={generalOptions} formikTouched={formik.touched.fullCommitment} formikError={formik.errors.fullCommitment} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
 
-            <InputRadio value="noOtherFellowShip" label="Applicant confirms that he/she will not be in receipt of any other remuneration or fellowship during the duration of the NIDHI-EIR." options={['Yes','No']} formikTouched={formik.touched.noOtherFellowShip} formikError={formik.errors.noOtherFellowShip} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+            <InputRadio value="noOtherFellowShip" label="Applicant confirms that he/she will not be in receipt of any other remuneration or fellowship during the duration of the NIDHI-EIR." options={generalOptions} formikTouched={formik.touched.noOtherFellowShip} formikError={formik.errors.noOtherFellowShip} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
-            <InputRadio value="businessCommitment" label="Applicant confirms that he/she is fully committed to exploring a business idea. NIDHI-EIR support recipient should not treat this support as a stop gap arrangement to support them in their academic pursuits or transition between jobs." options={['Yes','No']} formikTouched={formik.touched.businessCommitment} formikError={formik.errors.businessCommitment} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+            <InputRadio value="businessCommitment" label="Applicant confirms that he/she is fully committed to exploring a business idea. NIDHI-EIR support recipient should not treat this support as a stop gap arrangement to support them in their academic pursuits or transition between jobs." options={generalOptions} formikTouched={formik.touched.businessCommitment} formikError={formik.errors.businessCommitment} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
-            <InputRadio value="notBeneficiary" label="Applicant confirms that he/she is not the promoter or significant (>10%) share holder / beneficiary of another company at the time of applying for and receiving the NIDHI-EIR support." options={['Yes','No']} formikTouched={formik.touched.notBeneficiary} formikError={formik.errors.notBeneficiary} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+            <InputRadio value="notBeneficiary" label="Applicant confirms that he/she is not the promoter or significant (>10%) share holder / beneficiary of another company at the time of applying for and receiving the NIDHI-EIR support." options={generalOptions} formikTouched={formik.touched.notBeneficiary} formikError={formik.errors.notBeneficiary} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
             
-            <InputRadio value="registerPEP" label="The NIDHI-EIR has or is planning to register for the pre-incubation or incubation program at the PEP for the entire duration of NIDHI-EIR support.  " options={['Yes','No']} formikTouched={formik.touched.registerPEP} formikError={formik.errors.registerPEP} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+            <InputRadio value="registerPEP" label="The NIDHI-EIR has or is planning to register for the pre-incubation or incubation program at the PEP for the entire duration of NIDHI-EIR support.  " options={generalOptions} formikTouched={formik.touched.registerPEP} formikError={formik.errors.registerPEP} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
 
             

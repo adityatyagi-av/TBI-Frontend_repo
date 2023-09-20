@@ -39,7 +39,7 @@ function page() {
             </div>
  
 
-        <div className=" py-20 flex flex-col items-center justify-center">
+        <div className=" py-20 flex flex-col items-center justify-center overflow-x-hidden">
             <div className="xl:w-1/2 w-11/12">
                 <h1 role="heading" tabIndex={0} className="text-6xl font-bold 2xl:leading-10 leading-0 text-center text-gray-800">
                    Some of our top Startups

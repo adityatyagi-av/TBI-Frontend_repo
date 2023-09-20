@@ -15,10 +15,10 @@ const InputRadio = ({value,label,options,formikTouched,formikError,formikChange,
         <input type="radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
         id={`${value}-${option}`}
         name={value}
-        value={option}
+        value={option.value}
        onChange={formikChange}
        onBlur={formikBlur}/>
-        <label for={value} className="ml-2 text-sm font-medium text-gray-900 ">{option}</label>
+        <label for={value} className="ml-2 text-sm font-medium text-gray-900 ">{option.label}</label>
         </div>
         
         )
