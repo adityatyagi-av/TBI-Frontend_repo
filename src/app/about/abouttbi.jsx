@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue } from "@nextui-org/react";
+import BoardOfGoverners from '@/components/BoardOfGoverners/BoardOfGoverners';
 const rows = [
   {
     key: "1",
@@ -208,24 +209,6 @@ const AboutTbi = () => {
           </main>
         </div>
       </section>
-      <h1 className="mt-12 mb-5 self-center text-center font-semibold text-gray-800 capitalize lg:text-3xl ">
-        Board of Governers
-      </h1>
-      <Table aria-label="Board of Members" fullWidth={false} isStriped={true}>
-        <TableHeader>
-          {columns.map((column) =>
-            <TableColumn key={column.key}>{column.label}</TableColumn>
-          )}
-        </TableHeader>
-        <TableBody>
-          {rows.map((row) =>
-            <TableRow key={row.key}>
-              {(columnKey) => <TableCell>{getKeyValue(row, columnKey)}</TableCell>}
-            </TableRow>
-          )}
-        </TableBody>
-      </Table>
-
     </>
   )
 }
