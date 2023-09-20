@@ -94,8 +94,16 @@ export default function HorizontalLinearStepper() {
       })
       .required('Resume is required'),
       ideaDescription: Yup.string().required('Required'),
-      conceptNote: Yup.mixed().required('Attach the concept note'),
-      aspectNote: Yup.mixed().required('Attach the note describing the knowledge or technology intensity aspects of the idea.'),
+      conceptNote: Yup.mixed()
+      .test('fileSize', 'File size must be less than 10MB', (value) => {
+        if (!value) return true;
+        return value && value.size <= 10 * 1024 * 1024;
+      }).required('Attach the concept note'),
+      aspectNote: Yup.mixed()
+      .test('fileSize', 'File size must be less than 10MB', (value) => {
+        if (!value) return true;
+        return value && value.size <= 10 * 1024 * 1024;
+      }).required('Attach the note describing the knowledge or technology intensity aspects of the idea.'),
       previousReciepent: Yup.string().required('Required'),
       fullCommitment:Yup.string().required('Required'),
       noOtherFellowShip:Yup.string().required('Required'),
@@ -131,6 +139,9 @@ export default function HorizontalLinearStepper() {
     validationSchema: validationSchema,
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
+      console.log(JSON.stringify(values, null, 2));
+      // console.log(JSON.stringify(values, null, 2));
+
     },
   });
   
@@ -222,6 +233,7 @@ export default function HorizontalLinearStepper() {
           <InputTextArea value="ideaDescription" label="Please describe the technology for which you are seeking market opportunities or market for which you are seeking technology opportunities." placeHolder="Your Experience " formikTouched={formik.touched.ideaDescription} formikError={formik.errors.ideaDescription} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.ideaDescription} />
 
           <InputFile value="conceptNote" label="Please attach a concept note of the technology/business idea you propose to pursue." formik={formik} formikTouched={formik.touched.conceptNote} formikError={formik.errors.conceptNote} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.conceptNote}/>
+         
 
           <InputFile value="aspectNote" label="Please attach a note describing the knowledge or technology intensity aspects of the idea. Describe the innovative elements of the idea along with comparisons with previous reports or products available." formik={formik} formikTouched={formik.touched.aspectNote} formikError={formik.errors.aspectNote} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.aspectNote}/>
          
