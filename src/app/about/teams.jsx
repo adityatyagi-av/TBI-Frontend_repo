@@ -3,12 +3,16 @@ import React from "react";
 import { Tabs, Tab, Card, CardBody } from "@nextui-org/react";
 import { mainteam, developerteam, designteam, marketingteam } from "./team";
 import TeamCard from "./teamcards";
+import BoardOfGoverners from "@/components/BoardOfGoverners/BoardOfGoverners";
 
 
 const Teams = () => {
   return (
-    <div className="flex  flex-col mx-10 ">
+    <div className="flex  flex-col max-w-screen-xl mx-auto ">
       <Tabs aria-label="Options" fullWidth={true} size="lg" radius="" className=" mx-auto mb-5 py-3">
+        <Tab key="boardMembers" title="Board Members">
+          <BoardOfGoverners />
+        </Tab>
         <Tab key="mainteam" title="Main Team">
           <TeamCard team={mainteam[0]} />
         </Tab>
