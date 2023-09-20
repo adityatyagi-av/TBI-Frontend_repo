@@ -152,7 +152,7 @@ const Infrastructure = () => {
         <section className="max-w-8xl mx-auto container bg-white pt-16">
           <div>
             <div role="contentinfo" className="flex items-center flex-col px-4">
-              <hh1 tabIndex={0} className="focus:outline-none text-4xl lg:text-4xl font-extrabold text-center leading-10 text-gray-800 lg:w-5/12 md:w-9/12 pt-4">We provide you <br /> a variety of Softwares </hh1>
+              <h1 tabIndex={0} className="focus:outline-none text-4xl lg:text-4xl font-extrabold text-center leading-10 text-gray-800 lg:w-5/12 md:w-9/12 pt-4">We provide you <br /> a variety of Softwares </h1>
             </div>
             <div tabIndex={0} aria-label="group of cards" className="focus:outline-none mt-20 flex flex-wrap justify-center gap-10 px-4">
               <div tabIndex={0} aria-label="card 1" className="focus:outline-none flex sm:w-full md:w-5/12 pb-20">
