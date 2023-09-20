@@ -11,7 +11,7 @@ const InputFile = ({formik,value,label,placeHolder,formikTouched,formikError,for
          type="file"
          id={value}
          name={value}
-         onChange={(event) => formik.setFieldValue('resume', event.currentTarget.files[0])}
+         onChange={(event) => formik.setFieldValue(value, event.currentTarget.files[0])}
         onBlur={formikBlur}
         className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 " aria-describedby={value} />
         {/* <p class="mt-1 text-sm text-gray-500" id={value}>PDF or DOCX FILE ONLY (MAX 10MB)</p> */}
