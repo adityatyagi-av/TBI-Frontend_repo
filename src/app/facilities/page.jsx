@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { Tabs, Tab, Card, CardBody } from "@nextui-org/react";
+import { Tabs, Tab } from "@nextui-org/react";
 import Infrastructure from "./infrastructure";
 import Support from "./support";
 import TechAid from "./techaid";
