@@ -9,7 +9,7 @@ import Milestones from "./Milestones";
 
 export default function About() {
   return (
-    <div className="flex flex-col mx-auto ">
+    <div className="flex flex-col mx-auto max-w-screen-xl">
       <Tabs aria-label="Options" fullWidth={false} size="lg" color="secondary" className=" md:mx-auto mb-4 py-2">
         <Tab key="abouttbi" title="About TBI">
           <AboutTbi />
