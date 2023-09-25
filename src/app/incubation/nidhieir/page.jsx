@@ -1,12 +1,13 @@
+
 import IndividualScheme from '@/components/individualScheme/page'
 import React from 'react'
 
-const nidhiEir = () => {
+const page = () => {
   return (
-    <div>
-      <IndividualScheme/>
+    <div className='max-w-screen-xl mx-auto'>
+      <IndividualScheme />
     </div>
   )
 }
 
-export default nidhiEir
+export default page

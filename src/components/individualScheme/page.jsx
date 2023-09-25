@@ -4,7 +4,7 @@ const IndividualScheme = () => {
     return (
         <>
 
-            <div className="py-20 2xl:px-10 lg:px-12 px-4 2xl:mx-auto 2xl:container " >
+            <div className="py-20 2xl:px-10 lg:px-12 px-4 2xl:mx-auto 2xl:container max-w-screen-xl " >
                 <div className="md:flex items-center justify-between w-full">
                     <div className="xl:w-1/3 md:w-1/2 w-full">
                         <h1 role="heading" className="focus:outline-none md:w-60 font-bold md:text-6xl italic text-4xl leading-tight text-gray-800">

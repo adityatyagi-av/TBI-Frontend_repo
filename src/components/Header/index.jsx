@@ -4,6 +4,7 @@ import { Navbar, NavbarBrand, NavbarMenu, NavbarMenuToggle, NavbarMenuItem, Navb
 import { Logo } from "./Logo.jsx";
 import { menuItems } from './menuData.jsx'
 import Link from "next/link.js";
+import IncubationDropdown from "./IncubationDropdown.jsx";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
@@ -17,7 +18,7 @@ export default function Header() {
 
      >
       <NavbarContent className="flex flex-row-reverse justify-between items-center">
-        <NavbarMenuToggle
+        <NavbarMenuToggle 
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden "
           justify="start"
@@ -33,38 +34,39 @@ export default function Header() {
       <NavbarContent className="hidden sm:flex gap-6 focus:underline" justify="center" >
 
         <NavbarItem>
-          <Link href="/about" className="text-[18px] text-gray-700   hover:text-blue-900 text-md font-normal active:text-blue-900 focus:text-blue-900">
+          <Link href="/about" className="text-[18px] text-gray-800   hover:text-blue-950 text-md font-normal active:text-blue-950 focus:text-blue-950">
             About
           </Link>
         </NavbarItem>
         <NavbarItem >
-          <Link href="/events" className="text-[18px] text-gray-700   hover:text-blue-900 text-md font-normal active:text-blue-900 focus:text-blue-900">
+          <Link href="/events" className="text-[18px] text-gray-800   hover:text-blue-950 text-md font-normal active:text-blue-950 focus:text-blue-950">
             Events
           </Link>
         </NavbarItem>
         <NavbarItem >
-          <Link href="/mentors" className="text-[18px] text-gray-700  hover:text-blue-900 text-md font-normal active:text-blue-900 focus:text-blue-900">
+          <Link href="/mentors" className="text-[18px] text-gray-800  hover:text-blue-950 text-md font-normal active:text-blue-950 focus:text-blue-950">
             Mentors
           </Link>
         </NavbarItem>
+        
         <NavbarItem >
-          <Link href="/incubation" className="text-[18px] text-gray-700 hover:text-blue-900 text-md font-normal active:text-blue-900 focus:text-blue-900">
-            Incubation
-          </Link>
+          <IncubationDropdown/>
+
         </NavbarItem>
         <NavbarItem >
-          <Link href="/facilities" className="text-[18px] text-gray-700 hover:text-blue-900 text-md font-normal active:text-blue-900 focus:text-blue-900">
+          <Link href="/facilities" className="text-[18px] text-gray-800 hover:text-blue-950 text-md font-normal active:text-blue-950 focus:text-blue-950">
             Facilities
           </Link>
         </NavbarItem>
         <NavbarItem >
-          <Link href="/gallery" className="text-[18px] text-gray-700 hover:text-blue-900 text-md font-normal active:text-blue-900 focus:text-blue-900">
+          <Link href="/gallery" className="text-[18px] text-gray-800 hover:text-blue-950 text-md font-normal active:text-blue-950 focus:text-blue-950">
             Gallery
           </Link>
 
         </NavbarItem>
+        
         <NavbarItem >
-          <Link href="/contact" className="text-[18px] text-gray-700 hover:text-blue-900 text-md font-normal active:text-blue-900 focus:text-blue-900">
+          <Link href="/contact" className="text-[18px] text-gray-800 hover:text-blue-950 text-md font-normal active:text-blue-950 focus:text-blue-950">
             Contact
           </Link>
         </NavbarItem>
@@ -74,12 +76,12 @@ export default function Header() {
 
       <NavbarMenu justify="end">
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`} className=" text-gray-700 hover:text-blue-900 text-md font-normal active:text-blue-900 focus:text-blue-900" >
+          <NavbarMenuItem key={`${item}-${index}`} className=" text-gray-700 hover:text-blue-950 text-md font-normal active:text-blue-950 focus:text-blue-950" >
             <Link
               color={
                 index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
               }
-              className="w-full"
+              className="w-1/2"
               href={item.href}
               size="lg"
             >
