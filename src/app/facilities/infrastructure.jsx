@@ -4,8 +4,8 @@ import React from 'react'
 const Infrastructure = () => {
   return (
     <>
-      <section className="bg-white ">
-        <div className="container xl:px-20 md:px-6 px-4 py-10 mx-auto">
+      <section className="bg-white px-4">
+        <div className="container  py-10 mx-auto">
           <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl ">Building to <br /> accomodate 100+ Startups</h1>
 
           <div className="mt-2">
@@ -84,8 +84,8 @@ const Infrastructure = () => {
 
 
       <div className='overflow-y-hidden mt-6'>
-        <div className="xl:mx-auto xl:container  xl:px-11 md:px-6 px-4 py-12">
-          <div className="lg:flex flex-row-reverse gap-10 items-center justify-center lg:space-x-12 2xl:space-x-6">
+        <div className="xl:mx-auto xl:container md:px-6 py-12">
+          <div className="lg:flex flex-row-reverse gap-10 items-center justify-center lg:space-x-2 ">
             <div className>
               <p className="lg:text-4xl text-3xl font-extrabold leading-9 mt-0 text-gray-800">Office Space</p>
               <p className="text-lg leading-7 text-gray-600 mt-4 xl:w-7/12 w-full">Whether article spirits new her covered hastily sitting her. Money witty books nor son add</p>
@@ -149,9 +149,9 @@ const Infrastructure = () => {
       <div className="pb-16" style={{ fontFamily: '"Lato", sans-serif' }}>
 
 
-        <section className="max-w-8xl mx-auto container bg-white pt-16">
+        <section className=" mx-auto container bg-white pt-16">
           <div>
-            <div role="contentinfo" className="flex items-center flex-col px-4">
+            <div role="contentinfo" className="flex items-center flex-col ">
               <h1 tabIndex={0} className="focus:outline-none text-4xl lg:text-4xl font-extrabold text-center leading-10 text-gray-800 lg:w-5/12 md:w-9/12 pt-4">We provide you <br /> a variety of Softwares </h1>
             </div>
             <div tabIndex={0} aria-label="group of cards" className="focus:outline-none mt-20 flex flex-wrap justify-center gap-10 px-4">

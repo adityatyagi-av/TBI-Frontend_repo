@@ -11,7 +11,7 @@ import TechAid from "./techaid";
 const Facilities = () => {
   return (
 
-    <div className="flex  flex-col mx-auto ">
+    <div className="flex  flex-col mx-auto max-w-screen-xl">
       <Tabs aria-label="Options" fullWidth={false} size="lg" color="secondary" className="mx-auto mb-4 py-2">
         <Tab key="infrastructure" title="Infrastructure">
           <Infrastructure/>

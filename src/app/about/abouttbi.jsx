@@ -5,7 +5,7 @@ import React from 'react'
 const AboutTbi = () => {
   return (
     <>
-      <div className="2xl:container 2xl:mx-auto lg:py-16  md:py-12 md:px-6 py-9 px-4">
+      <div className="2xl:container 2xl:mx-auto lg:py-16 md:py-12 md:px-6 py-9 px-4">
         <div className="lg:w-10/12 w-full">
           <h1 className="text-2xl font-semibold capitalize lg:text-5xl lg:ml-4 ">
             <span className="text-blue-900">About TBI</span> <br />
