@@ -1,117 +1,11 @@
 import Image from 'next/image'
 import React from 'react'
-import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue } from "@nextui-org/react";
-import BoardOfGoverners from '@/components/BoardOfGoverners/BoardOfGoverners';
-const rows = [
-  {
-    key: "1",
-    name: "Saurav Kumar",
-    designation: "Head (HI), KIET Group of Institutions",
-    role: "Chairman",
-
-  },
-  {
-    key: "2",
-    name: "Saurav Kumar",
-    designation: "Advisor, KIET Group of Institutions",
-    role: "Member",
-
-  },
-  {
-    key: "3",
-    name: "Saurav Kumar",
-    designation: " Representative of NSTEDB, DST, Govt. of India, New Delhi",
-    role: "Member",
-
-  },
-  {
-    key: "4",
-    name: "Saurav Kumar",
-    designation: " Additional Advisor, Micro Small & Medium Enterprises, Govt. of India, New Delhi",
-    role: "Member",
-
-  },
-  {
-    key: "5",
-    name: "Saurav Kumar",
-    designation: "Lead Bank Manager, Syndicate Bank, Ghaziabad",
-    role: "Member",
-
-  },
-  {
-    key: "6",
-    name: "Saurav Kumar",
-    designation: "Representative of SIDBI, New Delhi",
-    role: "Member",
-
-  },
-  {
-    key: "7",
-    name: "Saurav Kumar",
-    designation: "Representative of Industries Department, U.P.",
-    role: "Member",
-
-  },
-  {
-    key: "8",
-    name: "Saurav Kumar",
-    designation: "Representative of National Research Development Corp., New Delhi",
-    role: "Member",
-
-  },
-  {
-    key: "9",
-    name: "Saurav Kumar",
-    designation: "Leading Entrepreneur",
-    role: "Member",
-
-  },
-  {
-    key: "10",
-    name: "Saurav Kumar",
-    designation: "R&D Expert, KIET, Ghaziabad",
-    role: "Member",
-
-  },
-  {
-    key: "11",
-    name: "Saurav Kumar",
-    designation: "Dean (Academic), KIET, Ghaziabad",
-    role: "Member",
-
-  },
-  {
-    key: "12",
-    name: "Saurav Kumar",
-    designation: "General Manager, TBI-KIET, Ghaziabad",
-    role: "Ex-Officio Member Secretary",
-
-  },
-
-];
-
-const columns = [
-  {
-    key: "name",
-    label: "NAME",
-  },
-  {
-    key: "designation",
-    label: "Designation",
-  },
-
-  {
-    key: "role",
-    label: "ROLE",
-  },
-
-];
 
 
 const AboutTbi = () => {
   return (
     <>
-      <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
+      <div className="2xl:container 2xl:mx-auto lg:py-16  md:py-12 md:px-6 py-9 px-4">
         <div className="lg:w-10/12 w-full">
           <h1 className="text-2xl font-semibold capitalize lg:text-5xl lg:ml-4 ">
             <span className="text-blue-900">About TBI</span> <br />

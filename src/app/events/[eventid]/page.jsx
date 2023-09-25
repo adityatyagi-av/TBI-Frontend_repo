@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
-import Button from '@/components/Button/Button';
+
 import React from 'react'
 import { Chip } from "@nextui-org/react";
 import { Tabs, Tab } from "@nextui-org/react";

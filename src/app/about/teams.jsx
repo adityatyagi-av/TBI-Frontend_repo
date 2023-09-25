@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { Tabs, Tab, Card, CardBody } from "@nextui-org/react";
+import { Tabs, Tab } from "@nextui-org/react";
 import { mainteam, developerteam, designteam, marketingteam } from "./team";
 import TeamCard from "./teamcards";
 import BoardOfGoverners from "@/components/BoardOfGoverners/BoardOfGoverners";

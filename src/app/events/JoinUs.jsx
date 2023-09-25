@@ -1,4 +1,4 @@
-// import Button from "./Button.jsx";
+
 import Button from "@/components/Button/Button";
 const JoinUs = () => (
     <section id="join" className="flex justify-center items-center sm:my-16 my-6 sm:px-16 px-6 sm:py-12 py-4 sm:flex-row flex-col bg-black-gradient-2 rounded-[20px] box-shadow">
