@@ -6,7 +6,7 @@ const Infrastructure = () => {
     <>
       <section className="bg-white px-4">
         <div className="container  py-10 mx-auto">
-          <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl ">Building to <br /> accomodate 100+ Startups</h1>
+          <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl ">Everything You Need  <br /> to Take Your Startup to the Next Level</h1>
 
           <div className="mt-2">
             <span className="inline-block w-40 h-1 bg-blue-500 rounded-full"></span>
@@ -23,11 +23,12 @@ const Infrastructure = () => {
                   </svg>
                 </span>
 
-                <h1 className="text-xl font-semibold text-gray-700 capitalize ">New Components</h1>
+                <h1 className="text-xl font-semibold text-gray-700 capitalize "> Coworking Space</h1>
 
                 <p className="text-gray-500 ">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
-                </p>
+                Work alongside like-minded entrepreneurs and innovators
+              TBI Kiet offers shared work areas where you can set up your startup, collaborate with others, and work in a professional environment.
+              </p>
               </div>
 
               <div className="space-y-3">
@@ -38,10 +39,11 @@ const Infrastructure = () => {
                   </svg>
                 </span>
 
-                <h1 className="text-xl font-semibold text-gray-700 capitalize ">elegant Dark Mode</h1>
+                <h1 className="text-xl font-semibold text-gray-700 capitalize ">Continuous Capital Support</h1>
 
                 <p className="text-gray-500 ">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
+                Grants and Support Schemes for Growth
+                TBI KIET offers a range of funding opportunities through schemes like Nidhi EIR,Nidhi Prayaas and Tide.
                 </p>
               </div>
 
@@ -52,10 +54,11 @@ const Infrastructure = () => {
                   </svg>
                 </span>
 
-                <h1 className="text-xl font-semibold text-gray-700 capitalize ">Easy to customiztions</h1>
+                <h1 className="text-xl font-semibold text-gray-700 capitalize ">Global Networking Opportunities </h1>
 
                 <p className="text-gray-500 ">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
+                Connecting Entrepreneurs to a World of Opportunities
+Connect with entrepreneurs, investors, and industry experts from around the world. Expand your network and tap into valuable resources to grow your startup on a global scale.
                 </p>
               </div>
 
@@ -66,10 +69,11 @@ const Infrastructure = () => {
                   </svg>
                 </span>
 
-                <h1 className="text-xl font-semibold text-gray-700 capitalize ">Simple & clean designs</h1>
+                <h1 className="text-xl font-semibold text-gray-700 capitalize ">Best Industry Mentors:</h1>
 
                 <p className="text-gray-500 ">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
+                Mentors to Guide you the best
+Our experienced mentors bring years of industry expertise to help you navigate the challenges and opportunities of entrepreneurship.
                 </p>
               </div>
             </div>
