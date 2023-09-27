@@ -1,7 +1,6 @@
-
-import Scheme from '@/components/schemes'
 import React from 'react'
 import Image from 'next/image'
+import { Scheme } from '@/components/schemes'
 
 function page() {
     return (
@@ -42,9 +41,14 @@ function page() {
                     </div>
                 </div>
             </div>
-            <Scheme pageLink="healthcare/nidhieir" />
-            <Scheme direction="lg:flex-row-reverse" pageLink="healthcare/nidhieir/" />
-            <Scheme pageLink="healthcare/nidhieir" />
+
+            {/* all the schemes linked here */}
+            
+            <Scheme/>
+            <Scheme/>
+            <Scheme/>
+            <Scheme/>
+            <Scheme/>
 
 
 
