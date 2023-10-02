@@ -1,6 +1,57 @@
 import Link from "next/link";
-
+const schemes=[
+  {
+    id:1,
+    name:"NIDHI EIR",
+    description:"KIET-TBI, is one of the 10 selected NIDHI-EIR centers as PEP.The NIDHI-EIR Programme would provide subsistence grant upto Rs.30,000 per month to entrepreneurs with promising potential.",
+    link:"/incubation/nidhieir"
+  },
+  {
+    id:2,
+    name:"NIDHI PRAYAS",
+    description:"DST supported National Initiative for Developing and Harnessing Innovation (NIDHI) programs About NIDHI- Promotion and Acceleration of Young and Aspiring innovators and start-ups (PRAYAS) program focuses on supporting innovators to develop their innovative idea into prototypes. This program would attract a large number of youngsters to come forward to try out their ideas without actually worrying about failure.",
+    link:"/incubation/nidhiprayas"
+  },
+  {
+    id:3,
+    name:"Tide 2.0 Grant",
+    description:"The TIDE 2.0 program primarily focuses on nurturing valid Proof of Concept (PoC) ideas, elevating them to prototypes or Minimum Viable Products (MVPs). This scheme is dedicated to fortifying nearly 200 technology startups in strategically chosen domains of national significance. As a recipient of the MEITY TIDE-Grant, you can access substantial support, with grants of up to ₹700,000",
+    link:"/incubation/tidegrant"
+  },
+  {
+    id:4,
+    name:"Tide 2.0 Eir",
+    description:"It serves as a supportive platform for aspiring entrepreneurs, offering them the tools to nurture their innovative ideas within a technology-driven ecosystem.  As a beneficiary of the MEITY TIDE-EIR support, you have the potential to receive up to ₹30,000 per month, with a minimum grant of ₹10,000 per month for a 12-month duration. You can access support up to ₹3,60,000. ",
+    link:"/incubation/tideeir"
+  },
+  {
+    id:5,
+    name:"MSME IDEA Hackathon",
+    description:"The objective of the scheme is to promote and support untapped creativity and to promote adoption of latest technologies in MSMEs that seek the validation of their ideas at the proof-of-concept level.Up to maximum of Rs. 15 lakh per idea shall be provided to HI for developing and nurturing the ideas",
+    link:"/incubation/msme"
+  },
+  {
+    id:6,
+    name:"Twaran",
+    description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam inventore quas voluptates est ipsum adipisci, recusandae delectus! Ullam, magni?",
+    link:"/incubation/twaran"
+  },
+  {
+    id:7,
+    name:"iDEX",
+    description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam inventore quas voluptates est ipsum adipisci, recusandae delectus! Ullam, magni?",
+    link:"/incubation/idex"
+  },
+  {
+    id:8,
+    name:"Startup In UP",
+    description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam inventore quas voluptates est ipsum adipisci, recusandae delectus! Ullam, magni?",
+    link:"/incubation/upstartup"
+  }
+  
+]
 export const IncubationSchemes = () => {
+  
     return (
       <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
@@ -39,8 +90,10 @@ export const IncubationSchemes = () => {
           </p>
         </div>
         <div className="grid gap-5 row-gap-5 mb-8 lg:grid-cols-4 sm:grid-cols-2">
-          <Link
-            href="/incubation/nidhieir"
+          {schemes.map((scheme)=>{
+            return(
+              <Link key="id"
+            href={scheme.link}
             aria-label="View Item"
             className="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
           >
@@ -53,180 +106,22 @@ export const IncubationSchemes = () => {
               <div className="flex-grow border border-t-0 rounded-b">
                 <div className="p-5">
                   <h6 className="mb-2 font-semibold leading-5">
-                    NIDHI EIR
+                    {scheme.name}
                   </h6>
                   <p className="text-sm text-gray-900">
-                    Sportacus andrew weatherall goose Refined gentlemen super
-                    mario des lynam alpha trion zap rowsdower.
+                    {scheme.description}
                   </p>
                 </div>
               </div>
             </div>
           </Link>
-          <Link
-            href="/incubation/nidhiprayas"
-            aria-label="View Item"
-            className="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
-          >
-            <div className="flex flex-col h-full">
-              <img
-                src="https://images.pexels.com/photos/3182750/pexels-photo-3182750.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                className="object-cover w-full h-48"
-                alt=""
-              />
-              <div className="flex-grow border border-t-0 rounded-b">
-                <div className="p-5">
-                  <h6 className="mb-2 font-semibold leading-5">
-                    NIDHI PRAYAS
-                  </h6>
-                  <p className="text-sm text-gray-900">
-                    Bulbasaur Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Link>
-          <Link
-            href="/incubation/tidegrant"
-            aria-label="View Item"
-            className="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
-          >
-            <div className="flex flex-col h-full">
-              <img
-                src="https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                className="object-cover w-full h-48"
-                alt=""
-              />
-              <div className="flex-grow border border-t-0 rounded-b">
-                <div className="p-5">
-                  <h6 className="mb-2 font-semibold leading-5">TIDE 2.0 GRANT</h6>
-                  <p className="text-sm text-gray-900">
-                    A flower in my garden, a mystery in my panties. Heart attack
-                    never stopped old Big Bear.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Link>
-          <Link
-            href="/incubation/tideeir"
-            aria-label="View Item"
-            className="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
-          >
-            <div className="flex flex-col h-full">
-              <img
-                src="https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                className="object-cover w-full h-48"
-                alt=""
-              />
-              <div className="flex-grow border border-t-0 rounded-b">
-                <div className="p-5">
-                  <h6 className="mb-2 font-semibold leading-5">
-                    TIDE 2.0 EIR
-                  </h6>
-                  <p className="text-sm text-gray-900">
-                    Bro ipsum dolor sit amet gaper backside single track, manny
-                    Bike epic clipless. Schraeder drop gondy.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Link>
-          <Link
-            href="/incubation/msme"
-            aria-label="View Item"
-            className="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
-          >
-            <div className="flex flex-col h-full">
-              <img
-                src="https://images.pexels.com/photos/3184311/pexels-photo-3184311.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500"
-                className="object-cover w-full h-48"
-                alt=""
-              />
-              <div className="flex-grow border border-t-0 rounded-b">
-                <div className="p-5">
-                  <h6 className="mb-2 font-semibold leading-5">
-                    MSME IDEA HACKATHON
-                  </h6>
-                  <p className="text-sm text-gray-900">
-                    Sportacus andrew weatherall goose Refined gentlemen super
-                    mario des lynam alpha trion zap rowsdower.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Link>
-          <Link
-            href="/incubation/twaran"
-            aria-label="View Item"
-            className="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
-          >
-            <div className="flex flex-col h-full">
-              <img
-                src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                className="object-cover w-full h-48"
-                alt=""
-              />
-              <div className="flex-grow border border-t-0 rounded-b">
-                <div className="p-5">
-                  <h6 className="mb-2 font-semibold leading-5">
-                    TWARAN ACCELERATION PROGRAM
-                  </h6>
-                  <p className="text-sm text-gray-900">
-                    Bulbasaur Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Link>
-          <Link
-            href="/incubation/idex"
-            aria-label="View Item"
-            className="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
-          >
-            <div className="flex flex-col h-full">
-              <img
-                src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                className="object-cover w-full h-48"
-                alt=""
-              />
-              <div className="flex-grow border border-t-0 rounded-b">
-                <div className="p-5">
-                  <h6 className="mb-2 font-semibold leading-5 mx-auto">iDEX</h6>
-                  <p className="text-sm text-gray-900">
-                    A flower in my garden, a mystery in my panties. Heart attack
-                    never stopped old Big Bear.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Link>
-          <Link
-            href="/incubation/upstartup"
-            aria-label="View Item"
-            className="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
-          >
-            <div className="flex flex-col h-full">
-              <img
-                src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                className="object-cover w-full h-48"
-                alt=""
-              />
-              <div className="flex-grow border border-t-0 rounded-b">
-                <div className="p-5">
-                  <h6 className="mb-2 font-semibold leading-5">
-                    UP STARTUP POLICY
-                  </h6>
-                  <p className="text-sm text-gray-900">
-                    Bro ipsum dolor sit amet gaper backside single track, manny
-                    Bike epic clipless. Schraeder drop gondy.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Link>
+            )
+          })}
+          
+         
+        
+         
+          
         </div>
         <div className="text-center">
             
