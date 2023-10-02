@@ -17,7 +17,7 @@ function Stats() {
                         <span className="inline-block w-1 h-1 bg-blue-900 rounded-full"></span>
                     </div>
                 </div>
-                <div className="flex flex-wrap text-center">
+                <div className="flex flex-wrap text-center mx-auto">
                     <EachStatsCard end={987}
                         content={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, officiis.'}
                         bg={'bg-secondary'}
@@ -34,72 +34,6 @@ function Stats() {
                         content={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, officiis.'}
                         bg={'bg-white'}
                         text={'text-gray-900'} />
-                    <EachStatsCard end={987}
-                        content={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, officiis.'}
-                        bg={'bg-secondary'}
-                        text={'text-white'} />
-                    <EachStatsCard end={987}
-                        content={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, officiis.'}
-                        bg={'bg-white'}
-                        text={'text-gray-900'} />
-                    <EachStatsCard end={987}
-                        content={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, officiis.'}
-                        bg={'bg-secondary'}
-                        text={'text-white'} />
-                    <EachStatsCard end={987}
-                        content={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, officiis.'}
-                        bg={'bg-white'}
-                        text={'text-gray-900'} />
-                    <EachStatsCard end={987}
-                        content={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, officiis.'}
-                        bg={'bg-secondary'}
-                        text={'text-white'} />
-                    <EachStatsCard end={987}
-                        content={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, officiis.'}
-                        bg={'bg-white'}
-                        text={'text-gray-900'} />
-                    <EachStatsCard end={987}
-                        content={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, officiis.'}
-                        bg={'bg-secondary'}
-                        text={'text-white'} />
-                    <EachStatsCard end={987}
-                        content={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, officiis.'}
-                        bg={'bg-white'}
-                        text={'text-gray-900'} />
-                    <EachStatsCard end={987}
-                        content={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, officiis.'}
-                        bg={'bg-secondary'}
-                        text={'text-white'} />
-                    <EachStatsCard end={987}
-                        content={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, officiis.'}
-                        bg={'bg-white'}
-                        text={'text-gray-900'} />
-                    <EachStatsCard end={987}
-                        content={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, officiis.'}
-                        bg={'bg-secondary'}
-                        text={'text-white'} />
-                    <EachStatsCard end={987}
-                        content={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, officiis.'}
-                        bg={'bg-white'}
-                        text={'text-gray-900'} />
-                    <EachStatsCard end={987}
-                        content={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, officiis.'}
-                        bg={'bg-secondary'}
-                        text={'text-white'} />
-                    <EachStatsCard end={987}
-                        content={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, officiis.'}
-                        bg={'bg-white'}
-                        text={'text-gray-900'} />
-                    <EachStatsCard end={987}
-                        content={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, officiis.'}
-                        bg={'bg-secondary'}
-                        text={'text-white'} />
-                    <EachStatsCard end={987}
-                        content={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, officiis.'}
-                        bg={'bg-white'}
-                        text={'text-gray-900'} />
-
-
                 </div>
             </div>
         </section>

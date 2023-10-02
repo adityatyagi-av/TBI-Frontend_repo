@@ -5,7 +5,6 @@ import UpcomingEvents from "./UpcomingEvents";
 import RecentEvents from "./PastEvents";
 
 
-
 const Events = () => {
   return (
 
