@@ -28,12 +28,12 @@ function page() {
                                     <img className="object-cover w-full  rounded-xl h-72 lg:h-96" src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" />
                                     <div>
 
-                                        <div class="flex items-center mt-6">
-                                            <img class="object-cover object-center w-10 h-12 rounded-full" src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" alt="" />
+                                        <div className="flex items-center mt-6">
+                                            <img className="object-cover object-center w-10 h-12 rounded-full" src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" alt="" />
 
-                                            <div class="mx-4">
-                                                <h1 class="text-md font-medium text-gray-700">Hosted By</h1>
-                                                <p class="text-sm text-gray-500">Technology Business Incubator KIET</p>
+                                            <div className="mx-4">
+                                                <h1 className="text-md font-medium text-gray-700">Hosted By</h1>
+                                                <p className="text-sm text-gray-500">Technology Business Incubator KIET</p>
                                             </div>
                                         </div>
                                     </div>
@@ -69,34 +69,34 @@ function page() {
                             </div>
                             <div className='mt-7 lg:-mx-6 lg:flex lg:items-center'>
                                 <div className='w-full lg:w-[48%] '>
-                                    <div class="p-8 mt-8 space-y-8 rounded-lg">
+                                    <div className="p-8 mt-8 space-y-8 rounded-lg">
                                         <h2 className="text-2xl font-semibold font-poppins capitalize lg:text-3xl ">
                                             Details of Event
                                         </h2>
-                                        <div class="flex items-center justify-between">
-                                            <p class="font-poppins text-lg sm:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                        <div className="flex items-center justify-between">
+                                            <p className="font-poppins text-lg sm:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
                                         </div>
 
-                                        <div class="flex items-center justify-between">
-                                            <p class="font-poppins text-lg sm:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                        <div className="flex items-center justify-between">
+                                            <p className="font-poppins text-lg sm:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
                                         </div>
 
-                                        <div class="flex items-center justify-between">
-                                            <p class="font-poppins text-lg sm:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                        <div className="flex items-center justify-between">
+                                            <p className="font-poppins text-lg sm:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
                                         </div>
 
-                                        <div class="flex items-center justify-between">
-                                            <p class="font-poppins text-lg sm:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                        <div className="flex items-center justify-between">
+                                            <p className="font-poppins text-lg sm:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
                                         </div>
-                                        <div class="flex items-center justify-between">
-                                            <p class="font-poppins text-lg sm:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                        <div className="flex items-center justify-between">
+                                            <p className="font-poppins text-lg sm:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
                                         </div>
                                     </div>
                                 </div>
 
 
                                 <div className='w-full lg:w-1/3 mx-auto'>
-                                    <div class="p-8 mt-8 space-y-8">
+                                    <div className="p-8 mt-8 space-y-8">
                                         <div className="flex-1 flex justify-center items-start flex-col">
                                             <h2 className="font-poppins font-semibold sm:text-[48px] text-[40px] sm:leading-[76.8px] leading-[66.8px] w-full">Registrations <span className='text-secondary'>Closed</span></h2>
                                             <p className={`font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px] max-w-[470px] mt-5`}>Registrations for this event are now closed </p>

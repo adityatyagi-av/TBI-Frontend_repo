@@ -12,7 +12,7 @@ const MyCarousel = () => {
         autoPlay
         autoPlaySpeed={1000}
         centerMode={false}
-        // containerClass='w-full'
+        // containerclassName='w-full'
         containerclassName="container-with-dots w-full"
         customTransition="all 1s linear"
         dotList

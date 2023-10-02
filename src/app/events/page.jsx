@@ -17,6 +17,7 @@ const Events = () => {
           <RecentEvents />
         </Tab>
       </Tabs>
+
     </div>
   )
 }
