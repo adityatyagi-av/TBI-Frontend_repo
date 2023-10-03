@@ -150,6 +150,7 @@ export default function HorizontalLinearStepper() {
       dateOfBirth:'',
       gender:'',
       category:'',
+      aadharNumber:'',
       address:'',
       addressDocument:null,
       panNumber:'',
