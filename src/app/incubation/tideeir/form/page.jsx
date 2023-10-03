@@ -14,7 +14,7 @@ import InputTextArea from '@/components/inputTextArea';
 import InputFile from '@/components/inputFile';
 
 
-const steps = ['Applicant Details', 'Idea Description', 'Checklist'];
+const steps = ['Applicant Details', 'Idea Description', 'Checklist','Final Review'];
 
 export default function HorizontalLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -193,16 +193,14 @@ export default function HorizontalLinearStepper() {
   ]
 
   return (
-    <Box sx={{ width: '81%' }} className="mx-auto my-10">
+    <Box sx={{ width: '81%' }} className="mx-auto my-10 ">
       <form onSubmit={formik.handleSubmit}>
-        <Stepper activeStep={activeStep}>
+        <Stepper activeStep={activeStep} className='hidden sm:flex'>
           {steps.map((label, index) => {
             const stepProps = {};
             const labelProps = {};
 
-            if (isStepSkipped(index)) {
-              stepProps.completed = false;
-            }
+            
             return (
               <Step key={label} {...stepProps}>
                 <StepLabel {...labelProps}>{label}</StepLabel>

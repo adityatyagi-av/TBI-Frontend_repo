@@ -166,7 +166,7 @@ export default function HorizontalLinearStepper() {
   return (
     <Box sx={{ width: '81%' }} className="mx-auto">
       <form onSubmit={formik.handleSubmit}>
-        <Stepper activeStep={activeStep}>
+        <Stepper activeStep={activeStep} className='hidden sm:flex'>
           {steps.map((label, index) => {
             const stepProps = {};
             const labelProps = {};
