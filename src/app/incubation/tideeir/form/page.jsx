@@ -14,7 +14,7 @@ import InputTextArea from '@/components/inputTextArea';
 import InputFile from '@/components/inputFile';
 
 
-const steps = ['Applicant Details', 'Idea Description', 'Checklist','Final Review'];
+const steps = ['Applicant Details', 'Team & Idea Desc.', 'Checklist'];
 
 export default function HorizontalLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -103,6 +103,10 @@ export default function HorizontalLinearStepper() {
         return value && value.size <= 10 * 1024 * 1024;
       })
       .required('Resume is required'),
+      teamMemberName: Yup.string(),
+      teamMemberInstituteName: Yup.string(),
+      teamMemberEducation: Yup.string(),
+      teamMemberExperience:Yup.string(),
       projectTitle: Yup.string().required('Required'),
       techStack: Yup.string().required('Required'),
     ideaDescription: Yup.string().required('Required'),
@@ -122,6 +126,9 @@ export default function HorizontalLinearStepper() {
         if (!value) return true;
         return value && value.size <= 20 * 1024 * 1024;
       }).required('Upload the video'),
+      companyName:Yup.string(),
+      incorporationDate:Yup.date(),
+      companyDescription:Yup.string(),
     previousRecipient: Yup.string().required('Required'),
     fullCommitment: Yup.string().required('Required'),
     noOtherFellowship: Yup.string().required('Required'),
@@ -146,6 +153,10 @@ export default function HorizontalLinearStepper() {
       instituteName:'',
       experience: '',
       resume: null,
+      teamMemberName:'',
+      teamMemberInstituteName:'',
+      teamMemberEducation:'',
+      teamMemberExperience:'',
       projectTitle:'',
       techStack:'',
       ideaDescription: '',
@@ -153,6 +164,9 @@ export default function HorizontalLinearStepper() {
       aspectNote: null,
       projectStatus:'',
       projectVideo:null,
+      companyName:'',
+      incorporationDate:'',
+      companyDescription:'',
       previousRecipient: '',
       fullCommitment: '',
       noOtherFellowship: '',
@@ -226,6 +240,18 @@ export default function HorizontalLinearStepper() {
         {activeStep === 0 &&
 
           <>
+          <div className="mt-8"/>
+          <div className="mt-5 mb-4">
+                <h2 className="text-xl font-semibold text-gray-800 capitalize lg:text-2xl ">
+                {`Applicant Details`}
+                </h2>
+
+                <div className="flex mx-auto mt-2">
+                    <span className="inline-block w-40 h-1 bg-blue-900 rounded-full"></span>
+                    <span className="inline-block w-3 h-1 mx-1 bg-blue-900 rounded-full"></span>
+                    <span className="inline-block w-1 h-1 bg-blue-900 rounded-full"></span>
+                </div>
+            </div>
             <Input className="mt-4" value="name" label="Name Of the Applicant" placeHolder="Aditya Tyagi" formikTouched={formik.touched.name} formikError={formik.errors.name} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.name} type="text" />
 
             <Input value="email" label="Your Email" placeHolder="adityatyagi@gmail.com" formikTouched={formik.touched.email} formikError={formik.errors.email} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.email} type="email" />
@@ -282,6 +308,36 @@ export default function HorizontalLinearStepper() {
 
           <>
            <div className='mt-10'/>
+           
+            <div className="mt-5 mb-4">
+                <h2 className="text-xl font-semibold text-gray-800 capitalize lg:text-2xl ">
+                {`About the Team(if any)`}
+                </h2>
+
+                <div className="flex mx-auto mt-2">
+                    <span className="inline-block w-40 h-1 bg-blue-900 rounded-full"></span>
+                    <span className="inline-block w-3 h-1 mx-1 bg-blue-900 rounded-full"></span>
+                    <span className="inline-block w-1 h-1 bg-blue-900 rounded-full"></span>
+                </div>
+            </div>
+           <Input value="teamMemberName" label="Name of Team Members" placeHolder="Aditya Pandey" formikTouched={formik.touched.teamMemberName} formikError={formik.errors.teamMemberName} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.teamMemberName} type="text"/>
+
+           <Input value="teamMemberEducation" label="Highest Qualification & Passing Year" placeHolder="B.Tech in Computer Science (2022)" formikTouched={formik.touched.teamMemberEducation} formikError={formik.errors.teamMemberEducation} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.teamMemberEducation} type="text"/>
+
+           <Input value="teamMemberInstituteName" label="Institute Name" placeHolder="KIET Group Of Institutions" formikTouched={formik.touched.teamMemberInstituteName} formikError={formik.errors.teamMemberInstituteName} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.teamMemberInstituteName} type="text"/>
+
+           <div className="mt-5 mb-4">
+                <h2 className="text-xl font-semibold text-gray-800 capitalize lg:text-2xl ">
+                {`About the applicant's Technology/project idea`}
+                </h2>
+
+                <div className="flex mx-auto mt-2">
+                    <span className="inline-block w-40 h-1 bg-blue-900 rounded-full"></span>
+                    <span className="inline-block w-3 h-1 mx-1 bg-blue-900 rounded-full"></span>
+                    <span className="inline-block w-1 h-1 bg-blue-900 rounded-full"></span>
+                </div>
+            </div>
+
            <Input value="projectTitle" label="Please provide a short title of the project" placeHolder="Enter your project Title " formikTouched={formik.touched.projectTitle} formikError={formik.errors.projectTitle} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.projectTitle} type="text"/>
 
            <Input value="techStack" label="Please provide an emerging technology you are using (e.g., IoT, AI, Blockchain, Robotics, ML, etc.):" placeHolder="Enter your Tech Stack " formikTouched={formik.touched.techStack} formikError={formik.errors.techStack} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.techStack} type="text" className="mt-20"/>
@@ -322,6 +378,35 @@ export default function HorizontalLinearStepper() {
         }
         {activeStep === 2 &&
           <>
+          <div className="mt-5 mb-4">
+                <h2 className="text-xl font-semibold text-gray-800 capitalize lg:text-2xl ">
+                {` Have you formed a company? Give Details (if any)`}
+                </h2>
+
+                <div className="flex mx-auto mt-2">
+                    <span className="inline-block w-40 h-1 bg-blue-900 rounded-full"></span>
+                    <span className="inline-block w-3 h-1 mx-1 bg-blue-900 rounded-full"></span>
+                    <span className="inline-block w-1 h-1 bg-blue-900 rounded-full"></span>
+                </div>
+            </div>
+            <Input value="companyName" label="Company Name" placeHolder="Develop It " formikTouched={formik.touched.companyName} formikError={formik.errors.companyName} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.companyName} type="text" className="mt-20"/>
+
+            <Input value="incorporationDate" label="Incorporation Date" placeHolder="02-06-2009" formikTouched={formik.touched.incorporationDate} formikError={formik.errors.incorporationDate} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.incorporationDate} type="date" />
+
+            <InputTextArea value="companyDescription" label="Brief about the Company." placeHolder="Enter your company details." formikTouched={formik.touched.companyDescription} formikError={formik.errors.companyDescription} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.companyDescription} />
+
+            <div className="mt-5 mb-4">
+                <h2 className="text-xl font-semibold text-gray-800 capitalize lg:text-2xl ">
+                {`Checklist of essential criteria`}
+                </h2>
+
+                <div className="flex mx-auto mt-2">
+                    <span className="inline-block w-40 h-1 bg-blue-900 rounded-full"></span>
+                    <span className="inline-block w-3 h-1 mx-1 bg-blue-900 rounded-full"></span>
+                    <span className="inline-block w-1 h-1 bg-blue-900 rounded-full"></span>
+                </div>
+            </div>
+
             <InputRadio value="previousRecipient" label="Applicant confirms that he/she has not been a recipient of the TIDE 2.0-EIR previously." options={generalOptions} formikTouched={formik.touched.previousRecipient} formikError={formik.errors.previousRecipient} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
 
