@@ -66,24 +66,120 @@ const FinalReview = ({ formik }) => {
     },
     {
         id: 13,
-        label: 'Enterpreneurship xperience',
-        value: '',
+        label: 'Enterpreneurship Experience',
+        value: 'experience',
     },
     {
-        id: ,
-        label: '',
-        value: '',
-    },
-
-    {   id:10,
+        id: 14,
         label: 'Resume',
         value: 'resume',
     },
-    {
-        id: ,
-        label: '',
-        value: '',
+
+    {   id:15,
+        label: 'Applicant Image',
+        value: 'applicantImage',
     },
+    {
+        id: 16,
+        label: 'Aadhar Image',
+        value: 'aadharImage',
+    },
+    {
+        id: 17,
+        label: 'Pan Image',
+        value: 'panImage',
+    },
+    {
+        id: 18,
+        label: 'Team Member Name',
+        value: 'teamMemberName',
+    },
+    {
+        id: 19,
+        label: 'Team Member Education',
+        value: 'teamMemberEducation',
+    },
+    {
+        id: 20,
+        label: 'Team Member Institute Name',
+        value: 'teamMemberInstituteName',
+    },
+    {
+        id: 21,
+        label: 'Project Title',
+        value: 'projectTitle',
+    },
+    {
+        id: 22,
+        label: 'techStack',
+        value: 'Tech Stack',
+    },
+    {
+        id: 23,
+        label: 'Idea Description',
+        value: 'ideaDescription',
+    },
+    {
+        id: 24,
+        label: 'Concept Note',
+        value: 'conceptNote',
+    },
+    {
+        id: 25,
+        label: 'Aspect Note',
+        value: 'aspectNote',
+    },
+    {
+        id: 26,
+        label: 'Project Status',
+        value: 'projectStatus',
+    },
+    {
+        id: 27,
+        label: 'Project Video',
+        value: 'projectVideo',
+    },
+    {
+        id: 28,
+        label: 'Company Name',
+        value: 'companyName',
+    },
+    {
+        id: 29,
+        label: 'Incorporation Date',
+        value: 'incorporationDate',
+    },
+    {
+        id: 30,
+        label: 'Company Description',
+        value: 'companyDescription',
+    },
+    {
+        id: 31,
+        label: 'Applicant confirms that he/she has not been a recipient of the TIDE 2.0-EIR previously.',
+        value: 'previousRecipient',
+    },
+    {
+        id: 32,
+        label: 'Applicant is planning to pursue TIDE 2.0 EIR full-time with no other concurrent commitments.',
+        value: 'fullCommitment',
+    },
+    {
+        id: 33,
+        label: 'Applicant confirms that he/she will not be in receipt of any other remuneration or fellowship during the duration of the TIDE 2.0 EIR.',
+        value: 'noOtherFellowship',
+    },
+    {
+        id: 34,
+        label: 'Applicant admits that he/she is willing to take the startup formation as the primary career option.',
+        value: 'businessCommitment',
+    },
+    {
+        id: 35,
+        label: 'Applicant confirms that he/she is not the promoter or significant (>10%) shareholder/beneficiary of another company at the time of applying for and receiving the TIDE 2.0 EIR support.',
+        value: 'notBeneficiary',
+    },
+
 
       
 
