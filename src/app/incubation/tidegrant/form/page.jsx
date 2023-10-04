@@ -5,29 +5,58 @@ import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import Input from '@/components/input';
 import InputRadio from '@/components/inputRadio';
 import InputTextArea from '@/components/inputTextArea';
 import InputFile from '@/components/inputFile';
-import FinalReview from './finalreview';
 
 
-const steps = ['Applicant Details', 'Team & Idea Desc.', 'Checklist','Final Review'];
+const steps = ['Applicant Details', 'Team & Idea Desc.', 'Checklist'];
 
 export default function HorizontalLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
+  const [skipped, setSkipped] = React.useState(new Set());
+
+  const isStepOptional = (step) => {
+    return step === 1;
+  };
+
+  const isStepSkipped = (step) => {
+    return skipped.has(step);
+  };
 
   const handleNext = () => {
+    let newSkipped = skipped;
+    if (isStepSkipped(activeStep)) {
+      newSkipped = new Set(newSkipped.values());
+      newSkipped.delete(activeStep);
+    }
+
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    setSkipped(newSkipped);
   };
 
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
- 
+  const handleSkip = () => {
+    if (!isStepOptional(activeStep)) {
+      // You probably want to guard against something like this,
+      // it should never occur unless someone's actively trying to break something.
+      throw new Error("You can't skip a step that isn't optional.");
+    }
+
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    setSkipped((prevSkipped) => {
+      const newSkipped = new Set(prevSkipped.values());
+      newSkipped.add(activeStep);
+      return newSkipped;
+    });
+  };
   //conditions for dob
   const today = new Date();
   const minDate = new Date(today);
@@ -212,37 +241,17 @@ export default function HorizontalLinearStepper() {
           })}
         </Stepper>
 
-        {activeStep === steps.length-1 &&
+        {activeStep === steps.length &&
           <>
-            <div className="mt-5 mb-4 mx-auto">
-                <h1 className="text-2xl font-semibold text-gray-800 capitalize mx-auto lg:text-3xl ">
-                {`FINAL REVIEW`}
-                </h1>
+            <Typography sx={{ mt: 2, mb: 1 }}>
+              All steps completed - you&apos;re finished
+            </Typography>
+            
 
-                <div className="flex mx-auto mt-2">
-                    <span className="inline-block w-40 h-1 bg-blue-900 rounded-full"></span>
-                    <span className="inline-block w-3 h-1 mx-1 bg-blue-900 rounded-full"></span>
-                    <span className="inline-block w-1 h-1 bg-blue-900 rounded-full"></span>
-                </div>
-
-            </div>
-            <FinalReview formik={formik}/>
             <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
-              <Button
-                color="inherit"
-                disabled={activeStep === 0}
-                onClick={handleBack}
-                sx={{ mr: 1 }}
-              >
-                Back
-              </Button>
               <Box sx={{ flex: '1 1 auto' }} />
-
-
               <Button type='submit'>Finish</Button>
             </Box>
-
-            
           </>
         }
 
@@ -290,11 +299,13 @@ export default function HorizontalLinearStepper() {
 
             <InputFile value="resume" label="Attach CV or Resume with details of education and work experience" formik={formik} formikTouched={formik.touched.resume} formikError={formik.errors.resume} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.resume} />
 
+            
             <InputFile value="applicantImage" label="Attach PP Size Photo" formik={formik} formikTouched={formik.touched.applicantImage} formikError={formik.errors.applicantImage} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.applicantImage} />
 
             <InputFile value="aadharImage" label="Attach Aadhar Card Image" formik={formik} formikTouched={formik.touched.aadharImage} formikError={formik.errors.aadharImage} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.aadharImage} />
 
             <InputFile value="panImage" label="Attach PAN Card Image" formik={formik} formikTouched={formik.touched.panImage} formikError={formik.errors.panImage} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.panImage} />
+
 
 
             <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
@@ -310,13 +321,10 @@ export default function HorizontalLinearStepper() {
 
 
               <Button
-                onClick={handleNext}
-                
-              >
+                onClick={handleNext}>
+
                 {'Next'}
               </Button>
-
-              
             </Box>
           </>
         }
