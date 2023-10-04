@@ -5,58 +5,30 @@ import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import Input from '@/components/input';
 import InputRadio from '@/components/inputRadio';
 import InputTextArea from '@/components/inputTextArea';
 import InputFile from '@/components/inputFile';
+import FinalReview from './finalreview';
+import InputSelect from '@/components/inputSelect';
 
 
-const steps = ['Applicant Details', 'Team & Idea Desc.', 'Checklist'];
+const steps = ['Applicant Details', 'Team & Idea Desc.', 'Checklist','Final Review'];
 
 export default function HorizontalLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
-  const [skipped, setSkipped] = React.useState(new Set());
-
-  const isStepOptional = (step) => {
-    return step === 1;
-  };
-
-  const isStepSkipped = (step) => {
-    return skipped.has(step);
-  };
 
   const handleNext = () => {
-    let newSkipped = skipped;
-    if (isStepSkipped(activeStep)) {
-      newSkipped = new Set(newSkipped.values());
-      newSkipped.delete(activeStep);
-    }
-
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    setSkipped(newSkipped);
   };
 
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
-  const handleSkip = () => {
-    if (!isStepOptional(activeStep)) {
-      // You probably want to guard against something like this,
-      // it should never occur unless someone's actively trying to break something.
-      throw new Error("You can't skip a step that isn't optional.");
-    }
-
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    setSkipped((prevSkipped) => {
-      const newSkipped = new Set(prevSkipped.values());
-      newSkipped.add(activeStep);
-      return newSkipped;
-    });
-  };
+ 
   //conditions for dob
   const today = new Date();
   const minDate = new Date(today);
@@ -118,23 +90,11 @@ export default function HorizontalLinearStepper() {
         if (!value) return true;
         return value && value.size <= 2 * 1024 * 1024;
       }).required('Attach the PAN Card Image'),
-      teamMemberName: Yup.string(),
-      teamMemberInstituteName: Yup.string(),
-      teamMemberEducation: Yup.string(),
-      teamMemberExperience:Yup.string(),
+      applicantProfession:Yup.string().required('Required'),
+      annualIncome:Yup.string().required('Required'),
       projectTitle: Yup.string().required('Required'),
       techStack: Yup.string().required('Required'),
     ideaDescription: Yup.string().required('Required'),
-    conceptNote: Yup.mixed()
-      .test('fileSize', 'File size must be less than 10MB', (value) => {
-        if (!value) return true;
-        return value && value.size <= 10 * 1024 * 1024;
-      }).required('Attach the concept note'),
-    aspectNote: Yup.mixed()
-      .test('fileSize', 'File size must be less than 10MB', (value) => {
-        if (!value) return true;
-        return value && value.size <= 10 * 1024 * 1024;
-      }).required('Please attach the note.'),
       projectStatus: Yup.string().required('Required'),
       projectVideo: Yup.mixed()
       .test('fileSize', 'File size must be less than 20MB', (value) => {
@@ -171,16 +131,12 @@ export default function HorizontalLinearStepper() {
       applicantImage:null,
       aadharImage:null,
       panImage:null,
-      teamMemberName:'',
-      teamMemberInstituteName:'',
-      teamMemberEducation:'',
-      teamMemberExperience:'',
+      applicantProfession:'',
+      annualIncome:'',
       projectTitle:'',
+      projectStatus:'',
       techStack:'',
       ideaDescription: '',
-      conceptNote: null,
-      aspectNote: null,
-      projectStatus:'',
       projectVideo:null,
       companyName:'',
       incorporationDate:'',
@@ -213,17 +169,19 @@ export default function HorizontalLinearStepper() {
     { label: 'ST', value: 'st' },
 
   ];
-  const projectStatusOptions = [
-    { label: 'Idea', value: 'idea' },
-    { label: 'POC', value: 'poc' },
-    
-  ];
+  
 
   const generalOptions = [
     { label: 'Yes', value: 'yes' },
     { label: 'No', value: 'no' },
   ]
-
+  const projectStatusOptions=[
+    {label: 'Idea',value:'idea'},
+    {label: 'POC',value:'poc'},
+    {label: 'Prototype',value:'prototype'},
+    {label: 'Ready to commercialize',value:'readytocommercialize'},
+    {label: 'Ready Market Product',value:'readymarketproduct'}
+  ]
   return (
     <Box sx={{ width: '81%' }} className="mx-auto my-10 ">
       <form onSubmit={formik.handleSubmit}>
@@ -241,17 +199,39 @@ export default function HorizontalLinearStepper() {
           })}
         </Stepper>
 
-        {activeStep === steps.length &&
+        {activeStep === steps.length-1 &&
           <>
-            <Typography sx={{ mt: 2, mb: 1 }}>
-              All steps completed - you&apos;re finished
-            </Typography>
+            <div className="mt-5 mb-4 mx-auto">
+                <h1 className="text-2xl font-semibold text-gray-800 capitalize mx-auto lg:text-3xl ">
+                {`FINAL REVIEW`}
+                </h1>
+
+                <div className="flex mx-auto mt-2">
+                    <span className="inline-block w-40 h-1 bg-blue-900 rounded-full"></span>
+                    <span className="inline-block w-3 h-1 mx-1 bg-blue-900 rounded-full"></span>
+                    <span className="inline-block w-1 h-1 bg-blue-900 rounded-full"></span>
+                </div>
+
+            </div>
+            <FinalReview formik={formik}/>
             
 
             <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
+              <Button
+                color="inherit"
+                disabled={activeStep === 0}
+                onClick={handleBack}
+                sx={{ mr: 1 }}
+              >
+                Back
+              </Button>
               <Box sx={{ flex: '1 1 auto' }} />
-              <Button type='submit'>Finish</Button>
+
+
+              <Button type='submit' >Finish</Button>
             </Box>
+
+            
           </>
         }
 
@@ -295,16 +275,20 @@ export default function HorizontalLinearStepper() {
 
             <Input value="instituteName" label="Institute/Organization Name." placeHolder="Enter your institute name " formikTouched={formik.touched.instituteName} formikError={formik.errors.instituteName} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.instituteName} type="text"/>
 
-            <InputTextArea value="experience" label="Any Experience in Entrepreneurship? Give the details." placeHolder="Your Experience " formikTouched={formik.touched.experience} formikError={formik.errors.experience} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.experience} />
-
-            <InputFile value="resume" label="Attach CV or Resume with details of education and work experience" formik={formik} formikTouched={formik.touched.resume} formikError={formik.errors.resume} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.resume} />
-
             
+            <InputFile value="resume" label="Attach your latest CV or Resume with details of education and work experience" formik={formik} formikTouched={formik.touched.resume} formikError={formik.errors.resume} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.resume} />
+
             <InputFile value="applicantImage" label="Attach PP Size Photo" formik={formik} formikTouched={formik.touched.applicantImage} formikError={formik.errors.applicantImage} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.applicantImage} />
 
             <InputFile value="aadharImage" label="Attach Aadhar Card Image" formik={formik} formikTouched={formik.touched.aadharImage} formikError={formik.errors.aadharImage} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.aadharImage} />
 
             <InputFile value="panImage" label="Attach PAN Card Image" formik={formik} formikTouched={formik.touched.panImage} formikError={formik.errors.panImage} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.panImage} />
+
+
+            <Input value="applicantProfession" label="Profession of the Applicant." placeHolder="Enter your institute name " formikTouched={formik.touched.applicantProfession} formikError={formik.errors.applicantProfession} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.applicantProfession} type="text"/>
+
+            <Input value="annualIncome" label="Annual Income of the applicant." placeHolder="Enter your institute name " formikTouched={formik.touched.annualIncome} formikError={formik.errors.annualIncome} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.annualIncome} type="text"/>
+
 
 
 
@@ -321,10 +305,13 @@ export default function HorizontalLinearStepper() {
 
 
               <Button
-                onClick={handleNext}>
-
+                onClick={handleNext}
+                
+              >
                 {'Next'}
               </Button>
+
+              
             </Box>
           </>
         }
@@ -336,23 +323,6 @@ export default function HorizontalLinearStepper() {
 
           <>
            <div className='mt-10'/>
-           
-            <div className="mt-5 mb-4">
-                <h2 className="text-xl font-semibold text-gray-800 capitalize lg:text-2xl ">
-                {`About the Team(if any)`}
-                </h2>
-
-                <div className="flex mx-auto mt-2">
-                    <span className="inline-block w-40 h-1 bg-blue-900 rounded-full"></span>
-                    <span className="inline-block w-3 h-1 mx-1 bg-blue-900 rounded-full"></span>
-                    <span className="inline-block w-1 h-1 bg-blue-900 rounded-full"></span>
-                </div>
-            </div>
-           <Input value="teamMemberName" label="Name of Team Members" placeHolder="Aditya Pandey" formikTouched={formik.touched.teamMemberName} formikError={formik.errors.teamMemberName} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.teamMemberName} type="text"/>
-
-           <Input value="teamMemberEducation" label="Highest Qualification & Passing Year" placeHolder="B.Tech in Computer Science (2022)" formikTouched={formik.touched.teamMemberEducation} formikError={formik.errors.teamMemberEducation} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.teamMemberEducation} type="text"/>
-
-           <Input value="teamMemberInstituteName" label="Institute Name" placeHolder="KIET Group Of Institutions" formikTouched={formik.touched.teamMemberInstituteName} formikError={formik.errors.teamMemberInstituteName} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.teamMemberInstituteName} type="text"/>
 
            <div className="mt-5 mb-4">
                 <h2 className="text-xl font-semibold text-gray-800 capitalize lg:text-2xl ">
@@ -366,18 +336,13 @@ export default function HorizontalLinearStepper() {
                 </div>
             </div>
 
-           <Input value="projectTitle" label="Please provide a short title of the project" placeHolder="Enter your project Title " formikTouched={formik.touched.projectTitle} formikError={formik.errors.projectTitle} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.projectTitle} type="text"/>
+           <Input value="projectTitle" label="Enter the title for your Idea" placeHolder=" " formikTouched={formik.touched.projectTitle} formikError={formik.errors.projectTitle} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.projectTitle} type="text"/>
 
-           <Input value="techStack" label="Please provide an emerging technology you are using (e.g., IoT, AI, Blockchain, Robotics, ML, etc.):" placeHolder="Enter your Tech Stack " formikTouched={formik.touched.techStack} formikError={formik.errors.techStack} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.techStack} type="text" className="mt-20"/>
+           <InputSelect value="projectStatus" label="Please select the status of the project already carried out" options={projectStatusOptions} formikTouched={formik.touched.projectStatus} formikError={formik.errors.projectStatus} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
-            <InputTextArea value="ideaDescription" label="Please provide a brief idea of your project in 100 words." placeHolder="Enter brief description." formikTouched={formik.touched.ideaDescription} formikError={formik.errors.ideaDescription} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.ideaDescription} />
+           <Input value="techStack" label="Technology & Working Principle behind the project:" placeHolder=" " formikTouched={formik.touched.techStack} formikError={formik.errors.techStack} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.techStack} type="text" className="mt-20"/>
 
-            <InputFile value="conceptNote" label="Please attach a concept note of your technology/project." formik={formik} formikTouched={formik.touched.conceptNote} formikError={formik.errors.conceptNote} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.conceptNote} />
-
-
-            <InputFile value="aspectNote" label="Please attach a note describing the impact of the technology/project you are proposing for. Describe the innovative elements and uniqueness of the idea along with comparisons with existing solutions in the market." formik={formik} formikTouched={formik.touched.aspectNote} formikError={formik.errors.aspectNote} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.aspectNote} />
-
-            <InputRadio value="projectStatus" label="Category" options={projectStatusOptions} formikTouched={formik.touched.projectStatus} formikError={formik.errors.projectStatus} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+            <InputTextArea value="ideaDescription" label="Describe the idea of highlighting innovative elements" formikTouched={formik.touched.ideaDescription} formikError={formik.errors.ideaDescription} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.ideaDescription} />
 
             <InputFile value="projectVideo" label="Please upload video of project Status" formik={formik} formikTouched={formik.touched.projectVideo} formikError={formik.errors.projectVideo} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.projectVideo} />
 

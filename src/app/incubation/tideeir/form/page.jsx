@@ -227,6 +227,8 @@ export default function HorizontalLinearStepper() {
 
             </div>
             <FinalReview formik={formik}/>
+            
+
             <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
               <Button
                 color="inherit"
@@ -239,7 +241,7 @@ export default function HorizontalLinearStepper() {
               <Box sx={{ flex: '1 1 auto' }} />
 
 
-              <Button type='submit'>Finish</Button>
+              <Button type='submit' >Finish</Button>
             </Box>
 
             
