@@ -106,15 +106,10 @@ const UpcomingEvents = () => {
                       <Button content={'RSVP NOW'} />
                       <br />
                       <div >
-                        <Chip className='mx-2 my-2' size="md">Large</Chip>
-                        <Chip className='mx-2 my-2' size="md">Large</Chip>
-                        <Chip className='mx-2 my-2' size="md">Large</Chip>
-                        <Chip className='mx-2 my-2' size="md">Large</Chip>
-                        <Chip className='mx-2 my-2' size="md">Large</Chip>
-                        <Chip className='mx-2 my-2' size="md">Large</Chip>
-                        <Chip className='mx-2 my-2' size="md">Large</Chip>
-                        <Chip className='mx-2 my-2' size="md">Large</Chip>
-                        <Chip className='mx-2 my-2' size="md">Large</Chip>
+                        <Chip className='mx-2 my-2' size="md">Entrepreneurship</Chip>
+                        <Chip className='mx-2 my-2' size="md">Business</Chip>
+                        <Chip className='mx-2 my-2' size="md">Incubation</Chip>
+                        <Chip className='mx-2 my-2' size="md">Startups</Chip>
                       </div>
                     </div>
                   </div>

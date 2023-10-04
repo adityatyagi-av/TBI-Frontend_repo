@@ -1,10 +1,29 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react'
+'use client'
+import { useEffect, useState } from 'react'
 import EachPastEventCard from './EachPastEventCard'
 import JoinUs from './JoinUs'
 const RecentEvents = () => {
-    return (
+    const [pastEvents, setPastEvents] = useState([]);
 
+    useEffect(() => {
+        const apiUrl = 'http://127.0.0.1:8000/events/';
+
+        fetch(apiUrl)
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then((responseData) => {
+                setPastEvents(responseData.past_events);
+            })
+            .catch((error) => {
+                console.error('Error fetching upcoming events data:', error);
+            });
+    }, []);
+    return (
         <section className="bg-white max-w-screen-xl mx-auto">
             <div className="container px-6 py-10 mx-auto">
                 <div className="py-9">
@@ -20,12 +39,21 @@ const RecentEvents = () => {
                 </div>
 
                 <div className="grid grid-cols-1 gap-8 mt-8 lg:grid-cols-2">
-                    <EachPastEventCard />
-                    <EachPastEventCard />
-                    <EachPastEventCard />
-                    <EachPastEventCard />
-                    <EachPastEventCard />
-                    <EachPastEventCard />
+                    {pastEvents.length > 0 ? (
+                        pastEvents.map((event) => {
+                            return (
+
+                                <EachPastEventCard
+                                    key={event.id}
+                                    imgUrl={`http://127.0.0.1:8000${event.image}`}
+                                    title={event.title}
+                                    desc={event.description}
+                                />
+                            )
+                        })
+                    ) : (<div>
+                        nothing
+                    </div>)}
                 </div>
                 <JoinUs />
             </div>

@@ -5,7 +5,6 @@ import UpcomingEvents from "./UpcomingEvents";
 import RecentEvents from "./PastEvents";
 
 
-
 const Events = () => {
   return (
 
@@ -18,6 +17,7 @@ const Events = () => {
           <RecentEvents />
         </Tab>
       </Tabs>
+
     </div>
   )
 }
