@@ -15,7 +15,7 @@ import FinalReview from './finalreview';
 import InputSelect from '@/components/inputSelect';
 
 
-const steps = ['Applicant Details', 'Team & Idea Desc.', 'Checklist','Final Review'];
+const steps = ['Applicant Details', 'Idea Description', 'Work Plan & Checklist','Final Review'];
 
 export default function HorizontalLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -101,15 +101,21 @@ export default function HorizontalLinearStepper() {
         if (!value) return true;
         return value && value.size <= 20 * 1024 * 1024;
       }).required('Upload the video'),
+      innovationBeneficiary:Yup.string().required('Required'),
+      prototypeCostDetails:Yup.number().required('Required'),
+      projectPeriod:Yup.number().max(12,'Must be less than 12').required('Required'),
       companyName:Yup.string(),
       incorporationDate:Yup.date(),
       companyDescription:Yup.string(),
+      activities:Yup.string().required('Required'),
+      monitrableMilestones:Yup.number().max(12,'Not more than 12 months').required('Required'),
+      duration:Yup.number().max(12,'Must be less than 12').required('Required'),
+      financialSupportStatus:Yup.string(),
     previousRecipient: Yup.string().required('Required'),
     fullCommitment: Yup.string().required('Required'),
     noOtherFellowship: Yup.string().required('Required'),
-    businessCommitment: Yup.string().required('Required'),
-    notBeneficiary: Yup.string().required('Required'),
-   
+    incubationRegister: Yup.string().required('Required'),
+    
   });
 
 
@@ -138,14 +144,20 @@ export default function HorizontalLinearStepper() {
       techStack:'',
       ideaDescription: '',
       projectVideo:null,
+      innovationBeneficiary:'',
+      prototypeCostDetails:'',
+      projectPeriod:'',
       companyName:'',
       incorporationDate:'',
       companyDescription:'',
+      activities:'',
+      monitrableMilestones:'',
+      duration:'',
+      financialSupportStatus:'',
       previousRecipient: '',
       fullCommitment: '',
       noOtherFellowship: '',
-      businessCommitment: '',
-      notBeneficiary: '',
+     incubationRegister:'',
      
     },
     validationSchema: validationSchema,
@@ -346,6 +358,12 @@ export default function HorizontalLinearStepper() {
 
             <InputFile value="projectVideo" label="Please upload video of project Status" formik={formik} formikTouched={formik.touched.projectVideo} formikError={formik.errors.projectVideo} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.projectVideo} />
 
+            <Input value="innovationBeneficiary" label="Who would be the beneficiary of this innovation and why?" placeHolder=" " formikTouched={formik.touched.innovationBeneficiary} formikError={formik.errors.innovationBeneficiary} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.innovationBeneficiary} type="text"/>
+
+            <Input value="prototypeCostDetails" label="Total Cost of the prototype: (Please provide the details)" placeHolder=" " formikTouched={formik.touched.prototypeCostDetails} formikError={formik.errors.prototypeCostDetails} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.prototypeCostDetails} type="number" />
+
+            <Input value="projectPeriod" label="Project period in months (Not more than 12 months)" placeHolder=" " formikTouched={formik.touched.projectPeriod} formikError={formik.errors.projectPeriod} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.projectPeriod} type="number" />
+            
 
             <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
 
@@ -387,6 +405,27 @@ export default function HorizontalLinearStepper() {
             <Input value="incorporationDate" label="Incorporation Date" placeHolder="02-06-2009" formikTouched={formik.touched.incorporationDate} formikError={formik.errors.incorporationDate} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.incorporationDate} type="date" />
 
             <InputTextArea value="companyDescription" label="Brief about the Company." placeHolder="Enter your company details." formikTouched={formik.touched.companyDescription} formikError={formik.errors.companyDescription} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.companyDescription} />
+            
+            <div className="mt-5 mb-4">
+                <h2 className="text-xl font-semibold text-gray-800 capitalize lg:text-2xl ">
+                {` Activity details/work plan`}
+                </h2>
+
+                <div className="flex mx-auto mt-2">
+                    <span className="inline-block w-40 h-1 bg-blue-900 rounded-full"></span>
+                    <span className="inline-block w-3 h-1 mx-1 bg-blue-900 rounded-full"></span>
+                    <span className="inline-block w-1 h-1 bg-blue-900 rounded-full"></span>
+                </div>
+            </div>
+            <Input value="activities" label="Activities" placeHolder="" formikTouched={formik.touched.activities} formikError={formik.errors.activities} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.activities} type="text" />
+
+            <Input value="monitrableMilestones" label="Monitorable Milestones" placeHolder="" formikTouched={formik.touched.monitrableMilestones} formikError={formik.errors.monitrableMilestones} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.monitrableMilestones} type="text" />
+
+            <Input value="duration" label="Duration (months)" placeHolder="" formikTouched={formik.touched.duration} formikError={formik.errors.duration} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.duration} type="number" />
+
+            <Input value="financialSupportStatus" label="Have you received financial support/award for your present work from any other source? (if so, please furnish details)" placeHolder="" formikTouched={formik.touched.financialSupportStatus} formikError={formik.errors.financialSupportStatus} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.financialSupportStatus} type="text" />
+
+
 
             <div className="mt-5 mb-4">
                 <h2 className="text-xl font-semibold text-gray-800 capitalize lg:text-2xl ">
@@ -400,23 +439,15 @@ export default function HorizontalLinearStepper() {
                 </div>
             </div>
 
-            <InputRadio value="previousRecipient" label="Applicant confirms that he/she has not been a recipient of the TIDE 2.0-EIR previously." options={generalOptions} formikTouched={formik.touched.previousRecipient} formikError={formik.errors.previousRecipient} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+            <InputRadio value="previousRecipient" label="Applicant Confirms that he/she has not been a recipient of any TIDE 2.0 Grant or similar support previously for the same innovative concept as proposed in this form" options={generalOptions} formikTouched={formik.touched.previousRecipient} formikError={formik.errors.previousRecipient} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
 
-            <InputRadio value="fullCommitment" label="Applicant is planning to pursue TIDE 2.0 EIR full-time with no other concurrent commitments." options={generalOptions} formikTouched={formik.touched.fullCommitment} formikError={formik.errors.fullCommitment} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+            <InputRadio value="fullCommitment" label="Applicant confirms that he/she is fully committed to work towards the prototype development for which the support is being sought and should not treat this as a stop gap arrangement to support any other pursuits" options={generalOptions} formikTouched={formik.touched.fullCommitment} formikError={formik.errors.fullCommitment} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
 
-            <InputRadio value="noOtherFellowship" label="Applicant confirms that he/she will not be in receipt of any other remuneration or fellowship during the duration of the TIDE 2.0 EIR." options={generalOptions} formikTouched={formik.touched.noOtherFellowship} formikError={formik.errors.noOtherFellowship} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+            <InputRadio value="noOtherFellowship" label="Applicant is planning to pursue TIDE 2.0 Grant full time with no other concurrent commitments." options={generalOptions} formikTouched={formik.touched.noOtherFellowship} formikError={formik.errors.noOtherFellowship} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
-            <InputRadio value="businessCommitment" label="Applicant admits that he/she is willing to take the startup formation as the primary career option." options={generalOptions} formikTouched={formik.touched.businessCommitment} formikError={formik.errors.businessCommitment} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
-
-            <InputRadio value="notBeneficiary" label="Applicant confirms that he/she is not the promoter or significant (>10%) shareholder/beneficiary of another company at the time of applying for and receiving the TIDE 2.0 EIR support." options={generalOptions} formikTouched={formik.touched.notBeneficiary} formikError={formik.errors.notBeneficiary} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
-
-            
-
-
-
-
+            <InputRadio value="incubationRegister" label="Applicant has or is planning to register for the pre incubation or incubation program at the TBI for the entire duration of TIDE 2.0 support:" options={generalOptions} formikTouched={formik.touched.incubationRegister} formikError={formik.errors.incubationRegister} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
             <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
               <Button

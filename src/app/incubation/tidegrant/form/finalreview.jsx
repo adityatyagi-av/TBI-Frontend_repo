@@ -66,78 +66,74 @@ const FinalReview = ({ formik }) => {
     },
     {
         id: 13,
-        label: 'Enterpreneurship Experience',
-        value: 'experience',
-    },
-    {
-        id: 14,
         label: 'Resume',
         value: 'resume',
     },
 
-    {   id:15,
+    {   id:14,
         label: 'Applicant Image',
         value: 'applicantImage',
     },
     {
-        id: 16,
+        id: 15,
         label: 'Aadhar Image',
         value: 'aadharImage',
     },
     {
-        id: 17,
+        id: 16,
         label: 'Pan Image',
         value: 'panImage',
     },
     {
+        id: 17,
+        label: 'Profession of the Applicant',
+        value: 'applicantProfession',
+    },
+    {
         id: 18,
-        label: 'Team Member Name',
-        value: 'teamMemberName',
+        label: 'Annual Income of the applicant',
+        value: 'annualIncome',
     },
     {
         id: 19,
-        label: 'Team Member Education',
-        value: 'teamMemberEducation',
-    },
-    {
-        id: 20,
-        label: 'Team Member Institute Name',
-        value: 'teamMemberInstituteName',
-    },
-    {
-        id: 21,
         label: 'Project Title',
         value: 'projectTitle',
     },
+    
     {
-        id: 22,
+        id: 20,
+        label: 'Status of the Project',
+        value: 'projectStatus',
+    },
+    {
+        id: 21,
         label: 'techStack',
         value: 'Tech Stack',
     },
     {
-        id: 23,
+        id: 22,
         label: 'Idea Description',
         value: 'ideaDescription',
     },
     {
+        id: 23,
+        label: 'Video of project Status',
+        value: 'projectVideo',
+    },
+    {
         id: 24,
-        label: 'Concept Note',
-        value: 'conceptNote',
+        label: 'Beneficiary of the innovation',
+        value: 'innovationBeneficiary',
     },
     {
         id: 25,
-        label: 'Aspect Note',
-        value: 'aspectNote',
+        label: 'Total Cost of the Prototype',
+        value: 'prototypeCostDetails',
     },
     {
         id: 26,
-        label: 'Project Status',
-        value: 'projectStatus',
-    },
-    {
-        id: 27,
-        label: 'Project Video',
-        value: 'projectVideo',
+        label: 'Project Period',
+        value: 'projectPeriod',
     },
     {
         id: 28,
@@ -156,33 +152,44 @@ const FinalReview = ({ formik }) => {
     },
     {
         id: 31,
-        label: 'Applicant confirms that he/she has not been a recipient of the TIDE 2.0-EIR previously.',
-        value: 'previousRecipient',
+        label: 'Activities',
+        value: 'activities',
     },
     {
         id: 32,
-        label: 'Applicant is planning to pursue TIDE 2.0 EIR full-time with no other concurrent commitments.',
-        value: 'fullCommitment',
+        label: 'Monitorable Milestones',
+        value: 'monitrableMilestones',
     },
     {
         id: 33,
-        label: 'Applicant confirms that he/she will not be in receipt of any other remuneration or fellowship during the duration of the TIDE 2.0 EIR.',
-        value: 'noOtherFellowship',
+        label: 'Duration (months)',
+        value: 'duration',
     },
     {
         id: 34,
-        label: 'Applicant admits that he/she is willing to take the startup formation as the primary career option.',
-        value: 'businessCommitment',
+        label: 'financial support/award for your present work from any other source?',
+        value: 'financialSupportStatus',
+    },
+    {
+        id: 34,
+        label: 'Applicant Confirms that he/she has not been a recipient of any TIDE 2.0 Grant or similar support previously for the same innovative concept as proposed in this form',
+        value: 'previousRecipient',
     },
     {
         id: 35,
-        label: 'Applicant confirms that he/she is not the promoter or significant (>10%) shareholder/beneficiary of another company at the time of applying for and receiving the TIDE 2.0 EIR support.',
-        value: 'notBeneficiary',
+        label: 'Applicant confirms that he/she is fully committed to work towards the prototype development for which the support is being sought and should not treat this as a stop gap arrangement to support any other pursuits',
+        value: 'fullCommitment',
     },
-
-
-      
-
+    {
+        id: 36,
+        label: 'Applicant is planning to pursue TIDE 2.0 Grant full time with no other concurrent commitments.',
+        value: 'noOtherFellowship',
+    },
+    {
+        id: 37,
+        label: 'Applicant has or is planning to register for the pre incubation or incubation program at the TBI for the entire duration of TIDE 2.0 support:',
+        value: 'incubationRegister',
+    }
   ];
 
   return (
