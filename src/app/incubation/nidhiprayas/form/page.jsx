@@ -12,9 +12,10 @@ import Input from '@/components/input';
 import InputRadio from '@/components/inputRadio';
 import InputTextArea from '@/components/inputTextArea';
 import InputFile from '@/components/inputFile';
+import FinalReview from './finalreview';
 
 
-const steps = ['Applicant Details', 'Idea Description','Checklist'];
+const steps = ['Applicant Details', 'Idea Description','Checklist','Final Review'];
 
 export default function HorizontalLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -209,33 +210,55 @@ export default function HorizontalLinearStepper() {
   return (
     <Box  className="mx-auto max-w-screen-xl">
       <form onSubmit={formik.handleSubmit}>
-      <Stepper activeStep={activeStep} className='hidden sm:flex'>
-        {steps.map((label, index) => {
-          const stepProps = {};
-          const labelProps = {};
-          
-          if (isStepSkipped(index)) {
-            stepProps.completed = false;
-          }
-          return (
-            <Step key={label} {...stepProps}>
-              <StepLabel {...labelProps}>{label}</StepLabel>
-            </Step>
-          );
-        })}
-      </Stepper>
+        <Stepper activeStep={activeStep} className='hidden sm:flex'>
+          {steps.map((label) => {
+            const stepProps = {};
+            const labelProps = {};
 
-      {activeStep === steps.length &&
-        <>
-          <Typography sx={{ mt: 2, mb: 1 }}>
-            All steps completed - you&apos;re finished
-          </Typography>
-          <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
-            <Box sx={{ flex: '1 1 auto' }} />
-            <Button type='submit'>Finish</Button>
-          </Box>
-        </>
-}
+            
+            return (
+              <Step key={label} {...stepProps}>
+                <StepLabel {...labelProps}>{label}</StepLabel>
+              </Step>
+            );
+          })}
+        </Stepper>
+
+        {activeStep === steps.length-1 &&
+          <>
+            <div className="mt-5 mb-4 mx-auto">
+                <h1 className="text-2xl font-semibold text-gray-800 capitalize mx-auto lg:text-3xl ">
+                {`FINAL REVIEW`}
+                </h1>
+
+                <div className="flex mx-auto mt-2">
+                    <span className="inline-block w-40 h-1 bg-blue-900 rounded-full"></span>
+                    <span className="inline-block w-3 h-1 mx-1 bg-blue-900 rounded-full"></span>
+                    <span className="inline-block w-1 h-1 bg-blue-900 rounded-full"></span>
+                </div>
+
+            </div>
+            <FinalReview formik={formik}/>
+            
+
+            <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
+              <Button
+                color="inherit"
+                disabled={activeStep === 0}
+                onClick={handleBack}
+                sx={{ mr: 1 }}
+              >
+                Back
+              </Button>
+              <Box sx={{ flex: '1 1 auto' }} />
+
+
+              <Button type='submit' >Finish</Button>
+            </Box>
+
+            
+          </>
+        }
 
 
 

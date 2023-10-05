@@ -21,165 +21,84 @@ const FinalReview = ({ formik }) => {
     },
     {   
         id:4,
-        label: 'Whatsapp Number',
-        value: 'whatsappNumber',
-    },
-    {   
-        id:5,
         label: 'Address',
         value: 'address',
     },
     {
-        id:6,
+        id:5,
         label: 'Date Of Birth',
         value: 'dateOfBirth',
     },
     {   
-        id:7,
+        id:6,
         label: 'Gender',
         value: 'gender',
     },
     {
-        id: 8,
+        id: 7,
         label: 'Category',
         value: 'category',
     },
     {
-        id: 9,
-        label: 'Pan Number',
-        value: 'panNumber',
-    },
-    {
-        id: 10,
-        label: 'Aadhar Number',
-        value: 'aadharNumber',
-    },
-    {
-        id: 11,
+        id: 8,
         label: 'Education',
         value: 'education',
     },
     {
-        id: 12,
-        label: 'Institute Name',
-        value: 'instituteName',
-    },
-    {
-        id: 13,
+        id: 9,
         label: 'Enterpreneurship Experience',
         value: 'experience',
     },
     {
-        id: 14,
+        id: 10,
         label: 'Resume',
         value: 'resume',
     },
-
-    {   id:15,
-        label: 'Applicant Image',
-        value: 'applicantImage',
-    },
     {
-        id: 16,
-        label: 'Aadhar Image',
-        value: 'aadharImage',
-    },
-    {
-        id: 17,
-        label: 'Pan Image',
-        value: 'panImage',
-    },
-    {
-        id: 18,
-        label: 'Team Member Name',
-        value: 'teamMemberName',
-    },
-    {
-        id: 19,
-        label: 'Team Member Education',
-        value: 'teamMemberEducation',
-    },
-    {
-        id: 20,
-        label: 'Team Member Institute Name',
-        value: 'teamMemberInstituteName',
-    },
-    {
-        id: 21,
-        label: 'Project Title',
-        value: 'projectTitle',
-    },
-    {
-        id: 22,
-        label: 'techStack',
-        value: 'Tech Stack',
-    },
-    {
-        id: 23,
+        id: 11,
         label: 'Idea Description',
         value: 'ideaDescription',
     },
     {
-        id: 24,
+        id: 12,
         label: 'Concept Note',
         value: 'conceptNote',
     },
     {
-        id: 25,
+        id: 13,
         label: 'Aspect Note',
         value: 'aspectNote',
     },
     {
-        id: 26,
-        label: 'Project Status',
-        value: 'projectStatus',
-    },
-    {
-        id: 27,
-        label: 'Project Video',
-        value: 'projectVideo',
-    },
-    {
-        id: 28,
-        label: 'Company Name',
-        value: 'companyName',
-    },
-    {
-        id: 29,
-        label: 'Incorporation Date',
-        value: 'incorporationDate',
-    },
-    {
-        id: 30,
-        label: 'Company Description',
-        value: 'companyDescription',
-    },
-    {
-        id: 31,
-        label: 'Applicant confirms that he/she has not been a recipient of the TIDE 2.0-EIR previously.',
+        id: 14,
+        label: 'Applicant confirms that he/she has not been a recipient of the NIDHI-EIR previously. NIDHI-EIR can be used only once.',
         value: 'previousRecipient',
     },
     {
-        id: 32,
-        label: 'Applicant is planning to pursue TIDE 2.0 EIR full-time with no other concurrent commitments.',
+        id: 15,
+        label: 'Applicant is planning to pursue NIDHI-EIR full-time with no other concurrent commitments.',
         value: 'fullCommitment',
     },
     {
-        id: 33,
-        label: 'Applicant confirms that he/she will not be in receipt of any other remuneration or fellowship during the duration of the TIDE 2.0 EIR.',
+        id: 16,
+        label: 'Applicant confirms that he/she will not be in receipt of any other remuneration or fellowship during the duration of the NIDHI-EIR.',
         value: 'noOtherFellowship',
     },
     {
-        id: 34,
-        label: 'Applicant admits that he/she is willing to take the startup formation as the primary career option.',
+        id: 17,
+        label: 'Applicant confirms that he/she is fully committed to exploring a business idea. NIDHI-EIR support recipient should not treat this support as a stop gap arrangement to support them in their academic pursuits or transition between jobs.',
         value: 'businessCommitment',
     },
     {
-        id: 35,
-        label: 'Applicant confirms that he/she is not the promoter or significant (>10%) shareholder/beneficiary of another company at the time of applying for and receiving the TIDE 2.0 EIR support.',
+        id: 18,
+        label: 'Applicant confirms that he/she is not the promoter or significant (>10%) share holder / beneficiary of another company at the time of applying for and receiving the NIDHI-EIR support.',
         value: 'notBeneficiary',
     },
-
+    {
+        id: 19,
+        label: 'The NIDHI-EIR has or is planning to register for the pre-incubation or incubation program at the PEP for the entire duration of NIDHI-EIR support.',
+        value: 'notBeneficiary',
+    },
 
       
 
