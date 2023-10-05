@@ -198,7 +198,7 @@ export default function HorizontalLinearStepper() {
     <Box sx={{ width: '81%' }} className="mx-auto my-10 ">
       <form onSubmit={formik.handleSubmit}>
         <Stepper activeStep={activeStep} className='hidden sm:flex'>
-          {steps.map((label, index) => {
+          {steps.map((label) => {
             const stepProps = {};
             const labelProps = {};
 
@@ -264,42 +264,42 @@ export default function HorizontalLinearStepper() {
                     <span className="inline-block w-1 h-1 bg-blue-900 rounded-full"></span>
                 </div>
             </div>
-            <Input className="mt-4" value="name" label="Name Of the Applicant" placeHolder="Aditya Tyagi" formikTouched={formik.touched.name} formikError={formik.errors.name} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.name} type="text" />
+            <Input className="mt-4" value="name" label="1. Name Of the Applicant" placeHolder="Aditya Tyagi" formikTouched={formik.touched.name} formikError={formik.errors.name} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.name} type="text" />
 
-            <Input value="email" label="Your Email" placeHolder="adityatyagi@gmail.com" formikTouched={formik.touched.email} formikError={formik.errors.email} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.email} type="email" />
+            <Input value="email" label="2. Your Email" placeHolder="adityatyagi@gmail.com" formikTouched={formik.touched.email} formikError={formik.errors.email} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.email} type="email" />
 
-            <Input value="phoneNumber" label="Phone/Mobile Number" placeHolder="8088088088" formikTouched={formik.touched.phoneNumber} formikError={formik.errors.phoneNumber} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.phoneNumber} type="tel" />
+            <Input value="phoneNumber" label="3. Phone/Mobile Number" placeHolder="8088088088" formikTouched={formik.touched.phoneNumber} formikError={formik.errors.phoneNumber} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.phoneNumber} type="tel" />
 
-            <Input value="whatsappNumber" label="Whatsapp Number" placeHolder="8088088088" formikTouched={formik.touched.whatsappNumber} formikError={formik.errors.whatsappNumber} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.whatsappNumber} type="tel"/>
+            <Input value="whatsappNumber" label="4. Whatsapp Number" placeHolder="8088088088" formikTouched={formik.touched.whatsappNumber} formikError={formik.errors.whatsappNumber} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.whatsappNumber} type="tel"/>
 
 
-            <InputTextArea value="address" label="Full Postal Address" placeHolder="5A, street-12,Thane Mumbai " formikTouched={formik.touched.address} formikError={formik.errors.address} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.address} />
+            <InputTextArea value="address" label="5. Full Postal Address" placeHolder="5A, street-12,Thane Mumbai " formikTouched={formik.touched.address} formikError={formik.errors.address} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.address} />
 
-            <Input value="dateOfBirth" label="Date Of Birth" placeHolder="02-06-2003" formikTouched={formik.touched.dateOfBirth} formikError={formik.errors.dateOfBirth} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.dateOfBirth} type="date" />
+            <Input value="dateOfBirth" label="6. Date Of Birth" placeHolder="02-06-2003" formikTouched={formik.touched.dateOfBirth} formikError={formik.errors.dateOfBirth} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.dateOfBirth} type="date" />
 
-            <InputRadio value="gender" label="Gender" options={genderOptions} formikTouched={formik.touched.gender} formikError={formik.errors.gender} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+            <InputRadio value="gender" label="7. Gender" options={genderOptions} formikTouched={formik.touched.gender} formikError={formik.errors.gender} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
-            <InputRadio value="category" label="Category" options={categoryOptions} formikTouched={formik.touched.category} formikError={formik.errors.category} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
-            <Input value="panNumber" label="PAN Card No." placeHolder="" formikTouched={formik.touched.panNumber} formikError={formik.errors.panNumber} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.panNumber} type="number"/>
-            <Input value="aadharNumber" label="Aadhar Card No." placeHolder="" formikTouched={formik.touched.aadharNumber} formikError={formik.errors.aadharNumber} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.aadharNumber} type="number"/>
+            <InputRadio value="category" label="8. Category" options={categoryOptions} formikTouched={formik.touched.category} formikError={formik.errors.category} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+            <Input value="panNumber" label="9. PAN Card No." placeHolder="" formikTouched={formik.touched.panNumber} formikError={formik.errors.panNumber} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.panNumber} type="number"/>
+            <Input value="aadharNumber" label="10. Aadhar Card No." placeHolder="" formikTouched={formik.touched.aadharNumber} formikError={formik.errors.aadharNumber} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.aadharNumber} type="number"/>
 
-            <InputTextArea value="education" label="Highest Qualification & Passing year" placeHolder="Enter your educational Details " formikTouched={formik.touched.education} formikError={formik.errors.education} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.education} />
+            <InputTextArea value="education" label="11. Highest Qualification & Passing year" placeHolder="Enter your educational Details " formikTouched={formik.touched.education} formikError={formik.errors.education} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.education} />
 
-            <Input value="instituteName" label="Institute/Organization Name." placeHolder="Enter your institute name " formikTouched={formik.touched.instituteName} formikError={formik.errors.instituteName} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.instituteName} type="text"/>
+            <Input value="instituteName" label="12. Institute/Organization Name." placeHolder="Enter your institute name " formikTouched={formik.touched.instituteName} formikError={formik.errors.instituteName} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.instituteName} type="text"/>
 
             
-            <InputFile value="resume" label="Attach your latest CV or Resume with details of education and work experience" formik={formik} formikTouched={formik.touched.resume} formikError={formik.errors.resume} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.resume} />
+            <InputFile value="resume" label="13. Attach your latest CV or Resume with details of education and work experience" formik={formik} formikTouched={formik.touched.resume} formikError={formik.errors.resume} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.resume} />
 
-            <InputFile value="applicantImage" label="Attach PP Size Photo" formik={formik} formikTouched={formik.touched.applicantImage} formikError={formik.errors.applicantImage} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.applicantImage} />
+            <InputFile value="applicantImage" label="14. Attach PP Size Photo" formik={formik} formikTouched={formik.touched.applicantImage} formikError={formik.errors.applicantImage} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.applicantImage} />
 
-            <InputFile value="aadharImage" label="Attach Aadhar Card Image" formik={formik} formikTouched={formik.touched.aadharImage} formikError={formik.errors.aadharImage} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.aadharImage} />
+            <InputFile value="aadharImage" label="15. Attach Aadhar Card Image" formik={formik} formikTouched={formik.touched.aadharImage} formikError={formik.errors.aadharImage} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.aadharImage} />
 
-            <InputFile value="panImage" label="Attach PAN Card Image" formik={formik} formikTouched={formik.touched.panImage} formikError={formik.errors.panImage} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.panImage} />
+            <InputFile value="panImage" label="16. Attach PAN Card Image" formik={formik} formikTouched={formik.touched.panImage} formikError={formik.errors.panImage} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.panImage} />
 
 
-            <Input value="applicantProfession" label="Profession of the Applicant." placeHolder="Enter your institute name " formikTouched={formik.touched.applicantProfession} formikError={formik.errors.applicantProfession} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.applicantProfession} type="text"/>
+            <Input value="applicantProfession" label="17. Profession of the Applicant." placeHolder="Enter your institute name " formikTouched={formik.touched.applicantProfession} formikError={formik.errors.applicantProfession} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.applicantProfession} type="text"/>
 
-            <Input value="annualIncome" label="Annual Income of the applicant." placeHolder="Enter your institute name " formikTouched={formik.touched.annualIncome} formikError={formik.errors.annualIncome} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.annualIncome} type="text"/>
+            <Input value="annualIncome" label="18. Annual Income of the applicant." placeHolder="Enter your institute name " formikTouched={formik.touched.annualIncome} formikError={formik.errors.annualIncome} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.annualIncome} type="text"/>
 
 
 
@@ -348,21 +348,21 @@ export default function HorizontalLinearStepper() {
                 </div>
             </div>
 
-           <Input value="projectTitle" label="Enter the title for your Idea" placeHolder=" " formikTouched={formik.touched.projectTitle} formikError={formik.errors.projectTitle} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.projectTitle} type="text"/>
+           <Input value="projectTitle" label="19. Enter the title for your Idea" placeHolder=" " formikTouched={formik.touched.projectTitle} formikError={formik.errors.projectTitle} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.projectTitle} type="text"/>
 
-           <InputSelect value="projectStatus" label="Please select the status of the project already carried out" options={projectStatusOptions} formikTouched={formik.touched.projectStatus} formikError={formik.errors.projectStatus} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+           <InputSelect value="projectStatus" label="20. Please select the status of the project already carried out" options={projectStatusOptions} formikTouched={formik.touched.projectStatus} formikError={formik.errors.projectStatus} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
-           <Input value="techStack" label="Technology & Working Principle behind the project:" placeHolder=" " formikTouched={formik.touched.techStack} formikError={formik.errors.techStack} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.techStack} type="text" className="mt-20"/>
+           <Input value="techStack" label="21. Technology & Working Principle behind the project:" placeHolder=" " formikTouched={formik.touched.techStack} formikError={formik.errors.techStack} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.techStack} type="text" className="mt-20"/>
 
-            <InputTextArea value="ideaDescription" label="Describe the idea of highlighting innovative elements" formikTouched={formik.touched.ideaDescription} formikError={formik.errors.ideaDescription} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.ideaDescription} />
+            <InputTextArea value="ideaDescription" label="22. Describe the idea of highlighting innovative elements" formikTouched={formik.touched.ideaDescription} formikError={formik.errors.ideaDescription} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.ideaDescription} />
 
-            <InputFile value="projectVideo" label="Please upload video of project Status" formik={formik} formikTouched={formik.touched.projectVideo} formikError={formik.errors.projectVideo} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.projectVideo} />
+            <InputFile value="projectVideo" label="23. Please upload video of project Status" formik={formik} formikTouched={formik.touched.projectVideo} formikError={formik.errors.projectVideo} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.projectVideo} />
 
-            <Input value="innovationBeneficiary" label="Who would be the beneficiary of this innovation and why?" placeHolder=" " formikTouched={formik.touched.innovationBeneficiary} formikError={formik.errors.innovationBeneficiary} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.innovationBeneficiary} type="text"/>
+            <Input value="innovationBeneficiary" label="24. Who would be the beneficiary of this innovation and why?" placeHolder=" " formikTouched={formik.touched.innovationBeneficiary} formikError={formik.errors.innovationBeneficiary} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.innovationBeneficiary} type="text"/>
 
-            <Input value="prototypeCostDetails" label="Total Cost of the prototype: (Please provide the details)" placeHolder=" " formikTouched={formik.touched.prototypeCostDetails} formikError={formik.errors.prototypeCostDetails} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.prototypeCostDetails} type="number" />
+            <Input value="prototypeCostDetails" label="25. Total Cost of the prototype: (Please provide the details)" placeHolder=" " formikTouched={formik.touched.prototypeCostDetails} formikError={formik.errors.prototypeCostDetails} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.prototypeCostDetails} type="number" />
 
-            <Input value="projectPeriod" label="Project period in months (Not more than 12 months)" placeHolder=" " formikTouched={formik.touched.projectPeriod} formikError={formik.errors.projectPeriod} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.projectPeriod} type="number" />
+            <Input value="projectPeriod" label="26. Project period in months (Not more than 12 months)" placeHolder=" " formikTouched={formik.touched.projectPeriod} formikError={formik.errors.projectPeriod} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.projectPeriod} type="number" />
             
 
             <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
@@ -400,11 +400,11 @@ export default function HorizontalLinearStepper() {
                     <span className="inline-block w-1 h-1 bg-blue-900 rounded-full"></span>
                 </div>
             </div>
-            <Input value="companyName" label="Company Name" placeHolder="Develop It " formikTouched={formik.touched.companyName} formikError={formik.errors.companyName} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.companyName} type="text" className="mt-20"/>
+            <Input value="companyName" label="27. Company Name" placeHolder="Develop It " formikTouched={formik.touched.companyName} formikError={formik.errors.companyName} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.companyName} type="text" className="mt-20"/>
 
-            <Input value="incorporationDate" label="Incorporation Date" placeHolder="02-06-2009" formikTouched={formik.touched.incorporationDate} formikError={formik.errors.incorporationDate} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.incorporationDate} type="date" />
+            <Input value="incorporationDate" label="28. Incorporation Date" placeHolder="02-06-2009" formikTouched={formik.touched.incorporationDate} formikError={formik.errors.incorporationDate} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.incorporationDate} type="date" />
 
-            <InputTextArea value="companyDescription" label="Brief about the Company." placeHolder="Enter your company details." formikTouched={formik.touched.companyDescription} formikError={formik.errors.companyDescription} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.companyDescription} />
+            <InputTextArea value="companyDescription" label="29. Brief about the Company." placeHolder="Enter your company details." formikTouched={formik.touched.companyDescription} formikError={formik.errors.companyDescription} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.companyDescription} />
             
             <div className="mt-5 mb-4">
                 <h2 className="text-xl font-semibold text-gray-800 capitalize lg:text-2xl ">
@@ -417,13 +417,13 @@ export default function HorizontalLinearStepper() {
                     <span className="inline-block w-1 h-1 bg-blue-900 rounded-full"></span>
                 </div>
             </div>
-            <Input value="activities" label="Activities" placeHolder="" formikTouched={formik.touched.activities} formikError={formik.errors.activities} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.activities} type="text" />
+            <Input value="activities" label="30. Activities" placeHolder="" formikTouched={formik.touched.activities} formikError={formik.errors.activities} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.activities} type="text" />
 
-            <Input value="monitrableMilestones" label="Monitorable Milestones" placeHolder="" formikTouched={formik.touched.monitrableMilestones} formikError={formik.errors.monitrableMilestones} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.monitrableMilestones} type="text" />
+            <Input value="monitrableMilestones" label="31. Monitorable Milestones" placeHolder="" formikTouched={formik.touched.monitrableMilestones} formikError={formik.errors.monitrableMilestones} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.monitrableMilestones} type="text" />
 
-            <Input value="duration" label="Duration (months)" placeHolder="" formikTouched={formik.touched.duration} formikError={formik.errors.duration} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.duration} type="number" />
+            <Input value="duration" label="32. Duration (months)" placeHolder="" formikTouched={formik.touched.duration} formikError={formik.errors.duration} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.duration} type="number" />
 
-            <Input value="financialSupportStatus" label="Have you received financial support/award for your present work from any other source? (if so, please furnish details)" placeHolder="" formikTouched={formik.touched.financialSupportStatus} formikError={formik.errors.financialSupportStatus} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.financialSupportStatus} type="text" />
+            <Input value="financialSupportStatus" label="33. Have you received financial support/award for your present work from any other source? (if so, please furnish details)" placeHolder="" formikTouched={formik.touched.financialSupportStatus} formikError={formik.errors.financialSupportStatus} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.financialSupportStatus} type="text" />
 
 
 
@@ -439,15 +439,15 @@ export default function HorizontalLinearStepper() {
                 </div>
             </div>
 
-            <InputRadio value="previousRecipient" label="Applicant Confirms that he/she has not been a recipient of any TIDE 2.0 Grant or similar support previously for the same innovative concept as proposed in this form" options={generalOptions} formikTouched={formik.touched.previousRecipient} formikError={formik.errors.previousRecipient} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+            <InputRadio value="previousRecipient" label="34. Applicant Confirms that he/she has not been a recipient of any TIDE 2.0 Grant or similar support previously for the same innovative concept as proposed in this form" options={generalOptions} formikTouched={formik.touched.previousRecipient} formikError={formik.errors.previousRecipient} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
 
-            <InputRadio value="fullCommitment" label="Applicant confirms that he/she is fully committed to work towards the prototype development for which the support is being sought and should not treat this as a stop gap arrangement to support any other pursuits" options={generalOptions} formikTouched={formik.touched.fullCommitment} formikError={formik.errors.fullCommitment} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+            <InputRadio value="fullCommitment" label="35. Applicant confirms that he/she is fully committed to work towards the prototype development for which the support is being sought and should not treat this as a stop gap arrangement to support any other pursuits" options={generalOptions} formikTouched={formik.touched.fullCommitment} formikError={formik.errors.fullCommitment} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
 
-            <InputRadio value="noOtherFellowship" label="Applicant is planning to pursue TIDE 2.0 Grant full time with no other concurrent commitments." options={generalOptions} formikTouched={formik.touched.noOtherFellowship} formikError={formik.errors.noOtherFellowship} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+            <InputRadio value="noOtherFellowship" label="36. Applicant is planning to pursue TIDE 2.0 Grant full time with no other concurrent commitments." options={generalOptions} formikTouched={formik.touched.noOtherFellowship} formikError={formik.errors.noOtherFellowship} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
-            <InputRadio value="incubationRegister" label="Applicant has or is planning to register for the pre incubation or incubation program at the TBI for the entire duration of TIDE 2.0 support:" options={generalOptions} formikTouched={formik.touched.incubationRegister} formikError={formik.errors.incubationRegister} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+            <InputRadio value="incubationRegister" label="37. Applicant has or is planning to register for the pre incubation or incubation program at the TBI for the entire duration of TIDE 2.0 support:" options={generalOptions} formikTouched={formik.touched.incubationRegister} formikError={formik.errors.incubationRegister} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
             <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
               <Button

@@ -12,51 +12,25 @@ import Input from '@/components/input';
 import InputRadio from '@/components/inputRadio';
 import InputTextArea from '@/components/inputTextArea';
 import InputFile from '@/components/inputFile';
+import FinalReview from './finalreview';
 
 
-const steps = ['Applicant Details', 'Idea Description', 'Checklist'];
+const steps = ['Applicant Details', 'Idea Description', 'Checklist','Final Review'];
 
 export default function HorizontalLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
-  const [skipped, setSkipped] = React.useState(new Set());
 
-  const isStepOptional = (step) => {
-    return step === 1;
-  };
-
-  const isStepSkipped = (step) => {
-    return skipped.has(step);
-  };
+ 
 
   const handleNext = () => {
-    let newSkipped = skipped;
-    if (isStepSkipped(activeStep)) {
-      newSkipped = new Set(newSkipped.values());
-      newSkipped.delete(activeStep);
-    }
-
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    setSkipped(newSkipped);
   };
 
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
-  const handleSkip = () => {
-    if (!isStepOptional(activeStep)) {
-      // You probably want to guard against something like this,
-      // it should never occur unless someone's actively trying to break something.
-      throw new Error("You can't skip a step that isn't optional.");
-    }
-
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    setSkipped((prevSkipped) => {
-      const newSkipped = new Set(prevSkipped.values());
-      newSkipped.add(activeStep);
-      return newSkipped;
-    });
-  };
+ 
   //conditions for dob
   const today = new Date();
   const minDate = new Date(today);
@@ -165,15 +139,13 @@ export default function HorizontalLinearStepper() {
 
   return (
     <Box sx={{ width: '81%' }} className="mx-auto">
-      <form onSubmit={formik.handleSubmit}>
+       <form onSubmit={formik.handleSubmit}>
         <Stepper activeStep={activeStep} className='hidden sm:flex'>
-          {steps.map((label, index) => {
+          {steps.map((label) => {
             const stepProps = {};
             const labelProps = {};
 
-            if (isStepSkipped(index)) {
-              stepProps.completed = false;
-            }
+            
             return (
               <Step key={label} {...stepProps}>
                 <StepLabel {...labelProps}>{label}</StepLabel>
@@ -182,15 +154,39 @@ export default function HorizontalLinearStepper() {
           })}
         </Stepper>
 
-        {activeStep === steps.length &&
+        {activeStep === steps.length-1 &&
           <>
-            <Typography sx={{ mt: 2, mb: 1 }}>
-              All steps completed - you&apos;re finished
-            </Typography>
+            <div className="mt-5 mb-4 mx-auto">
+                <h1 className="text-2xl font-semibold text-gray-800 capitalize mx-auto lg:text-3xl ">
+                {`FINAL REVIEW`}
+                </h1>
+
+                <div className="flex mx-auto mt-2">
+                    <span className="inline-block w-40 h-1 bg-blue-900 rounded-full"></span>
+                    <span className="inline-block w-3 h-1 mx-1 bg-blue-900 rounded-full"></span>
+                    <span className="inline-block w-1 h-1 bg-blue-900 rounded-full"></span>
+                </div>
+
+            </div>
+            <FinalReview formik={formik}/>
+            
+
             <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
+              <Button
+                color="inherit"
+                disabled={activeStep === 0}
+                onClick={handleBack}
+                sx={{ mr: 1 }}
+              >
+                Back
+              </Button>
               <Box sx={{ flex: '1 1 auto' }} />
-              <Button type='submit'>Finish</Button>
+
+
+              <Button type='submit' >Finish</Button>
             </Box>
+
+            
           </>
         }
 
@@ -199,26 +195,37 @@ export default function HorizontalLinearStepper() {
         {activeStep === 0 &&
 
           <>
-          <div className="mt-10"/>
-            <Input className="mt-4" value="name" label="Name Of the Applicant" placeHolder="Aditya Tyagi" formikTouched={formik.touched.name} formikError={formik.errors.name} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.name} type="text" />
+          <div className="mt-8"/>
+          <div className="mt-5 mb-4">
+                <h2 className="text-xl font-semibold text-gray-800 capitalize lg:text-2xl ">
+                {`Applicant Details`}
+                </h2>
 
-            <Input value="email" label="Your Email" placeHolder="adityatyagi@gmail.com" formikTouched={formik.touched.email} formikError={formik.errors.email} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.email} type="email" />
+                <div className="flex mx-auto mt-2">
+                    <span className="inline-block w-40 h-1 bg-blue-900 rounded-full"></span>
+                    <span className="inline-block w-3 h-1 mx-1 bg-blue-900 rounded-full"></span>
+                    <span className="inline-block w-1 h-1 bg-blue-900 rounded-full"></span>
+                </div>
+            </div>
+            <Input className="mt-4" value="name" label="1. Name Of the Applicant" placeHolder="Aditya Tyagi" formikTouched={formik.touched.name} formikError={formik.errors.name} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.name} type="text" />
 
-            <Input value="phoneNumber" label="Phone/Mobile Number" placeHolder="8088088088" formikTouched={formik.touched.phoneNumber} formikError={formik.errors.phoneNumber} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.phoneNumber} type="tel" />
+            <Input value="email" label="2. Your Email" placeHolder="adityatyagi@gmail.com" formikTouched={formik.touched.email} formikError={formik.errors.email} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.email} type="email" />
 
-            <InputTextArea value="address" label="Full Postal Address" placeHolder="5A, street-12,Thane Mumbai " formikTouched={formik.touched.address} formikError={formik.errors.address} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.address} />
+            <Input value="phoneNumber" label="3. Phone/Mobile Number" placeHolder="8088088088" formikTouched={formik.touched.phoneNumber} formikError={formik.errors.phoneNumber} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.phoneNumber} type="tel" />
 
-            <Input value="dateOfBirth" label="Date Of Birth" placeHolder="02-06-2003" formikTouched={formik.touched.dateOfBirth} formikError={formik.errors.dateOfBirth} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.dateOfBirth} type="date" />
+            <InputTextArea value="address" label="4. Full Postal Address" placeHolder="5A, street-12,Thane Mumbai " formikTouched={formik.touched.address} formikError={formik.errors.address} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.address} />
 
-            <InputRadio value="gender" label="Gender" options={genderOptions} formikTouched={formik.touched.gender} formikError={formik.errors.gender} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+            <Input value="dateOfBirth" label="5. Date Of Birth" placeHolder="02-06-2003" formikTouched={formik.touched.dateOfBirth} formikError={formik.errors.dateOfBirth} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.dateOfBirth} type="date" />
 
-            <InputRadio value="category" label="Category" options={categoryOptions} formikTouched={formik.touched.category} formikError={formik.errors.category} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+            <InputRadio value="gender" label="6. Gender" options={genderOptions} formikTouched={formik.touched.gender} formikError={formik.errors.gender} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
-            <InputTextArea value="education" label="Basic undergraduate training/education" placeHolder="Enter your educational Details " formikTouched={formik.touched.education} formikError={formik.errors.education} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.education} />
+            <InputRadio value="category" label="7. Category" options={categoryOptions} formikTouched={formik.touched.category} formikError={formik.errors.category} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
-            <InputTextArea value="experience" label="Any experiences relating to entrepreneurship, leadership, fund raising, organizing activities/ events etc." placeHolder="Your Experience " formikTouched={formik.touched.experience} formikError={formik.errors.experience} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.experience} />
+            <InputTextArea value="education" label="8. Basic undergraduate training/education" placeHolder="Enter your educational Details " formikTouched={formik.touched.education} formikError={formik.errors.education} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.education} />
 
-            <InputFile value="resume" label="Attach CV or Resume with details of education and work experience" formik={formik} formikTouched={formik.touched.resume} formikError={formik.errors.resume} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.resume} />
+            <InputTextArea value="experience" label="9. Any experiences relating to entrepreneurship, leadership, fund raising, organizing activities/ events etc." placeHolder="Your Experience " formikTouched={formik.touched.experience} formikError={formik.errors.experience} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.experience} />
+
+            <InputFile value="resume" label="10. Attach CV or Resume with details of education and work experience" formik={formik} formikTouched={formik.touched.resume} formikError={formik.errors.resume} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.resume} />
 
 
             <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
@@ -248,12 +255,24 @@ export default function HorizontalLinearStepper() {
         {activeStep === 1 &&
 
           <>
-            <InputTextArea value="ideaDescription" label="Please describe the technology for which you are seeking market opportunities or market for which you are seeking technology opportunities." placeHolder="Your Experience " formikTouched={formik.touched.ideaDescription} formikError={formik.errors.ideaDescription} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.ideaDescription} />
+          <div className="mt-8"/>
+          <div className="mt-5 mb-4">
+                <h2 className="text-xl font-semibold text-gray-800 capitalize lg:text-2xl ">
+                {`Idea Description`}
+                </h2>
 
-            <InputFile value="conceptNote" label="Please attach a concept note of the technology/business idea you propose to pursue." formik={formik} formikTouched={formik.touched.conceptNote} formikError={formik.errors.conceptNote} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.conceptNote} />
+                <div className="flex mx-auto mt-2">
+                    <span className="inline-block w-40 h-1 bg-blue-900 rounded-full"></span>
+                    <span className="inline-block w-3 h-1 mx-1 bg-blue-900 rounded-full"></span>
+                    <span className="inline-block w-1 h-1 bg-blue-900 rounded-full"></span>
+                </div>
+            </div>
+            <InputTextArea value="ideaDescription" label="11. Please describe the technology for which you are seeking market opportunities or market for which you are seeking technology opportunities." placeHolder="Your Experience " formikTouched={formik.touched.ideaDescription} formikError={formik.errors.ideaDescription} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.ideaDescription} />
+
+            <InputFile value="conceptNote" label="12. Please attach a concept note of the technology/business idea you propose to pursue." formik={formik} formikTouched={formik.touched.conceptNote} formikError={formik.errors.conceptNote} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.conceptNote} />
 
 
-            <InputFile value="aspectNote" label="Please attach a note describing the knowledge or technology intensity aspects of the idea. Describe the innovative elements of the idea along with comparisons with previous reports or products available." formik={formik} formikTouched={formik.touched.aspectNote} formikError={formik.errors.aspectNote} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.aspectNote} />
+            <InputFile value="aspectNote" label="13. Please attach a note describing the knowledge or technology intensity aspects of the idea. Describe the innovative elements of the idea along with comparisons with previous reports or products available." formik={formik} formikTouched={formik.touched.aspectNote} formikError={formik.errors.aspectNote} formikChange={formik.handleChange} formikBlur={formik.handleBlur} formikValue={formik.values.aspectNote} />
 
 
             <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
@@ -280,19 +299,31 @@ export default function HorizontalLinearStepper() {
         }
         {activeStep === 2 &&
           <>
-            <InputRadio value="previousRecipient" label="Applicant confirms that he/she has not been a recipient of the NIDHI-EIR previously. NIDHI-EIR can be used only once." options={generalOptions} formikTouched={formik.touched.previousRecipient} formikError={formik.errors.previousRecipient} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+          <div className="mt-8"/>
+          <div className="mt-5 mb-4">
+                <h2 className="text-xl font-semibold text-gray-800 capitalize lg:text-2xl ">
+                {`Checklist`}
+                </h2>
+
+                <div className="flex mx-auto mt-2">
+                    <span className="inline-block w-40 h-1 bg-blue-900 rounded-full"></span>
+                    <span className="inline-block w-3 h-1 mx-1 bg-blue-900 rounded-full"></span>
+                    <span className="inline-block w-1 h-1 bg-blue-900 rounded-full"></span>
+                </div>
+            </div>
+            <InputRadio value="previousRecipient" label="14. Applicant confirms that he/she has not been a recipient of the NIDHI-EIR previously. NIDHI-EIR can be used only once." options={generalOptions} formikTouched={formik.touched.previousRecipient} formikError={formik.errors.previousRecipient} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
 
-            <InputRadio value="fullCommitment" label="Applicant is planning to pursue NIDHI-EIR full-time with no other concurrent commitments." options={generalOptions} formikTouched={formik.touched.fullCommitment} formikError={formik.errors.fullCommitment} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+            <InputRadio value="fullCommitment" label="15. Applicant is planning to pursue NIDHI-EIR full-time with no other concurrent commitments." options={generalOptions} formikTouched={formik.touched.fullCommitment} formikError={formik.errors.fullCommitment} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
 
-            <InputRadio value="noOtherFellowship" label="Applicant confirms that he/she will not be in receipt of any other remuneration or fellowship during the duration of the NIDHI-EIR." options={generalOptions} formikTouched={formik.touched.noOtherFellowship} formikError={formik.errors.noOtherFellowship} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+            <InputRadio value="noOtherFellowship" label="16. Applicant confirms that he/she will not be in receipt of any other remuneration or fellowship during the duration of the NIDHI-EIR." options={generalOptions} formikTouched={formik.touched.noOtherFellowship} formikError={formik.errors.noOtherFellowship} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
-            <InputRadio value="businessCommitment" label="Applicant confirms that he/she is fully committed to exploring a business idea. NIDHI-EIR support recipient should not treat this support as a stop gap arrangement to support them in their academic pursuits or transition between jobs." options={generalOptions} formikTouched={formik.touched.businessCommitment} formikError={formik.errors.businessCommitment} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+            <InputRadio value="businessCommitment" label="17. Applicant confirms that he/she is fully committed to exploring a business idea. NIDHI-EIR support recipient should not treat this support as a stop gap arrangement to support them in their academic pursuits or transition between jobs." options={generalOptions} formikTouched={formik.touched.businessCommitment} formikError={formik.errors.businessCommitment} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
-            <InputRadio value="notBeneficiary" label="Applicant confirms that he/she is not the promoter or significant (>10%) share holder / beneficiary of another company at the time of applying for and receiving the NIDHI-EIR support." options={generalOptions} formikTouched={formik.touched.notBeneficiary} formikError={formik.errors.notBeneficiary} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+            <InputRadio value="notBeneficiary" label="18. Applicant confirms that he/she is not the promoter or significant (>10%) share holder / beneficiary of another company at the time of applying for and receiving the NIDHI-EIR support." options={generalOptions} formikTouched={formik.touched.notBeneficiary} formikError={formik.errors.notBeneficiary} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
-            <InputRadio value="registerPEP" label="The NIDHI-EIR has or is planning to register for the pre-incubation or incubation program at the PEP for the entire duration of NIDHI-EIR support.  " options={generalOptions} formikTouched={formik.touched.registerPEP} formikError={formik.errors.registerPEP} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
+            <InputRadio value="registerPEP" label="19. The NIDHI-EIR has or is planning to register for the pre-incubation or incubation program at the PEP for the entire duration of NIDHI-EIR support.  " options={generalOptions} formikTouched={formik.touched.registerPEP} formikError={formik.errors.registerPEP} formikChange={formik.handleChange} formikBlur={formik.handleBlur} />
 
 
 
