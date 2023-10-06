@@ -9,97 +9,162 @@ const FinalReview = ({ formik }) => {
       label: 'Name',
       value: 'name',
     },
-    {   
+    { 
         id:2,
+        label: 'Applicant Image',
+        value: 'applicantImage',
+      },
+      { 
+        id:3,
+        label: `Father's Name`,
+        value: 'fatherName',
+      },
+
+    {   
+        id:4,
         label: 'Email',
         value: 'email',
     },
     {   
-        id:3,
+        id:5,
         label: 'Phone Number',
         value: 'phoneNumber',
     },
     {   
-        id:4,
+        id:6,
+        label: 'Whatsapp Number',
+        value: 'whatsappNumber',
+    },
+    {   
+        id:7,
         label: 'Address',
         value: 'address',
     },
+    {   
+        id:8,
+        label: 'Address Document',
+        value: 'addressDocument',
+    },
     {
-        id:5,
+        id:9,
         label: 'Date Of Birth',
         value: 'dateOfBirth',
     },
     {   
-        id:6,
+        id:10,
         label: 'Gender',
         value: 'gender',
     },
     {
-        id: 7,
+        id: 11,
         label: 'Category',
         value: 'category',
     },
     {
-        id: 8,
+        id: 12,
+        label: 'Pan Number',
+        value: 'panNumber',
+    },
+    {
+        id: 13,
+        label: 'Aadhar Number',
+        value: 'aadharNumber',
+    },
+    {
+        id: 14,
         label: 'Education',
         value: 'education',
     },
     {
-        id: 9,
+        id: 15,
         label: 'Enterpreneurship Experience',
         value: 'experience',
     },
     {
-        id: 10,
+        id: 16,
         label: 'Resume',
         value: 'resume',
     },
     {
-        id: 11,
+        id: 17,
+        label: 'Are you an  Innovator in Employment / Students with any R& D organisation / Academic Institution ?',
+        value: 'innovator',
+    },
+    {
+        id: 18,
+        label: 'Annual Income',
+        value: 'annualIncome',
+    },
+    {
+        id: 19,
+        label: ' Have you started and registered your own Venture (start up) ',
+        value: 'ownVenture',
+    },
+    {
+        id: 20,
+        label: 'Team Members in your proposed project',
+        value: 'teamMembers',
+    },
+    {
+        id: 21,
         label: 'Idea Description',
         value: 'ideaDescription',
     },
     {
-        id: 12,
-        label: 'Concept Note',
-        value: 'conceptNote',
+        id: 22,
+        label: 'Project Status',
+        value: 'projectStaatus',
     },
     {
-        id: 13,
-        label: 'Aspect Note',
-        value: 'aspectNote',
+        id: 23,
+        label: 'Science and working principle behind the idea',
+        value: 'ideaTechnology',
     },
     {
-        id: 14,
-        label: 'Applicant confirms that he/she has not been a recipient of the NIDHI-EIR previously. NIDHI-EIR can be used only once.',
-        value: 'previousRecipient',
+        id: 25,
+        label: 'Video showcasing your idea presentation/POC/Prototype working',
+        value: 'projectVideo',
     },
     {
-        id: 15,
-        label: 'Applicant is planning to pursue NIDHI-EIR full-time with no other concurrent commitments.',
+        id: 26,
+        label: 'Quantum (amount) of the fund required (Cost break-up and time activity plan have to be submitted at the time of presentation )',
+        value: 'amountRequired',
+    },
+    {
+        id: 27,
+        label: 'Have you received financial support / award for your present work from any other sources? (if so, please furnish details)',
+        value: 'financialSupport',
+    },
+    {
+        id: 28,
+        label: 'Applicant Confirms that he/she has not been a recipient of any NIDHI-PRAYAS or similar support previously for the same innovative concept as proposed in this form. (NIDHI-PRAYAS can be used only once.)',
+        value: 'previousReciepent',
+    },
+    {
+        id: 29,
+        label: 'Applicant is planning to pursue NIDHI- PRAYAS full time with no other concurrent commitments',
         value: 'fullCommitment',
     },
     {
-        id: 16,
-        label: 'Applicant confirms that he/she will not be in receipt of any other remuneration or fellowship during the duration of the NIDHI-EIR.',
-        value: 'noOtherFellowship',
-    },
-    {
-        id: 17,
+        id: 30,
         label: 'Applicant confirms that he/she is fully committed to exploring a business idea. NIDHI-EIR support recipient should not treat this support as a stop gap arrangement to support them in their academic pursuits or transition between jobs.',
         value: 'businessCommitment',
     },
     {
-        id: 18,
+        id: 31,
         label: 'Applicant confirms that he/she is not the promoter or significant (>10%) share holder / beneficiary of another company at the time of applying for and receiving the NIDHI-EIR support.',
         value: 'notBeneficiary',
     },
     {
-        id: 19,
-        label: 'The NIDHI-EIR has or is planning to register for the pre-incubation or incubation program at the PEP for the entire duration of NIDHI-EIR support.',
-        value: 'notBeneficiary',
+        id: 32,
+        label: 'Applicant has or is planning to register for the pre incubation or incubation program at the TBI for the entire duration of PRAYAS support.',
+        value: 'registerPEP',
     },
-
+    {
+        id: 33,
+        label: 'Have you also applied / in process of applying to any other PRAYAS Centre (s) forHave you also applied / in process of applying to any other PRAYAS Centre (s) for NIDHI-PRAYAS and/or NIDHI-EIR grant -- Yes/ No',
+        value: 'applyOtherPrayas',
+    },
       
 
   ];
