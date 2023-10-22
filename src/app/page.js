@@ -18,16 +18,16 @@ export default function Home() {
         <MyCarousel />
         <Stats />
         <TopMentors />
-        <IncubationSchemes/>
-        </main>
-        <TopStartups/>
-        <main className="overflow-hidden font-poppins max-w-screen-xl mx-auto ">
-        
+        <IncubationSchemes />
+      </main>
+      <TopStartups />
+      <main className="overflow-hidden font-poppins max-w-screen-xl mx-auto ">
+
         <KeyPoints />
         <Testimonials />
         <FAQ />
-        </main>
-      
+      </main>
+
     </>
   )
 }

@@ -6,6 +6,7 @@ function EachPastEventCard({ imgUrl, title, desc }) {
     const words = desc.split(" ");
     const first10Words = words.slice(0, 10);
     const slicedDesc = first10Words.join(" ");
+    const slugTitle = title.replace(/\s+/g, '-').toLowerCase().split(' ').join('-');
     return (
         <div className='py-4'>
             <img className="relative z-10 object-cover w-full rounded-md h-96" src={imgUrl} alt={title} />
@@ -19,7 +20,7 @@ function EachPastEventCard({ imgUrl, title, desc }) {
                     {slicedDesc}
                 </p>
 
-                <Link href={'/events/:title'} className="mt-3 text-base font-medium text-blue-800 group-hover:text-green-400 cursor-pointer">Check It Out</Link>
+                <Link href={`/events/${slugTitle}`} className="mt-3 text-base font-medium text-blue-800 group-hover:text-green-400 cursor-pointer">Check It Out</Link>
             </div>
         </div>
     )

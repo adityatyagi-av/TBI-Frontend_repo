@@ -26,9 +26,9 @@ const Infrastructure = () => {
                 <h1 className="text-xl font-semibold text-gray-700 capitalize "> Coworking Space</h1>
 
                 <p className="text-gray-500 ">
-                Work alongside like-minded entrepreneurs and innovators
-              TBI Kiet offers shared work areas where you can set up your startup, collaborate with others, and work in a professional environment.
-              </p>
+                  Work alongside like-minded entrepreneurs and innovators
+                  TBI Kiet offers shared work areas where you can set up your startup, collaborate with others, and work in a professional environment.
+                </p>
               </div>
 
               <div className="space-y-3">
@@ -42,8 +42,8 @@ const Infrastructure = () => {
                 <h1 className="text-xl font-semibold text-gray-700 capitalize ">Continuous Capital Support</h1>
 
                 <p className="text-gray-500 ">
-                Grants and Support Schemes for Growth
-                TBI KIET offers a range of funding opportunities through schemes like Nidhi EIR,Nidhi Prayaas and Tide.
+                  Grants and Support Schemes for Growth
+                  TBI KIET offers a range of funding opportunities through schemes like Nidhi EIR,Nidhi Prayaas and Tide.
                 </p>
               </div>
 
@@ -57,8 +57,8 @@ const Infrastructure = () => {
                 <h1 className="text-xl font-semibold text-gray-700 capitalize ">Global Networking Opportunities </h1>
 
                 <p className="text-gray-500 ">
-                Connecting Entrepreneurs to a World of Opportunities
-Connect with entrepreneurs, investors, and industry experts from around the world. Expand your network and tap into valuable resources to grow your startup on a global scale.
+                  Connecting Entrepreneurs to a World of Opportunities
+                  Connect with entrepreneurs, investors, and industry experts from around the world. Expand your network and tap into valuable resources to grow your startup on a global scale.
                 </p>
               </div>
 
@@ -72,8 +72,8 @@ Connect with entrepreneurs, investors, and industry experts from around the worl
                 <h1 className="text-xl font-semibold text-gray-700 capitalize ">Best Industry Mentors:</h1>
 
                 <p className="text-gray-500 ">
-                Mentors to Guide you the best
-Our experienced mentors bring years of industry expertise to help you navigate the challenges and opportunities of entrepreneurship.
+                  Mentors to Guide you the best
+                  Our experienced mentors bring years of industry expertise to help you navigate the challenges and opportunities of entrepreneurship.
                 </p>
               </div>
             </div>
