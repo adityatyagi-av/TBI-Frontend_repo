@@ -5,7 +5,7 @@ const InputRadio = ({value,label,options,formikTouched,formikError,formikChange,
   return (
     <div className="my-2">
 
-          <label for={value} className="block mb-2 text-sm font-medium text-gray-900 ">{label} {formikTouched && formikError ? (
+          <label htmlFor={value} className="block mb-2 text-sm font-medium text-gray-900 ">{label} {formikTouched && formikError ? (
           <span className=' text-xs text-red-500 mb-.5'>{`(${formikError}*)`}</span>
            ) : null}</label>
            <div className='flex gap-4'>
