@@ -3,11 +3,13 @@ import InputFile from '@/components/inputFile';
 import React from 'react';
 
 const FinalReview = ({ formik }) => {
+    console.log("formik down")
+    console.dir(formik)
   const items = [
     { 
       id:1,
-      label: 'Name',
-      value: 'name',
+      label: 'Namhbjlq3vewkj.cbvkqen blkr;k jr/kelse',
+      value: 'n34fiuhio34v34v',
     },
     {   
         id:2,
@@ -99,7 +101,11 @@ const FinalReview = ({ formik }) => {
         label: 'The NIDHI-EIR has or is planning to register for the pre-incubation or incubation program at the PEP for the entire duration of NIDHI-EIR support.',
         value: 'notBeneficiary',
     },
-
+    {
+        id: 20,
+        label:"Sceh,a",
+        value:"scheme",
+    }
       
 
   ];
