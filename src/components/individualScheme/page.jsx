@@ -11,8 +11,8 @@ const IndividualScheme = () => {
                             NIDHI<span className="font-normal italic text-blue-900 "> EIR 1.0 </span>
                         </h1>
                         <p role="contentinfo" className="focus:outline-none text-base leading-6 mt-8 text-gray-600 2xl:pr-24 xl:pr-0 pr-12">
-                            Don’t get carried away with super-short paragraphs. The secret to one-sentence paragraphs is to use them like a spice: A pinch of cumin can make a meal more savor.
-                        </p>
+                           The DST-supported NIDHI program (National Initiative for Developing and Harnessing Innovation) aims to promote and accelerate young innovators and startups. The PRAYAS program, part of NIDHI, helps innovators turn their ideas into prototypes, encouraging them to explore without fearing failure. Positioned as a pre-incubation initiative, NIDHI-PRAYAS supports early-stage innovation development.
+                             </p>
                         <div className="mt-10">
                             <a href='#' className="flex items-center md:p-3 p-1 focus:outline-none text-xl font-medium leading-5 text-gray-800 focus:ring-2 focus:ring-offset-2 focus:ring-gray-700">
                                 Register here
@@ -31,7 +31,7 @@ const IndividualScheme = () => {
                     <div className="xl:w-4/6 md:w-1/2 w-full xl:pl-40">
 
                         <div className="w-full">
-                            <img src="https://i.ibb.co/wMd2Q4B/new.png" alt="Purple flowers on a book" className="md:w-full sm:w-1/2 w-full" />
+                            <img src="/Incubation/nidhieir.png" alt="Nidhi EIR 1.0" className="md:w-full sm:w-1/2 w-full" />
                             <div className="flex items-center mt-8">
 
                             </div>
@@ -46,11 +46,11 @@ const IndividualScheme = () => {
                 {/* <p className="font-normal text-sm leading-3 text-indigo-700 hover:text-indigo-800 cursor-pointer pb-2">About</p> */}
                 <div className="flex lg:flex-row flex-col lg:gap-8 sm:gap-10 gap-12">
                     <div className="w-full lg:w-6/12">
-                        <h2 className="w-full font-bold lg:text-4xl text-3xl lg:leading-10 leading-9">We are here to make great design accessible and delightfull for everyone</h2>
-                        <p className="font-normal text-base leading-6 text-gray-600 mt-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.In the first place we have granted to God, and by this our present charter confirmed for us and our heirs forever that the English Church shall be free, and shall have her rights entire,</p>
+                        <h2 className="w-full font-bold lg:text-4xl text-3xl lg:leading-10 leading-9">Empowering Innovation: Facilitating the Journey from Idea to Market</h2>
+                        <p className="font-normal text-base leading-6 text-gray-600 mt-6">The NIDHI-EIR program supports aspiring entrepreneurs in transforming innovative ideas into market-ready prototypes. By offering financial aid, mentorship, and a collaborative ecosystem, it helps overcome early-stage challenges. This initiative fosters creativity and encourages calculated risks, driving startups to deliver impactful solutions to both local and global markets.</p>
                     </div>
                     <div className="w-full lg:w-6/12">
-                        <img className="lg:block hidden w-full" src="https://i.ibb.co/RjNH7QB/Rectangle-122-1.png" alt="people discussing on board" />
+                        <img className="lg:block hidden w-full" src="/Incubation/nidhieir2.png" alt="people discussing on board" />
                         <img className="lg:hidden sm:block hidden w-full" src="https://i.ibb.co/16fPqrg/Rectangle-122-2.png" alt="people discussing on board" />
                         <img className="sm:hidden block w-full" src="https://i.ibb.co/Jxhpxh6/Rectangle-122.png" alt="people discussing on board" />
                     </div>
@@ -88,15 +88,15 @@ const IndividualScheme = () => {
                 <div className="grid sm:grid-cols-3 grid-cols-2 sm:gap-8 gap-4">
                     <div>
                         <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 mt-6">Founded</p>
-                        <p className="font-normal text-base leading-6 text-gray-600 mt-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                        <p className="font-normal text-base leading-6 text-gray-600 mt-6">Founded in May 1971, the Department of Science & Technology (DST) was established to promote and coordinate Science & Technology activities across India</p>
                     </div>
                     <div>
-                        <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 mt-6">50M montly enrichments</p>
-                        <p className="font-normal text-base leading-6 text-gray-600 mt-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                        <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 mt-6">Venture Center</p>
+                        <p className="font-normal text-base leading-6 text-gray-600 mt-6">enture Center is a Pune-based incubator specializing in materials, chemicals, and biological sciences, serving as the NIDHI-EIR Programme Implementation Partner of NSTEDB.</p>
                     </div>
                     <div className="sm:block hidden">
-                        <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 mt-6">400k User</p>
-                        <p className="font-normal text-base leading-6 text-gray-600 mt-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                        <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 mt-6">1,30,000+ Jobs </p>
+                        <p className="font-normal text-base leading-6 text-gray-600 mt-6">NIDHI-EIR has successfully created more than 130,000 jobs, significantly contributing to employment growth in the innovation sector.</p>
                     </div>
                 </div>
                 <div className="sm:hidden block relative mt-8">
@@ -121,8 +121,8 @@ const IndividualScheme = () => {
                 <div className="flex lg:flex-row flex-col md:gap-14 gap-16 justify-between lg:mt-20 mt-16">
                     <div className="w-full lg:w-6/12">
                         <h2 className="font-bold lg:text-4xl text-3xl lg:leading-9 leading-7 text-gray-800">Our Mission</h2>
-                        <p className="font-normal text-base leading-6 text-gray-600 mt-6 w-full lg:w-10/12 xl:w-9/12">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.In the first place we have granted to God, and by this our present charter confirmed for us and our heirs forever that the English Church shall be free, and shall have her rights entire, and her liberties inviolate; and we will that it be thus observed; which is apparent from</p>
-                        <p className="font-normal text-base leading-6 text-gray-600 w-full lg:w-10/12 xl:w-9/12 mt-10">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.In the first place we have granted to God, and by this our present charter confirmed for us and our heirs forever that the English Church shall be free, and shall have her rights entire, and her liberties inviolate; and we will that it be thus observed; which is apparent from</p>
+                        <p className="font-normal text-base leading-6 text-gray-600 mt-6 w-full lg:w-10/12 xl:w-9/12">Our mission is to facilitate the translation of innovative ideas into prototypes, offering a platform that enables faster experimentation and refinement throughout the idea-to-market journey. We are committed to fostering the development of innovative solutions that address both local and global challenges.</p>
+                        <p className="font-normal text-base leading-6 text-gray-600 w-full lg:w-10/12 xl:w-9/12 mt-10">Additionally, we seek to enhance the pipeline of startups entering incubators, focusing on both quality and quantity. By creating a vibrant innovation ecosystem, we aim to establish a strong network that connects innovators, academia, mentors, and incubators. This collaborative environment will accelerate the growth of groundbreaking ideas, ensuring that they receive the necessary support and guidance to thrive.</p>
                     </div>
                     <div className="w-full lg:w-6/12">
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 lg:gap-12 gap-10">
@@ -137,7 +137,8 @@ const IndividualScheme = () => {
                                 </div>
                                 <div >
                                     <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800">Team</p>
-                                    <p className="mt-2 font-normal text-base leading-6 text-gray-600">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                                    <p className="mt-2 font-normal text-base leading-6 text-gray-600">
+Shruti Devasthali leads seed funding and portfolio monitoring at Venture Center. Namrata Salwe manages seed fund applications, with 18 years of IT and project management experience.</p>
                                 </div>
                             </div>
 
@@ -153,7 +154,7 @@ const IndividualScheme = () => {
                                 </div>
                                 <div >
                                     <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800">Board</p>
-                                    <p className="mt-2 font-normal text-base leading-6 text-gray-600">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                                    <p className="mt-2 font-normal text-base leading-6 text-gray-600">The Board is composed of experienced professionals guiding Venture Center's strategic direction, ensuring informed decision-making and effective implementation of innovation and entrepreneurship programs.</p>
                                 </div>
                             </div>
 
@@ -167,7 +168,7 @@ const IndividualScheme = () => {
                                 </div>
                                 <div >
                                     <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800">Press</p>
-                                    <p className="mt-2 font-normal text-base leading-6 text-gray-600">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                                    <p className="mt-2 font-normal text-base leading-6 text-gray-600">Our press releases highlight key milestones, partnerships, and innovations emerging from our incubator, fostering a culture of collaboration and awareness in the entrepreneurial ecosystem.</p>
                                 </div>
                             </div>
                         </div>
@@ -201,7 +202,7 @@ const IndividualScheme = () => {
                                 </div>
                                 <div className="flex mt-6 flex-col items-center md:items-start md:w-8/12">
                                     <h1 className="focus:outline-none text-xl font-bold leading-5">Register here</h1>
-                                    <h2 className="focus:outline-none text-gray-500 mt-3 text-base leading-6 tracking-wide">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, quia.</h2>
+                                    <h2 className="focus:outline-none text-gray-500 mt-3 text-base leading-6 tracking-wide">Fill Form to join the NIDHI-EIR program </h2>
                                 </div>
                                 <div aria-label="wallet" role="img">
                                     <img className="focus:outline-none mt-32" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/3_step_center_aligned_how_it_worksSvg5.svg" alt />
