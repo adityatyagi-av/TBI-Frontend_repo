@@ -56,8 +56,6 @@ const MentorPage = () => {
                         </div>
                     </div>
 
-
-
                 </div>
             </div>
         </section>);
