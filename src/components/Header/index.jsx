@@ -5,27 +5,29 @@ import { Logo } from "./Logo.jsx";
 import { menuItems } from './menuData.jsx'
 import Link from "next/link.js";
 import IncubationDropdown from "./IncubationDropdown.jsx";
-export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
+
+export default function Header() {
+
+const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   return (
-    <Navbar 
-    onMenuOpenChange={setIsMenuOpen} 
-    maxWidth="xl" 
-    height="6rem" 
-    justify="start"
+  
+         <Navbar
+      maxWidth="xl"
+      onMenuOpenChange={setIsMenuOpen}
+      isMenuOpen={isMenuOpen}
+      className="shadow-md pb-1.5"
+    >
 
-     >
-      <NavbarContent className="flex flex-row-reverse justify-between items-center">
+      <NavbarContent className="flex flex-row-reverse sm:flex justify-between items-center">
         <NavbarMenuToggle 
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden "
           justify="start"
         />
         <NavbarBrand justify="start">
-
-          <Link href="/" className="gap-2 flex">
+          <Link href="/" onClick={()=> setIsMenuOpen(false)} className="gap-2 flex">
             <Logo />
           </Link>
         </NavbarBrand>
@@ -34,17 +36,17 @@ export default function Header() {
       <NavbarContent className="hidden sm:flex gap-6 focus:underline" justify="center" >
 
         <NavbarItem>
-          <Link href="/about" className="text-[18px] text-gray-800   hover:text-blue-950 text-md font-normal active:text-blue-950 focus:text-blue-950">
+          <Link href="/about" onClick={()=> setIsMenuOpen(false)} className="text-[18px] text-gray-800   hover:text-blue-950 text-md font-normal active:text-blue-950 focus:text-blue-950">
             About
           </Link>
         </NavbarItem>
         <NavbarItem >
-          <Link href="/events" className="text-[18px] text-gray-800   hover:text-blue-950 text-md font-normal active:text-blue-950 focus:text-blue-950">
+          <Link href="/events"  onClick={()=> setIsMenuOpen(false)} className="text-[18px] text-gray-800   hover:text-blue-950 text-md font-normal active:text-blue-950 focus:text-blue-950">
             Events
           </Link>
         </NavbarItem>
         <NavbarItem >
-          <Link href="/mentors" className="text-[18px] text-gray-800  hover:text-blue-950 text-md font-normal active:text-blue-950 focus:text-blue-950">
+          <Link href="/mentors" size="lg"  onClick={()=> setIsMenuOpen(false)}  className="text-[18px] text-gray-800  hover:text-blue-950 text-md font-normal active:text-blue-950 focus:text-blue-950">
             Mentors
           </Link>
         </NavbarItem>
@@ -54,19 +56,19 @@ export default function Header() {
 
         </NavbarItem>
         <NavbarItem >
-          <Link href="/facilities" className="text-[18px] text-gray-800 hover:text-blue-950 text-md font-normal active:text-blue-950 focus:text-blue-950">
+          <Link href="/facilities" onClick={()=> setIsMenuOpen(false)} className="text-[18px] text-gray-800 hover:text-blue-950 text-md font-normal active:text-blue-950 focus:text-blue-950">
             Facilities
           </Link>
         </NavbarItem>
         <NavbarItem >
-          <Link href="/gallery" className="text-[18px] text-gray-800 hover:text-blue-950 text-md font-normal active:text-blue-950 focus:text-blue-950">
+          <Link href="/gallery" onClick={()=> setIsMenuOpen(false)} className="text-[18px] text-gray-800 hover:text-blue-950 text-md font-normal active:text-blue-950 focus:text-blue-950">
             Gallery
           </Link>
 
         </NavbarItem>
         
         <NavbarItem >
-          <Link href="/contact" className="text-[18px] text-gray-800 hover:text-blue-950 text-md font-normal active:text-blue-950 focus:text-blue-950">
+          <Link href="/contact" onClick={()=> setIsMenuOpen(false)} className="text-[18px] text-gray-800 hover:text-blue-950 text-md font-normal active:text-blue-950 focus:text-blue-950" >
             Contact
           </Link>
         </NavbarItem>
@@ -82,6 +84,7 @@ export default function Header() {
                 index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
               }
               className="w-1/2"
+              onClick={()=> setIsMenuOpen(false)}
               href={item.href}
               size="lg"
             >
@@ -93,3 +96,4 @@ export default function Header() {
     </Navbar>
   );
 }
+
