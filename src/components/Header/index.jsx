@@ -13,17 +13,17 @@ const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   return (
   
-         <Navbar
+      <Navbar
       maxWidth="xl"
       onMenuOpenChange={setIsMenuOpen}
       isMenuOpen={isMenuOpen}
-      className="shadow-md pb-1.5"
+      className="shadow-md pb-1.5 w-full  max-sm:font-serif mb-8 "      
     >
 
-      <NavbarContent className="flex flex-row-reverse sm:flex justify-between items-center">
+      <NavbarContent className="flex flex-row-reverse sm:flex  justify-between items-center">
         <NavbarMenuToggle 
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden "
+          className="sm:hidden  "
           justify="start"
         />
         <NavbarBrand justify="start">
@@ -78,7 +78,7 @@ const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
       <NavbarMenu justify="end">
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`} className=" text-gray-700 hover:text-blue-950 text-md font-normal active:text-blue-950 focus:text-blue-950" >
+          <NavbarMenuItem key={`${item}-${index}`} className="  text-gray-700 hover:text-blue-950 text-md font-bold  text-2xl  text-center font-serif active:text-blue-950 focus:text-blue-950" >
             <Link
               color={
                 index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
