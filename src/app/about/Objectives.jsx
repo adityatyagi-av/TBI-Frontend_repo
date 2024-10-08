@@ -26,8 +26,7 @@ function Objectives() {
                                 </svg>
                             </div>
                             <div className="flex-grow pl-4">
-                                <h2 className="font-medium title-font text-sm mb-1 tracking-wider">STEP 1</h2>
-                                <p className="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+                                <p className="leading-relaxed">Cultivate an entrepreneurship culture within the college and surrounding areas, fostering continuous generation of entrepreneurs </p>
                             </div>
                         </div>
                         <div className="flex relative pb-9">
@@ -38,8 +37,8 @@ function Objectives() {
                                 </svg>
                             </div>
                             <div className="flex-grow pl-4">
-                                <h2 className="font-medium title-font text-sm mb-1 tracking-wider">STEP 1</h2>
-                                <p className="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+
+                                <p className="leading-relaxed">Establish "KIET Silicon Valley" as a beacon of innovation and entrepreneurship in the region.</p>
                             </div>
                         </div>
                         <div className="flex relative pb-9">
@@ -50,8 +49,8 @@ function Objectives() {
                                 </svg>
                             </div>
                             <div className="flex-grow pl-4">
-                                <h2 className="font-medium title-font text-sm mb-1 tracking-wider">STEP 1</h2>
-                                <p className="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+
+                                <p className="leading-relaxed">Provide R&D for industry to enable small/medium industries, to take up R&D activities and technology up -gradation.</p>
                             </div>
                         </div>
                         <div className="flex relative pb-9">
@@ -62,8 +61,9 @@ function Objectives() {
                                 </svg>
                             </div>
                             <div className="flex-grow pl-4">
-                                <h2 className="font-medium title-font text-sm mb-1 tracking-wider">STEP 1</h2>
-                                <p className="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+
+                                <p className="leading-relaxed">Empower local industries with cutting-edge research and tech upgrades to train unemployed youth for wage employment.
+                                </p>
                             </div>
                         </div>
                         <div className="flex relative pb-9">
@@ -74,8 +74,9 @@ function Objectives() {
                                 </svg>
                             </div>
                             <div className="flex-grow pl-4">
-                                <h2 className="font-medium title-font text-sm mb-1 tracking-wider">STEP 1</h2>
-                                <p className="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+
+                                <p className="leading-relaxed">Promote entrepreneurial success through indigenous technology and innovation.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -121,8 +122,8 @@ function Objectives() {
                                 </svg>
                             </div>
                             <div className="flex-grow pl-4">
-                                <h2 className="font-medium title-font text-sm mb-1 tracking-wider">STEP 1</h2>
-                                <p className="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+
+                                <p className="leading-relaxed">Position KIET-TBI as a leader in entrepreneurship, focusing on ICT, Robotics, and Electronics..</p>
                             </div>
                         </div>
                         <div className="flex relative pb-9">
@@ -133,8 +134,8 @@ function Objectives() {
                                 </svg>
                             </div>
                             <div className="flex-grow pl-4">
-                                <h2 className="font-medium title-font text-sm mb-1 tracking-wider">STEP 1</h2>
-                                <p className="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+
+                                <p className="leading-relaxed">Support startups through innovation, IPR assistance, licensing, and comprehensive training programs.</p>
                             </div>
                         </div>
                         <div className="flex relative pb-9">
@@ -145,8 +146,8 @@ function Objectives() {
                                 </svg>
                             </div>
                             <div className="flex-grow pl-4">
-                                <h2 className="font-medium title-font text-sm mb-1 tracking-wider">STEP 1</h2>
-                                <p className="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+
+                                <p className="leading-relaxed">Disseminate knowledge through conferences and training for growth.</p>
                             </div>
                         </div>
                         <div className="flex relative pb-9">
@@ -157,8 +158,8 @@ function Objectives() {
                                 </svg>
                             </div>
                             <div className="flex-grow pl-4">
-                                <h2 className="font-medium title-font text-sm mb-1 tracking-wider">STEP 1</h2>
-                                <p className="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+
+                                <p className="leading-relaxed">Build strong institution-industry partnerships for collaborative innovation and technology commercialization.</p>
                             </div>
                         </div>
                         <div className="flex relative pb-9">
@@ -169,8 +170,8 @@ function Objectives() {
                                 </svg>
                             </div>
                             <div className="flex-grow pl-4">
-                                <h2 className="font-medium title-font text-sm mb-1 tracking-wider">STEP 1</h2>
-                                <p className="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+
+                                <p className="leading-relaxed">Promote knowledge dissemination via conferences and training for technological and business growth.</p>
                             </div>
                         </div>
                     </div>
