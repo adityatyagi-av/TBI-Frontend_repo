@@ -1,7 +1,7 @@
 const mainteam = [
     {
         name: "Our Lead Team",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo incidunt ex placeat modi magni quia error alias, adipisci rem similique, at omnis eligendi optio eos harum.",
+        desc: "Our Leadership Team: Visionary Leaders Driving Innovation and Spearheading Growth with Expertise and Passion",
         members: [
             {
                 id: 1,
