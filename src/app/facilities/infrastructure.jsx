@@ -92,9 +92,9 @@ const Infrastructure = () => {
           <div className="lg:flex flex-row-reverse gap-10 items-center justify-center lg:space-x-2 ">
             <div className>
               <p className="lg:text-4xl text-3xl font-extrabold leading-9 mt-0 text-gray-800">Office Space</p>
-              <p className="text-lg leading-7 text-gray-600 mt-4 xl:w-7/12 w-full">Whether article spirits new her covered hastily sitting her. Money witty books nor son add</p>
+              <p className="text-lg leading-7 text-gray-600 mt-4 xl:w-7/12 w-full">At TBI, we offer an engaging office space designed to foster creativity and teamwork among startups and entrepreneurs.</p>
               <div className="lg:hidden lg:w-3/5 xl:w-3/5 w-full lg:mt-0 mt-6">
-                <Image src="https://i.ibb.co/SKLJ7WX/austin-distel-jp-Hw8ndw-J-Q-unsplash-1.png" alt="ongoing meeting" className="w-full obejct-fit object-center object-fill h-full" width={100} height={100} />
+                <Image src="https://i.ibb.co/SKLJ7WX/austin-distel-jp-Hw8ndw-J-Q-unsplash-1.png" alt="ongoing meeting" className="w-full obejct-fit object-center object-fill h-full" width={2048} height={2048} />
               </div>
               <div className="mt-6 md:mt-10 grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6 lg:mt-6 2xl:mt-12">
                 <div className="flex items-center">
@@ -104,8 +104,8 @@ const Infrastructure = () => {
                     </div>
                   </div>
                   <div className="flex items-start flex-col ml-6 pt-8">
-                    <h2 className="text-lg font-semibold leading-4 text-gray-800">Time Prompt</h2>
-                    <p className="lg:w-40 2xl:w-52 text-base leading-6 mt-2 text-gray-600">Whether article spirits new her covered.</p>
+                    <h2 className="text-lg font-semibold leading-4 text-gray-800">Flexible Hours</h2>
+                    <p className="lg:w-40 2xl:w-52 text-base leading-6 mt-2 text-gray-600">Enjoy flexible working hours to enhance productivity</p>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -115,8 +115,8 @@ const Infrastructure = () => {
                     </div>
                   </div>
                   <div className="flex items-start flex-col ml-6 pt-8">
-                    <h2 className="text-lg font-semibold leading-4 text-gray-800">User Friendly</h2>
-                    <p className="lg:w-40 2xl:w-52 text-base leading-6 mt-2 text-gray-600">Whether article spirits new her covered.</p>
+                    <h2 className="text-lg font-semibold leading-4 text-gray-800">Collaborative Environment</h2>
+                    <p className="lg:w-40 2xl:w-52 text-base leading-6 mt-2 text-gray-600">Open workstations promote teamwork and idea sharing.</p>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -126,8 +126,8 @@ const Infrastructure = () => {
                     </div>
                   </div>
                   <div className="flex items-start flex-col ml-6 pt-8">
-                    <h2 className="text-lg font-semibold leading-4 text-gray-800">Creative Ideas</h2>
-                    <p className="lg:w-40 2xl:w-52 text-base leading-6 mt-2 text-gray-600">Whether article spirits new her covered.</p>
+                    <h2 className="text-lg font-semibold leading-4 text-gray-800">Fully Equipped Facilities</h2>
+                    <p className="lg:w-40 2xl:w-52 text-base leading-6 mt-2 text-gray-600">High-speed internet and essential supplies are readily available.</p>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -137,8 +137,10 @@ const Infrastructure = () => {
                     </div>
                   </div>
                   <div className="flex items-start flex-col ml-6 pt-8">
-                    <h2 className="text-lg font-semibold leading-4 text-gray-800">Achievments</h2>
-                    <p className="lg:w-40 2xl:w-52 text-base leading-6 mt-2 text-gray-600">Whether article spirits new her covered.</p>
+                    <h2 className="text-lg font-semibold leading-4 text-gray-800">Recognition of Success
+                    </h2>
+                    <p className="lg:w-40 2xl:w-52 text-base leading-6 mt-2 text-gray-600">Celebrate achievements to inspire and motivate.
+                    </p>
                   </div>
                 </div>
               </div>
