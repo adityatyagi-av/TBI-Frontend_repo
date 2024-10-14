@@ -53,7 +53,6 @@ const [isMenuOpen, setIsMenuOpen] = React.useState(false);
         
         <NavbarItem >
           <IncubationDropdown/>
-
         </NavbarItem>
         <NavbarItem >
           <Link href="/facilities" onClick={()=> setIsMenuOpen(false)} className="text-[18px] text-gray-800 hover:text-blue-950 text-md font-normal active:text-blue-950 focus:text-blue-950">

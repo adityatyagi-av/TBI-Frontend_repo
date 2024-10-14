@@ -140,7 +140,6 @@ const Infrastructure = () => {
                     <h2 className="text-lg font-semibold leading-4 text-gray-800">Recognition of Success
                     </h2>
                     <p className="lg:w-40 2xl:w-52 text-base leading-6 mt-2 text-gray-600">Celebrate achievements to inspire and motivate.
-
                     </p>
                   </div>
                 </div>
