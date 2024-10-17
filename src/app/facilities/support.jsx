@@ -37,9 +37,7 @@ const Support = () => {
               </span>
             </h2>
             <p className="pr-5 mb-5 text-base text-gray-700 md:text-lg">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae. explicabo.
+              We provide expert mentor support at TBI KIET, helping startups transform ideas into successful ventures.
             </p>
             <div className="flex items-center">
               <Link
@@ -112,12 +110,10 @@ const Support = () => {
               </div>
               <div>
                 <h6 className="mb-2 font-semibold leading-5">
-                  They urge you to put down
+                  Legal Advisory Services
                 </h6>
                 <p className="text-sm text-gray-900">
-                  Skate ipsum dolor sit amet, alley oop vert mute-air Colby Carter
-                  flail 180 berm. Half-cab camel back ollie transition ledge Wes
-                  Humpston 1080.
+                  We provide legal support to help startups navigate regulations and ensure compliance.
                 </p>
                 <hr className="w-full my-6 border-gray-300" />
               </div>
@@ -142,13 +138,10 @@ const Support = () => {
               </div>
               <div>
                 <h6 className="mb-2 font-semibold leading-5">
-                  The powerless in a world
+                  Marketing Strategy Development
                 </h6>
                 <p className="text-sm text-gray-900">
-                  The first mate and his Skipper too will do their very best to
-                  make the others comfortable in their tropic island nest. Michael
-                  Knight a young loner.
-                </p>
+                  Our mentors help create marketing strategies to build brand presence and drive growth.                </p>
                 <hr className="w-full my-6 border-gray-300" />
               </div>
             </div>
@@ -172,12 +165,10 @@ const Support = () => {
               </div>
               <div>
                 <h6 className="mb-2 font-semibold leading-5">
-                  Tell them I hate them
+                  IP and Trademark Support
                 </h6>
                 <p className="text-sm text-gray-900">
-                  Chase ball of string eat plants, meow, and throw up because I
-                  ate plants going to catch the red dot today going to catch the
-                  red dot today. I could pee on this if I had the energy.
+                  We assist in securing intellectual property and trademarks, protecting your innovations for long-term success.
                 </p>
               </div>
             </div>
@@ -258,11 +249,11 @@ const Support = () => {
                     </svg>
                   </div>
                   <h6 className="mb-2 font-semibold leading-5">
-                    The quick, brown fox jumps over a lazy dog
+
+                    Patent Filing Assistance
                   </h6>
                   <p className="text-sm text-gray-900">
-                    Baseball ipsum dolor sit amet cellar rubber win hack tossed.
-                    Slugging catcher slide bench league.
+                    We assist startups in filing patents to protect their innovative products and technologies.
                   </p>
                 </div>
               </div>
@@ -283,10 +274,10 @@ const Support = () => {
                   </svg>
                 </div>
                 <h6 className="mb-2 font-semibold leading-5">
-                  A flower in my garden, a mystery
+                  Trademark Registration Support
                 </h6>
                 <p className="text-sm text-gray-900">
-                  They urge you to put down your sword and come join the winners.
+                  Our team helps secure trademark rights, ensuring exclusive ownership of your brand name and logo.
                 </p>
               </div>
               <div>
@@ -306,11 +297,11 @@ const Support = () => {
                   </svg>
                 </div>
                 <h6 className="mb-2 font-semibold leading-5">
-                  Skate ipsum dolor sit amet, alley oop
+                  Copyright Protection
                 </h6>
                 <p className="text-sm text-gray-900">
-                  If one examines precultural libertarianism, one is faced with a
-                  choice: either accept rationalism.
+                  We provide support for copyright registration, safeguarding your original content, designs, or software from unauthorized use.
+
                 </p>
               </div>
               <div>
@@ -330,11 +321,10 @@ const Support = () => {
                   </svg>
                 </div>
                 <h6 className="mb-2 font-semibold leading-5">
-                  The first mate and his Skipper too will
+                  IP Strategy and Consultation
                 </h6>
                 <p className="text-sm text-gray-900">
-                  Those options are already baked in with this model shoot me an
-                  email clear blue water.
+                  Get expert advice on developing an intellectual property strategy to maximize the value of your innovations.
                 </p>
               </div>
             </div>
