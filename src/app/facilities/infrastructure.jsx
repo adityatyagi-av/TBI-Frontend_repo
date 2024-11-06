@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-
 const Infrastructure = () => {
   return (
     <>
@@ -22,15 +21,12 @@ const Infrastructure = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </span>
-
                 <h1 className="text-xl font-semibold text-gray-700 capitalize "> Coworking Space</h1>
-
                 <p className="text-gray-500 ">
                   Work alongside like-minded entrepreneurs and innovators
                   TBI Kiet offers shared work areas where you can set up your startup, collaborate with others, and work in a professional environment.
                 </p>
               </div>
-
               <div className="space-y-3">
                 <span className="inline-block p-3 text-blue-500 bg-blue-100 rounded-xl ">
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -145,8 +141,9 @@ const Infrastructure = () => {
                 </div>
               </div>
             </div>
-            <div className="hidden lg:block lg:w-3/5 xl:w-3/5 w-full lg:mt-0 mt-6">
-              <Image width={100} height={100} src="https://i.ibb.co/SKLJ7WX/austin-distel-jp-Hw8ndw-J-Q-unsplash-1.png" alt="ongoing meeting" className="w-full obejct-fit object-center object-fill h-full" />
+            <div className="hidden lg:block lg:w-4/5 xl:w-3/5 w-full lg:mt-0 mt-6">
+              <Image width={2048} height={2048} src='/officespace.png' alt="office space" className="w-full obejct-fit object-center object-fill h-full"  />
+              
             </div>
           </div>
         </div>
@@ -158,7 +155,7 @@ const Infrastructure = () => {
         <section className=" mx-auto container bg-white pt-16">
           <div>
             <div role="contentinfo" className="flex items-center flex-col ">
-              <h1 tabIndex={0} className="focus:outline-none text-4xl lg:text-4xl font-extrabold text-center leading-10 text-gray-800 lg:w-5/12 md:w-9/12 pt-4">We provide you <br /> a variety of Softwares </h1>
+              <h1 tabIndex={0} className="focus:outline-none text-4xl lg:text-4xl font-extrabold text-center leading-10 text-gray-800 lg:w-5/12 md:w-9/12 pt-4">We provide you <br /> a variety of other facilities </h1>
             </div>
             <div tabIndex={0} aria-label="group of cards" className="focus:outline-none mt-20 flex flex-wrap justify-center gap-10 px-4">
               <div tabIndex={0} aria-label="card 1" className="focus:outline-none flex sm:w-full md:w-5/12 pb-20">
@@ -169,8 +166,8 @@ const Infrastructure = () => {
                   </div>
                 </div>
                 <div className="w-10/12">
-                  <h2 tabIndex={0} className="focus:outline-none text-lg font-bold leading-tight text-gray-800">Ready to use components</h2>
-                  <p tabIndex={0} className="focus:outline-none text-base text-gray-600 leading-normal pt-2">It provides a very simple start, no need to write a lot of code, you just import it and start the primitive components and create the ones you need.</p>
+                  <h2 tabIndex={0} className="focus:outline-none text-lg font-bold leading-tight text-gray-800">	Mentorship and Networking </h2>
+                  <p tabIndex={0} className="focus:outline-none text-base text-gray-600 leading-normal pt-2">TBI-KIET has a pool of mentors and subject experts who assist startups with technical development, market analysis, and fundraising</p>
                 </div>
               </div>
               <div tabIndex={0} aria-label="card 2" className="focus:outline-none flex sm:w-full md:w-5/12 pb-20">
@@ -181,8 +178,9 @@ const Infrastructure = () => {
                   </div>
                 </div>
                 <div className="w-10/12">
-                  <h2 tabIndex={0} className="focus:outline-none text-lg font-semibold leading-tight text-gray-800">Hight Quality UI you can reply on</h2>
-                  <p tabIndex={0} className="focus:outline-none text-base text-gray-600 leading-normal pt-2">Modify the visual appearance of your site – including colors, fonts, margins and other style-related properties – with a sophisticated style.</p>
+                  <h2 tabIndex={0} className="focus:outline-none text-lg font-semibold leading-tight text-gray-800">Functional Support </h2>
+                  <p tabIndex={0} className="focus:outline-none text-base text-gray-600 leading-normal pt-2">
+                    TBI offers comprehensive services including Legal Advisory, HR Support, and Marketing Assistance to empower startups and drive their success</p>
                 </div>
               </div>
               <div tabIndex={0} aria-label="card 3" className="focus:outline-none flex sm:w-full md:w-5/12 pb-20">
@@ -193,8 +191,8 @@ const Infrastructure = () => {
                   </div>
                 </div>
                 <div className="w-10/12">
-                  <h2 tabIndex={0} className="focus:outline-none text-lg font-semibold leading-tight text-gray-800">Coded by Developers for Developers</h2>
-                  <p tabIndex={0} className="focus:outline-none text-base text-gray-600 leading-normal pt-2">Instead of just giving you the tools to create your own site, they offer you a list of themes you can choose from. Thus a handy product.</p>
+                  <h2 tabIndex={0} className="focus:outline-none text-lg font-semibold leading-tight text-gray-800">Funding</h2>
+                  <p tabIndex={0} className="focus:outline-none text-base text-gray-600 leading-normal pt-2">Providing funding to incubates through grants, debts, seed funds, and investments.</p>
                 </div>
               </div>
               <div tabIndex={0} aria-label="card 4" className="focus:outline-none flex sm:w-full md:w-5/12 pb-20">
@@ -205,8 +203,8 @@ const Infrastructure = () => {
                   </div>
                 </div>
                 <div className="w-10/12">
-                  <h2 tabIndex={0} className="focus:outline-none text-lg font-semibold leading-tight text-gray-800">The Last UI kit you’ll ever need</h2>
-                  <p tabIndex={0} className="focus:outline-none text-base text-gray-600 leading-normal pt-2">We have chosen the bright color palettes that arouse the only positive emotions. The kit that simply assures to be loved by everyone.</p>
+                  <h2 tabIndex={0} className="focus:outline-none text-lg font-semibold leading-tight text-gray-800">High-Speed Internet and Connectivity</h2>
+                  <p tabIndex={0} className="focus:outline-none text-base text-gray-600 leading-normal pt-2">24/7 high-speed internet with reliable Wi-Fi connectivity across the facility.</p>
                 </div>
               </div>
             </div>
