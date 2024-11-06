@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
 
-
 const AboutTbi = () => {
   return (
     <>
@@ -17,7 +16,7 @@ const AboutTbi = () => {
         </div>
 
         <div className="lg:mt-14 sm:mt-10 mt-12">
-          <Image className="lg:block hidden w-full" src='/Gallery/image1.png' alt="Group of people Chilling" width={240} height={240} quality={80} />
+          <Image className="lg:block hidden w-full" src='/Gallery/image1.png' alt="  TBI BUILDING" width={2048} height={2048} quality={100} />
           <Image className="lg:hidden sm:block hidden w-full" src="https://i.ibb.co/5sZTmHq/Rectangle-116.png" alt="Group of people Chilling" width={100} height={100} />
           <Image className="sm:hidden block w-full" src="https://i.ibb.co/zSxXJGQ/Rectangle-122.png" alt="Group of people Chilling" width={100} height={100} />
         </div>
@@ -53,7 +52,7 @@ const AboutTbi = () => {
 
             <div className="w-full p-6 bg-blue-900 md:flex md:items-center rounded-2xl md:bg-transparent md:p-0 lg:px-12 md:justify-evenly">
 
-              <Image className="h-[80] w-[80] md:mx-6 rounded-full object-cover shadow-md md:h-[32rem] md:w-80 lg:h-[36rem] lg:w-[26rem] md:rounded-2xl" src="/chairman.jpeg" width={70} height={70} alt="client photo" />
+              <Image className="h-[80] w-[80] md:mx-6 rounded-full object-cover shadow-md md:h-[32rem] md:w-80 lg:h-[36rem] lg:w-[26rem] md:rounded-2xl" src="/chairman.jpeg" width={1024} height={1024} quality={100} alt="client photo" />
 
               <div className="mt-2 md:mx-6">
                 <div>
@@ -84,7 +83,7 @@ const AboutTbi = () => {
 
             <div className="w-full p-6 bg-blue-900 md:flex md:items-center rounded-2xl md:bg-transparent md:p-0 lg:px-12 md:justify-evenly">
 
-              <Image className="h-[80] w-[80] md:mx-6 rounded-full object-cover shadow-md md:h-[32rem] md:w-80 lg:h-[36rem] lg:w-[26rem] md:rounded-2xl" src="/chairman.jpg" width={70} height={70} alt="client photo" />
+              <Image className="h-[80] w-[80] md:mx-6 rounded-full object-cover shadow-md md:h-[32rem] md:w-80 lg:h-[36rem] lg:w-[26rem] md:rounded-2xl" src="/chairman.jpg" width={2048} height={2048} quality={100}  alt="client photo" />
 
               <div className="mt-2 md:mx-6">
                 <div>

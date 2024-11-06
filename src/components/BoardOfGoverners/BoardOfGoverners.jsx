@@ -19,57 +19,65 @@ function BoardOfGoverners() {
                         </div>
 
                         <p className="max-w-md mt-4 text-gray-500">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo incidunt ex placeat modi magni quia error alias, adipisci rem similique, at omnis eligendi optio eos harum.
-                        </p>
+                            Meet the visionary leaders at TBI KIET, driving innovation and fostering growth through their expertise and forward-thinking approach.                        </p>
                     </div>
 
-                    <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-0 xl:mx-4 xl:w-1/2 md:grid-cols-2">
+                    <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-0 xl:mx-4 xl:w-1/2  md:grid-cols-2">
                         <div>
-                            <img className="object-cover rounded-xl aspect-square" src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="" />
+                            <img className="object-cover rounded-xl h-[274px] w-[344px] aspect-square" src="/boardmembers/Shri Atul Garg, Chairman.jpg" alt="Shri Atul Garg" />
 
-                            <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize">John Doe</h1>
+                            <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize">Shri Atul Garg</h1>
 
-                            <p className="mt-2 text-gray-500 capitalize">Full stack developer</p>
+                            <p className="mt-2 text-gray-500 capitalize">Chairman</p>
                         </div>
 
                         <div>
-                            <img className="object-cover rounded-xl aspect-square" src="https://images.unsplash.com/photo-1499470932971-a90681ce8530?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" />
+                            <img className="object-cover rounded-xl aspect-square  h-[274px] w-[344px]" src="/boardmembers/Shri Sarish Aggrawal, General Secretary.jpg" alt="Shri Sarish Aggrawal" />
 
-                            <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize">Mia</h1>
+                            <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize">Shri Sarish Aggrawal</h1>
 
-                            <p className="mt-2 text-gray-500 capitalize">Graphic Designer</p>
+                            <p className="mt-2 text-gray-500 capitalize">General Secretary</p>
                         </div>
+                       
                     </div>
                 </div>
             </div>
-            <div className="w-full grid grid-cols-1 gap-8 mt-8 xl:mt-0 md:grid-cols-2 lg:grid-cols-4 px-2 lg:px-7">
+            <div className="w-full grid grid-cols-1 gap-8 mt-8 xl:mt-0 md:grid-cols-2 lg:grid-cols-5 px-2 lg:px-7">
+             <div>
+                            <img className="object-cover rounded-xl h-[274px] w-[344px] aspect-square" src="/boardmembers/Shri Sunil Gupta, Treasurer.jpg
+" alt="Shri Sunil Gupta" />
+
+                            <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize">Shri Sunil Gupta</h1>
+
+                            <p className="mt-2 text-gray-500 capitalize">Treasurer</p>
+                        </div>
                 <div>
-                    <img className="object-cover rounded-xl aspect-square" src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="" />
+                    <img className="object-cover rounded-xl h-[274px] aspect-square " src="/boardmembers/Dr_SP_Mishra_Member.png" alt="Dr_SP_Mishra_Member" />
 
-                    <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize">John Doe</h1>
+                    <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize"> Dr S.P Mishra</h1>
 
-                    <p className="mt-2 text-gray-500 capitalize">Full stack developer</p>
+                    <p className="mt-2 text-gray-500 capitalize">Member</p>
                 </div>
                 <div>
-                    <img className="object-cover rounded-xl aspect-square" src="https://images.unsplash.com/photo-1499470932971-a90681ce8530?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" />
+                    <img className="object-cover rounded-xl h-[274px] aspect-square" src="/boardmembers/Shri BHISHAM KUMAR Makkar, Member.jpg" alt="Shri BHISHAM KUMAR Makkar" />
 
-                    <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize">Mia</h1>
+                    <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize">Shri Bhisham Kumar Makkar</h1>
 
-                    <p className="mt-2 text-gray-500 capitalize">Graphic Designer</p>
+                    <p className="mt-2 text-gray-500 capitalize">Member</p>
                 </div>
                 <div>
-                    <img className="object-cover rounded-xl aspect-square" src="https://images.unsplash.com/photo-1499470932971-a90681ce8530?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" />
+                    <img className="object-cover rounded-xl h-[274px] w-[344px] aspect-square" src="/boardmembers/Shri G.D. Jain.jpg" alt="Shri G.D. Jain" />
 
-                    <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize">Mia</h1>
+                    <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize">Shri G.D. Jain</h1>
 
-                    <p className="mt-2 text-gray-500 capitalize">Graphic Designer</p>
+                    <p className="mt-2 text-gray-500 capitalize">Member</p>
                 </div>
                 <div>
-                    <img className="object-cover rounded-xl aspect-square" src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="" />
+                    <img className="object-cover rounded-xl h-[274px] w-[344px] aspect-square" src="boardmembers/Shri Neeraj Chaudhary, Ex-Officio Member.jpg  " alt="Shri Neeraj Chaudhary" />
 
-                    <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize">John Doe</h1>
+                    <h1 className="mt-4 text-2xl font-semibold  text-gray-700 capitalize"> Shri Neeraj Chaudhary</h1>
 
-                    <p className="mt-2 text-gray-500 capitalize">Full stack developer</p>
+                    <p className="mt-2 text-gray-500 capitalize"> Ex-Officio Member</p>
                 </div>
             </div>
         </section>
